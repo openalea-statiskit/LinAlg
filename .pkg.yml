@@ -1,0 +1,23 @@
+about:
+  authors:
+  - Pierre Fernique
+  brief: !!python/unicode ' interactive Eigen'
+  email: !!python/unicode 'statiskit@googlegroups.com'
+  homepage: http://ieigen.readthedocs.io
+  name: !!python/unicode 'iEigen'
+  plugin: github
+  version: v1.0.0
+authors:
+  basename: CONTRIBUTORS.rst
+  format: '* `{name} <{email}>`_ ({score})'
+  plugin: commit
+license:
+  basename: LICENSE.rst
+  exclude:
+  - ./.git/*
+  - ./build/*
+  - ./.pkg.yml
+  - ./CONTRIBUTORS.rst
+  - ./LICENSE.rst
+  plugin: CeCILL
+  width: 78

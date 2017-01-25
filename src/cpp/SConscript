@@ -1,0 +1,20 @@
+# -*-python-*-
+
+import os
+import platform
+
+system = platform.system().lower()
+
+Import("env")
+
+cppenv = env.Clone(tools = ['cpp'],
+                   CPPDEFINES = ['LIBIEIGEN'])
+
+exclude = """
+""".split()
+
+sources = [source for source in cppenv.Glob('*.*') if not source.name in exclude]
+
+targets = cppenv.BuildCpp("ieigen", sources)
+Alias("cpp", targets)
+Alias("build", targets)

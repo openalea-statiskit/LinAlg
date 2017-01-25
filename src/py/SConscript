@@ -1,0 +1,15 @@
+# # -*-python-*-
+
+Import("env")
+pyenv = env.Clone(tools = ['boost_python'])
+
+pyenv.AppendUnique(LIBS  = ['ieigen'])
+
+exclude = """
+""".split()
+
+sources = [source for source in pyenv.Glob('*.*') if source.name not in exclude]
+
+targets = pyenv.BuildBoostPython("ieigen/__ieigen", sources)
+Alias("py", targets)
+Alias("build", targets)
