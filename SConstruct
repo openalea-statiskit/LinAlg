@@ -5,12 +5,6 @@ from SCons.Errors import EnvironmentError
 
 env = Environment(tools = ['toolchain'])
 
-# # import autowig
-
-# # asg = autowig.AbstractSemanticGraph()
-# # asg = autowig.parser(asg, [os.path.join(env['PREFIX'], 'include', 'eigen3', 'Eigen', 'Dense')],
-# #                           [env.subst('$_CCCOMCOM $CXXFLAGS')])
-
 SOLVER = ['partialPivLu',
 	      'fullPivLu',
 	      'householderQr',
@@ -89,6 +83,7 @@ namespace ieigen
 		for elt in ELT:
 			if not elt in ['i']:
 				filehandler.write('\tIEIGEN_API Vector' + size + elt + ' solve(const Matrix' + size + elt + '& A, const Vector' + size + elt + '& b, const solver_type& solver);\n')
+				filehandler.write('\tIEIGEN_API Matrix' + size + elt + ' solve(const Matrix' + size + elt + '& A, const Matrix' + size + elt + '& b, const solver_type& solver);\n')
 	filehandler.write('}\n\n#endif')
 
 for size in SIZE:
