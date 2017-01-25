@@ -1,0 +1,39 @@
+##################################################################################
+#                                                                                #
+# PyClangLite: Python bindings for Clang                                         #
+#                                                                                #
+# Homepage: http://pyclanglite.readthedocs.io/                                   #
+#                                                                                #
+# Copyright (c) 2016 Pierre Fernique                                             #
+#                                                                                #
+# This software is distributed under the CeCILL-C license. You should have       #
+# received a copy of the legalcode along with this work. If not, see             #
+# <http://www.cecill.info/licences/Licence_CeCILL-C_V1-en.html>.                 #
+#                                                                                #
+# File authors: Pierre Fernique <pfernique@gmail.com> (3)                        #
+#                                                                                #
+##################################################################################
+
+package:
+  name: python-ieigen
+  version: "3.3.1"
+
+source:
+  path: ../..
+
+build:
+  number: 0
+  script:
+    - scons py --prefix=$PREFIX -j$CPU_COUNT                         [not win]
+    - scons py --prefix=%LIBRARY_PREFIX% -j%CPU_COUNT% --arch=%ARCH% [win]
+
+about:
+  home: pyclanglite.readthedocs.org
+  license: CeCILL-C
+
+requirements:
+  build:
+    - libieigen
+    - libdev
+  run:
+    - libieigen

@@ -5,19 +5,11 @@ from SCons.Errors import EnvironmentError
 
 env = Environment(tools = ['toolchain'])
 
-# import autowig
+# # import autowig
 
-# asg = autowig.AbstractSemanticGraph()
-# asg = autowig.parser(asg, [os.path.join(env['PREFIX'], 'include', 'eigen3', 'Eigen', 'Dense')],
-#                           [env.subst('$_CCCOMCOM $CXXFLAGS')])
-
-# import os
-# import autowig
-# import sys
-
-# asg = autowig.AbstractSemanticGraph()
-# asg = autowig.parser(asg, [os.path.join(sys.prefix, 'include', 'ieigen', 'ieigen.h')], ['-x', 'c++', '-std=c++11', '-ferror-limit=0',
-#                                                                                               '-I' + os.path.join(sys.prefix, 'include')])
+# # asg = autowig.AbstractSemanticGraph()
+# # asg = autowig.parser(asg, [os.path.join(env['PREFIX'], 'include', 'eigen3', 'Eigen', 'Dense')],
+# #                           [env.subst('$_CCCOMCOM $CXXFLAGS')])
 
 SOLVER = ['partialPivLu',
 	      'fullPivLu',
@@ -102,20 +94,21 @@ namespace ieigen
 for size in SIZE:
 	for elt in ELT:
 		if not elt in ['i']:
-			with open('src/cpp/solve_' + size + elt + '.cpp', 'w') as filehandler:
-				filehandler.write('#include "base.h"\n\n')
-				filehandler.write('namespace ieigen\n{')
-				filehandler.write('\n\tVector' + size + elt + ' solve(const Matrix' + size + elt + '& A, const Vector' + size + elt + '& b, const solver_type& solver)\n')
-				filehandler.write('\t{\n')
-				filehandler.write('\t\tVector' + size + elt + ' x;\n')
-				filehandler.write('\t\tswitch(solver)\n\t\t{\n')
-				for solver in SOLVER:
-					filehandler.write('\t\t\tcase ' + solver + ':\n')
-					filehandler.write('\t\t\t\tx = A.' + solver + '().solve(b);\n')
-					filehandler.write('\t\t\t\tbreak;\n')
-				filehandler.write('\t\t}\n\t\treturn x;\n')
-				filehandler.write('\t}\n')
-				filehandler.write('}')
+			for obj in ['Matrix', 'Vector']:
+				with open('src/cpp/solve_' + obj.lower() + '_' + size.lower() + elt + '.cpp', 'w') as filehandler:
+					filehandler.write('#include "base.h"\n\n')
+					filehandler.write('namespace ieigen\n{')
+					filehandler.write('\n\t' + obj + size + elt + ' solve(const Matrix' + size + elt + '& A, const ' + obj + size + elt + '& b, const solver_type& solver)\n')
+					filehandler.write('\t{\n')
+					filehandler.write('\t\t' + obj + size + elt + ' x;\n')
+					filehandler.write('\t\tswitch(solver)\n\t\t{\n')
+					for solver in SOLVER:
+						filehandler.write('\t\t\tcase ' + solver + ':\n')
+						filehandler.write('\t\t\t\tx = A.' + solver + '().solve(b);\n')
+						filehandler.write('\t\t\t\tbreak;\n')
+					filehandler.write('\t\t}\n\t\treturn x;\n')
+					filehandler.write('\t}\n')
+					filehandler.write('}')
 
 VariantDir('build', 'src')
 try:
