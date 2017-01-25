@@ -37,16 +37,15 @@ wrappers.write()
 with open('writed.pkl', 'w') as filehandler:
 	pickle.dump(asg, filehandler)
 
-s = subprocess.Popen(['scons', 'py', '-j7', '-k'],
-                     stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+s = subprocess.Popen(['scons', 'py', '-j7', '-k'], stderr=subprocess.PIPE)
 prev, curr = s.communicate()
 
 codes = []
 while not prev == curr:
 	prev = curr
- 	codes.append(autowig.feedback(curr, '.', asg, variantdir='build'))
- 	if code:
- 		exec(codes[-1], locals())
- 	s = subprocess.Popen(['scons', 'py', '-j7', '-k'],
-                     stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-	temp, curr = s.communicate()
+	codes.append(autowig.feedback(curr, '.', asg, variant_dir='build'),
+		                                          src_dir='src')
+	if codes[-1]:
+		exec(codes[-1], locals())
+	s = subprocess.Popen(['scons', 'py', '-j7', '-k'], stderr=subprocess.PIPE)
+	none, curr = s.communicate()
