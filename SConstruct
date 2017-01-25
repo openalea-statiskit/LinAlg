@@ -16,7 +16,8 @@ env = Environment(tools = ['toolchain'])
 # import sys
 
 # asg = autowig.AbstractSemanticGraph()
-# asg = autowig.parser(asg, [os.path.join(sys.prefix, 'include', 'eigen3', 'Eigen', 'Dense')], ['-x', 'c++', '-std=c++11', '-DEIGEN_PARSED_BY_DOXYGEN', '-ferror-limit=0'])
+# asg = autowig.parser(asg, [os.path.join(sys.prefix, 'include', 'ieigen', 'ieigen.h')], ['-x', 'c++', '-std=c++11', '-ferror-limit=0',
+#                                                                                               '-I' + os.path.join(sys.prefix, 'include')])
 
 SOLVER = ['partialPivLu',
 	      'fullPivLu',
@@ -30,7 +31,7 @@ SIZE = ['2', '3', '4', 'X']
 ELT = ['i', 'f', 'd', 'cf', 'cd']
 OBJ = ['Matrix', 'Vector', 'RowVector']
 
-with open('src/cpp/ieigen.h', 'w') as filehandler:
+with open('src/cpp/base.h', 'w') as filehandler:
 	filehandler.write("""#ifndef IEGEN_H
 #define IEGEN_H
 
@@ -98,12 +99,12 @@ namespace ieigen
 				filehandler.write('\tIEIGEN_API Vector' + size + elt + ' solve(const Matrix' + size + elt + '& A, const Vector' + size + elt + '& b, const solver_type& solver);\n')
 	filehandler.write('}\n\n#endif')
 
-with open('src/cpp/ieigen.cpp', 'w') as filehandler:
-	filehandler.write('#include "ieigen.h"\n\n')
-	filehandler.write('namespace ieigen\n{\n')
-	for size in SIZE:
-		for elt in ELT:
-			if not elt in ['i']:
+for size in SIZE:
+	for elt in ELT:
+		if not elt in ['i']:
+			with open('src/cpp/solve_' + size + elt + '.cpp', 'w') as filehandler:
+				filehandler.write('#include "base.h"\n\n')
+				filehandler.write('namespace ieigen\n{')
 				filehandler.write('\n\tVector' + size + elt + ' solve(const Matrix' + size + elt + '& A, const Vector' + size + elt + '& b, const solver_type& solver)\n')
 				filehandler.write('\t{\n')
 				filehandler.write('\t\tVector' + size + elt + ' x;\n')
@@ -114,8 +115,7 @@ with open('src/cpp/ieigen.cpp', 'w') as filehandler:
 					filehandler.write('\t\t\t\tbreak;\n')
 				filehandler.write('\t\t}\n\t\treturn x;\n')
 				filehandler.write('\t}\n')
-
-	filehandler.write('}')
+				filehandler.write('}')
 
 VariantDir('build', 'src')
 try:
@@ -130,3 +130,5 @@ except EnvironmentError:
   pass
 except Exception:
     raise
+
+Default("install")

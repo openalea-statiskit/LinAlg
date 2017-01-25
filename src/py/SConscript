@@ -12,4 +12,4 @@ sources = [source for source in pyenv.Glob('*.*') if source.name not in exclude]
 
 targets = pyenv.BuildBoostPython("ieigen/__ieigen", sources)
 Alias("py", targets)
-Alias("build", targets)
+Alias("install", targets)
