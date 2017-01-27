@@ -3,14 +3,14 @@
 Import("env")
 pyenv = env.Clone(tools = ['boost_python'])
 
-pyenv.AppendUnique(LIBS  = ['ieigen'])
+pyenv.AppendUnique(LIBS  = ['statiskit_linalg'])
 
 exclude = """
 """.split()
 
 sources = [source for source in pyenv.Glob('*.*') if source.name not in exclude]
 
-targets = pyenv.BuildBoostPython("ieigen/__ieigen", sources)
+targets = pyenv.BuildBoostPython("statiskit/linalg/__linalg", sources)
 Alias("py", targets)
 Alias("install", targets)
 

@@ -1,4 +1,4 @@
-#include "_ieigen.h"
+#include "_linalg.h"
 
 
 namespace autowig

@@ -10,7 +10,8 @@ services:
   - docker
   
 env:
-  - RECIPE=libieigen
+  - RECIPE=libstatiskit_linalg
+  - RECIPE=python-statiskit_linalg
 
 install:
   - git clone https://github.com/StatisKit/travis-ci.git travis-ci
