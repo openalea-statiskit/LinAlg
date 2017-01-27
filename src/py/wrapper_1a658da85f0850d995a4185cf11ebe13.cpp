@@ -3,10 +3,8 @@
 
 namespace autowig
 {
-    void method_decorator_608ae10a566a5bfa98a5b495316aa7d9(struct ::Eigen::EigenBase< class ::Eigen::Matrix< struct ::std::complex< float >, -1, 1, 0, -1, 1 > > & instance, class ::Eigen::Matrix< struct ::std::complex< float >, -1, 1, 0, -1, 1 >  & param_out)
-    { instance.derived() = param_out; }
-    void method_decorator_2b32e1cc526556a198dfd7b6cad02c96(struct ::Eigen::EigenBase< class ::Eigen::Matrix< struct ::std::complex< float >, -1, 1, 0, -1, 1 > > const & instance, class ::Eigen::Matrix< struct ::std::complex< float >, -1, 1, 0, -1, 1 >  & param_out)
-    { instance.const_cast_derived() = param_out; }
+    void method_decorator_608ae10a566a5bfa98a5b495316aa7d9(struct ::Eigen::EigenBase< class ::Eigen::Matrix< struct ::std::complex< float >, -1, 1, 0, -1, 1 > > & instance, class ::Eigen::Matrix< struct ::std::complex< float >, -1, 1, 0, -1, 1 >  & param_out)     { instance.derived() = param_out; }
+    void method_decorator_2b32e1cc526556a198dfd7b6cad02c96(struct ::Eigen::EigenBase< class ::Eigen::Matrix< struct ::std::complex< float >, -1, 1, 0, -1, 1 > > const & instance, class ::Eigen::Matrix< struct ::std::complex< float >, -1, 1, 0, -1, 1 >  & param_out)     { instance.const_cast_derived() = param_out; }
 }
 
 

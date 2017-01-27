@@ -18,7 +18,6 @@ void wrapper_40b7e25b836f58f7a0b44f6afa84a437()
     boost::python::class_< class ::Eigen::Matrix< float, 4, 1, 0, 4, 1 >, autowig::HeldType< class ::Eigen::Matrix< float, 4, 1, 0, 4, 1 > >, boost::python::bases< class ::Eigen::PlainObjectBase< class ::Eigen::Matrix< float, 4, 1, 0, 4, 1 > > > > class_40b7e25b836f58f7a0b44f6afa84a437("_Matrix_40b7e25b836f58f7a0b44f6afa84a437", "", boost::python::no_init);
     class_40b7e25b836f58f7a0b44f6afa84a437.def(boost::python::init<  >(""));
     class_40b7e25b836f58f7a0b44f6afa84a437.def(boost::python::init< struct ::Eigen::internal::constructor_without_unaligned_array_assert  >(""));
-    class_40b7e25b836f58f7a0b44f6afa84a437.def(boost::python::init< float  const &, float  const &, float  const & >(""));
     class_40b7e25b836f58f7a0b44f6afa84a437.def(boost::python::init< float  const &, float  const &, float  const &, float  const & >(""));
     class_40b7e25b836f58f7a0b44f6afa84a437.def(boost::python::init< class ::Eigen::Matrix< float, 4, 1, 0, 4, 1 >  const & >(""));
     class_40b7e25b836f58f7a0b44f6afa84a437.def("inner_stride", method_pointer_f2613e3ec33c5461918bb3e7daaddac6, "");

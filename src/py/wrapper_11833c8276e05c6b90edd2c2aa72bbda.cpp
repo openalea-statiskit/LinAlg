@@ -3,10 +3,8 @@
 
 namespace autowig
 {
-    void method_decorator_76b19a62f8085219a06d300e243e3758(struct ::Eigen::EigenBase< class ::Eigen::Matrix< struct ::std::complex< double >, 2, 2, 0, 2, 2 > > & instance, class ::Eigen::Matrix< struct ::std::complex< double >, 2, 2, 0, 2, 2 >  & param_out)
-    { instance.derived() = param_out; }
-    void method_decorator_d2573e2f1eb051ecb773ee17bafca371(struct ::Eigen::EigenBase< class ::Eigen::Matrix< struct ::std::complex< double >, 2, 2, 0, 2, 2 > > const & instance, class ::Eigen::Matrix< struct ::std::complex< double >, 2, 2, 0, 2, 2 >  & param_out)
-    { instance.const_cast_derived() = param_out; }
+    void method_decorator_76b19a62f8085219a06d300e243e3758(struct ::Eigen::EigenBase< class ::Eigen::Matrix< struct ::std::complex< double >, 2, 2, 0, 2, 2 > > & instance, class ::Eigen::Matrix< struct ::std::complex< double >, 2, 2, 0, 2, 2 >  & param_out)     { instance.derived() = param_out; }
+    void method_decorator_d2573e2f1eb051ecb773ee17bafca371(struct ::Eigen::EigenBase< class ::Eigen::Matrix< struct ::std::complex< double >, 2, 2, 0, 2, 2 > > const & instance, class ::Eigen::Matrix< struct ::std::complex< double >, 2, 2, 0, 2, 2 >  & param_out)     { instance.const_cast_derived() = param_out; }
 }
 
 

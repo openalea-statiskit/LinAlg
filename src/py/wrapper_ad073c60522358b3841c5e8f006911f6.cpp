@@ -16,6 +16,9 @@ void wrapper_ad073c60522358b3841c5e8f006911f6()
     long int  (::Eigen::Matrix< ::std::complex< double >, 4, 4, 0, 4, 4 >::*method_pointer_eaf2171ce27a58a7b9364fb7bdabef3f)() const = &::Eigen::Matrix< struct ::std::complex< double >, 4, 4, 0, 4, 4 >::innerStride;
     long int  (::Eigen::Matrix< ::std::complex< double >, 4, 4, 0, 4, 4 >::*method_pointer_421016eab338576ea31e14990e9ab15b)() const = &::Eigen::Matrix< struct ::std::complex< double >, 4, 4, 0, 4, 4 >::outerStride;
     boost::python::class_< class ::Eigen::Matrix< struct ::std::complex< double >, 4, 4, 0, 4, 4 >, autowig::HeldType< class ::Eigen::Matrix< struct ::std::complex< double >, 4, 4, 0, 4, 4 > >, boost::python::bases< class ::Eigen::PlainObjectBase< class ::Eigen::Matrix< struct ::std::complex< double >, 4, 4, 0, 4, 4 > > > > class_ad073c60522358b3841c5e8f006911f6("_Matrix_ad073c60522358b3841c5e8f006911f6", "", boost::python::no_init);
+    class_ad073c60522358b3841c5e8f006911f6.def(boost::python::init<  >(""));
+    class_ad073c60522358b3841c5e8f006911f6.def(boost::python::init< struct ::Eigen::internal::constructor_without_unaligned_array_assert  >(""));
+    class_ad073c60522358b3841c5e8f006911f6.def(boost::python::init< class ::Eigen::Matrix< struct ::std::complex< double >, 4, 4, 0, 4, 4 >  const & >(""));
     class_ad073c60522358b3841c5e8f006911f6.def("inner_stride", method_pointer_eaf2171ce27a58a7b9364fb7bdabef3f, "");
     class_ad073c60522358b3841c5e8f006911f6.def("outer_stride", method_pointer_421016eab338576ea31e14990e9ab15b, "");
 

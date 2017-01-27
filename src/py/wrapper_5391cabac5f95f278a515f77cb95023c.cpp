@@ -3,28 +3,17 @@
 
 namespace autowig
 {
-    void method_decorator_154ffa07a02459a1a7e6ebc1d5df0411(class ::Eigen::PlainObjectBase< class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > > & instance, class ::Eigen::MatrixBase< class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > >  & param_out)
-    { instance.base() = param_out; }
-    void method_decorator_419f266b1ccd52a5a42837900b45cf4e(class ::Eigen::PlainObjectBase< class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > > & instance, long int  param_in_0, long int  param_in_1, const double  & param_out)
-    { instance.coeffRef(param_in_0, param_in_1) = param_out; }
-    void method_decorator_6e659a480fb2599ba37b6f5a4c7c87d7(class ::Eigen::PlainObjectBase< class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > > & instance, long int  param_in_0, const double  & param_out)
-    { instance.coeffRef(param_in_0) = param_out; }
-    void method_decorator_b2e84eef72b45a57acdc4a2b4b62bc67(class ::Eigen::PlainObjectBase< class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > > & instance, long int  param_in_0, double  const & param_in_1, class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 >  & param_out)
-    { instance.setConstant(param_in_0, param_in_1) = param_out; }
-    void method_decorator_9f16a46598c758e9a836f6da3c01cad7(class ::Eigen::PlainObjectBase< class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > > & instance, long int  param_in_0, long int  param_in_1, double  const & param_in_2, class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 >  & param_out)
-    { instance.setConstant(param_in_0, param_in_1, param_in_2) = param_out; }
-    void method_decorator_1be6275ba643577884d52ad6d637ce79(class ::Eigen::PlainObjectBase< class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > > & instance, long int  param_in_0, class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 >  & param_out)
-    { instance.setZero(param_in_0) = param_out; }
-    void method_decorator_af701a08d2e350a8963b00d38180ca08(class ::Eigen::PlainObjectBase< class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > > & instance, long int  param_in_0, long int  param_in_1, class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 >  & param_out)
-    { instance.setZero(param_in_0, param_in_1) = param_out; }
-    void method_decorator_76a820e4d6db5d8b90b62a706dcdd505(class ::Eigen::PlainObjectBase< class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > > & instance, long int  param_in_0, class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 >  & param_out)
-    { instance.setOnes(param_in_0) = param_out; }
-    void method_decorator_518a7155718a585284bbb788e6ecca2f(class ::Eigen::PlainObjectBase< class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > > & instance, long int  param_in_0, long int  param_in_1, class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 >  & param_out)
-    { instance.setOnes(param_in_0, param_in_1) = param_out; }
-    void method_decorator_f0fea311685e51559f1a3d28f7060617(class ::Eigen::PlainObjectBase< class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > > & instance, long int  param_in_0, class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 >  & param_out)
-    { instance.setRandom(param_in_0) = param_out; }
-    void method_decorator_e609a4c8cd435d7fbc7b0ee3d5c97107(class ::Eigen::PlainObjectBase< class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > > & instance, long int  param_in_0, long int  param_in_1, class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 >  & param_out)
-    { instance.setRandom(param_in_0, param_in_1) = param_out; }
+    void method_decorator_154ffa07a02459a1a7e6ebc1d5df0411(class ::Eigen::PlainObjectBase< class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > > & instance, class ::Eigen::MatrixBase< class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > >  & param_out)     { instance.base() = param_out; }
+    void method_decorator_419f266b1ccd52a5a42837900b45cf4e(class ::Eigen::PlainObjectBase< class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > > & instance, long int  param_in_0, long int  param_in_1, const double  & param_out)     { instance.coeffRef(param_in_0, param_in_1) = param_out; }
+    void method_decorator_6e659a480fb2599ba37b6f5a4c7c87d7(class ::Eigen::PlainObjectBase< class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > > & instance, long int  param_in_0, const double  & param_out)     { instance.coeffRef(param_in_0) = param_out; }
+    void method_decorator_b2e84eef72b45a57acdc4a2b4b62bc67(class ::Eigen::PlainObjectBase< class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > > & instance, long int  param_in_0, double  const & param_in_1, class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 >  & param_out)     { instance.setConstant(param_in_0, param_in_1) = param_out; }
+    void method_decorator_9f16a46598c758e9a836f6da3c01cad7(class ::Eigen::PlainObjectBase< class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > > & instance, long int  param_in_0, long int  param_in_1, double  const & param_in_2, class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 >  & param_out)     { instance.setConstant(param_in_0, param_in_1, param_in_2) = param_out; }
+    void method_decorator_1be6275ba643577884d52ad6d637ce79(class ::Eigen::PlainObjectBase< class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > > & instance, long int  param_in_0, class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 >  & param_out)     { instance.setZero(param_in_0) = param_out; }
+    void method_decorator_af701a08d2e350a8963b00d38180ca08(class ::Eigen::PlainObjectBase< class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > > & instance, long int  param_in_0, long int  param_in_1, class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 >  & param_out)     { instance.setZero(param_in_0, param_in_1) = param_out; }
+    void method_decorator_76a820e4d6db5d8b90b62a706dcdd505(class ::Eigen::PlainObjectBase< class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > > & instance, long int  param_in_0, class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 >  & param_out)     { instance.setOnes(param_in_0) = param_out; }
+    void method_decorator_518a7155718a585284bbb788e6ecca2f(class ::Eigen::PlainObjectBase< class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > > & instance, long int  param_in_0, long int  param_in_1, class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 >  & param_out)     { instance.setOnes(param_in_0, param_in_1) = param_out; }
+    void method_decorator_f0fea311685e51559f1a3d28f7060617(class ::Eigen::PlainObjectBase< class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > > & instance, long int  param_in_0, class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 >  & param_out)     { instance.setRandom(param_in_0) = param_out; }
+    void method_decorator_e609a4c8cd435d7fbc7b0ee3d5c97107(class ::Eigen::PlainObjectBase< class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > > & instance, long int  param_in_0, long int  param_in_1, class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 >  & param_out)     { instance.setRandom(param_in_0, param_in_1) = param_out; }
 }
 
 
@@ -62,7 +51,7 @@ void wrapper_5391cabac5f95f278a515f77cb95023c()
     class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 >  & (::Eigen::PlainObjectBase< ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > >::*method_pointer_f0fea311685e51559f1a3d28f7060617)(long int ) = &::Eigen::PlainObjectBase< class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > >::setRandom;
     class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 >  & (::Eigen::PlainObjectBase< ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > >::*method_pointer_e609a4c8cd435d7fbc7b0ee3d5c97107)(long int , long int ) = &::Eigen::PlainObjectBase< class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > >::setRandom;
     void  (*method_pointer_6bcadc1a2f8c5a66b7906e493f7a7e77)() = ::Eigen::PlainObjectBase< class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > >::_check_template_params;
-    boost::python::class_< class ::Eigen::PlainObjectBase< class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > >, autowig::HeldType< class ::Eigen::PlainObjectBase< class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > > >, boost::python::bases< class ::Eigen::MatrixBase< class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > > > > class_5391cabac5f95f278a515f77cb95023c("_PlainObjectBase_5391cabac5f95f278a515f77cb95023c", "", boost::python::no_init);
+    boost::python::class_< class ::Eigen::PlainObjectBase< class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > >, autowig::HeldType< class ::Eigen::PlainObjectBase< class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > > >, boost::python::bases< class ::Eigen::MatrixBase< class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > > >, boost::noncopyable > class_5391cabac5f95f278a515f77cb95023c("_PlainObjectBase_5391cabac5f95f278a515f77cb95023c", "", boost::python::no_init);
     class_5391cabac5f95f278a515f77cb95023c.def("base", method_pointer_154ffa07a02459a1a7e6ebc1d5df0411, boost::python::return_internal_reference<>(), "");
     class_5391cabac5f95f278a515f77cb95023c.def("base", autowig::method_decorator_154ffa07a02459a1a7e6ebc1d5df0411);
     class_5391cabac5f95f278a515f77cb95023c.def("base", method_pointer_8ebc08d1e13f5b1398fb16af7265f8c9, boost::python::return_value_policy< boost::python::return_by_value >(), "");

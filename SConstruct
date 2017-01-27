@@ -27,14 +27,18 @@ with open('src/cpp/base.h', 'w') as filehandler:
   #ifdef LIBIEIGEN
     #ifdef __GNUC__
       #define IEIGEN_API __attribute__ ((dllexport))
+      #define IEIGEN_IMP
     #else
       #define IEIGEN_API __declspec(dllexport)
+      #define IEIGEN_IMP
     #endif
   #else
     #ifdef __GNUC__
       #define IEIGEN_API __attribute__ ((dllimport))
+      #define IEIGEN_IMP extern
     #else
       #define IEIGEN_API __declspec(dllimport)
+      #define IEIGEN_IMP extern
     #endif
   #endif
   #define DLL_LOCAL
@@ -43,6 +47,11 @@ with open('src/cpp/base.h', 'w') as filehandler:
     #define IEIGEN_API __attribute__ ((visibility ("default")))
   #else
     #define IEIGEN_API
+  #endif
+  #ifdef LIBIEIGEN
+    #define IEIGEN_IMP
+  #else
+    #define IEIGEN_IMP extern
   #endif
 #endif
 
@@ -72,7 +81,22 @@ namespace ieigen
 					typedef.extend([size] * coef)
 				if obj == 'Vector':
 					typedef.extend(['1'])
-				filehandler.write('\ttypedef Eigen::Matrix< ' + ', '.join(typedef) + '> ' + obj + size + elt + ';\n')
+				filehandler.write('\t// IEIGEN_IMP template class IEIGEN_API Eigen::Matrix< ' + ', '.join(typedef) + ' >;\n')
+				filehandler.write('\ttypedef Eigen::Matrix< ' + ', '.join(typedef) + ' > ' + obj + size + elt + ';\n')
+				if not elt == 'i':
+					if obj == 'Matrix':
+						for solver in SOLVER:
+							if solver in ['llt', 'ldlt']:
+								solver = solver.upper()
+							else:
+								solver = solver[0].upper() + solver[1:]
+								if solver.endswith('Svd'):
+									solver = solver[:-3] + 'SVD'
+								else:
+									solver = solver[:-1] + solver[-1].upper()
+							filehandler.write('\t// IEIGEN_IMP template class IEIGEN_API Eigen::' + solver + '< Eigen::Matrix< ' + ', '.join(typedef) + ' > >;\n')
+							filehandler.write('\ttypedef Eigen::' + solver + '< Eigen::Matrix< ' + ', '.join(typedef) + ' > > ' + solver + obj + size + elt + ';\n')
+
 		filehandler.write('\n')
 	filehandler.write('\n')
 	filehandler.write('\tenum solver_type {\n')

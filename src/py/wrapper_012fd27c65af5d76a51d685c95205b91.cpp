@@ -3,20 +3,13 @@
 
 namespace autowig
 {
-    void method_decorator_67ca2169f27b5a07af00aef0ca874175(class ::Eigen::DenseBase< class ::Eigen::Matrix< float, -1, -1, 0, -1, -1 > > & instance, float  const & param_in_0, class ::Eigen::Matrix< float, -1, -1, 0, -1, -1 >  & param_out)
-    { instance.setConstant(param_in_0) = param_out; }
-    void method_decorator_e8b172b3a59a5d338eb26d517f214590(class ::Eigen::DenseBase< class ::Eigen::Matrix< float, -1, -1, 0, -1, -1 > > & instance, long int  param_in_0, float  const & param_in_1, float  const & param_in_2, class ::Eigen::Matrix< float, -1, -1, 0, -1, -1 >  & param_out)
-    { instance.setLinSpaced(param_in_0, param_in_1, param_in_2) = param_out; }
-    void method_decorator_c601287ab12b576f9fd9aa2e88dfa1b0(class ::Eigen::DenseBase< class ::Eigen::Matrix< float, -1, -1, 0, -1, -1 > > & instance, float  const & param_in_0, float  const & param_in_1, class ::Eigen::Matrix< float, -1, -1, 0, -1, -1 >  & param_out)
-    { instance.setLinSpaced(param_in_0, param_in_1) = param_out; }
-    void method_decorator_0e287d8bb3655f0b865a125440043702(class ::Eigen::DenseBase< class ::Eigen::Matrix< float, -1, -1, 0, -1, -1 > > & instance, class ::Eigen::Matrix< float, -1, -1, 0, -1, -1 >  & param_out)
-    { instance.setZero() = param_out; }
-    void method_decorator_1b71ce43e9c3530a960c7c2dfc30197d(class ::Eigen::DenseBase< class ::Eigen::Matrix< float, -1, -1, 0, -1, -1 > > & instance, class ::Eigen::Matrix< float, -1, -1, 0, -1, -1 >  & param_out)
-    { instance.setOnes() = param_out; }
-    void method_decorator_e1788abacee75e1daa8903f37b27b0d0(class ::Eigen::DenseBase< class ::Eigen::Matrix< float, -1, -1, 0, -1, -1 > > & instance, class ::Eigen::Matrix< float, -1, -1, 0, -1, -1 >  & param_out)
-    { instance.setRandom() = param_out; }
-    void method_decorator_a18689c78f755438814d304b5864f8c7(class ::Eigen::DenseBase< class ::Eigen::Matrix< float, -1, -1, 0, -1, -1 > > & instance, float  const & param_in_0, class ::Eigen::Matrix< float, -1, -1, 0, -1, -1 >  & param_out)
-    { instance.operator*=(param_in_0) = param_out; }
+    void method_decorator_67ca2169f27b5a07af00aef0ca874175(class ::Eigen::DenseBase< class ::Eigen::Matrix< float, -1, -1, 0, -1, -1 > > & instance, float  const & param_in_0, class ::Eigen::Matrix< float, -1, -1, 0, -1, -1 >  & param_out)     { instance.setConstant(param_in_0) = param_out; }
+// TODO     void method_decorator_e8b172b3a59a5d338eb26d517f214590(class ::Eigen::DenseBase< class ::Eigen::Matrix< float, -1, -1, 0, -1, -1 > > & instance, long int  param_in_0, float  const & param_in_1, float  const & param_in_2, class ::Eigen::Matrix< float, -1, -1, 0, -1, -1 >  & param_out)     { instance.setLinSpaced(param_in_0, param_in_1, param_in_2) = param_out; }
+// TODO     void method_decorator_c601287ab12b576f9fd9aa2e88dfa1b0(class ::Eigen::DenseBase< class ::Eigen::Matrix< float, -1, -1, 0, -1, -1 > > & instance, float  const & param_in_0, float  const & param_in_1, class ::Eigen::Matrix< float, -1, -1, 0, -1, -1 >  & param_out)     { instance.setLinSpaced(param_in_0, param_in_1) = param_out; }
+    void method_decorator_0e287d8bb3655f0b865a125440043702(class ::Eigen::DenseBase< class ::Eigen::Matrix< float, -1, -1, 0, -1, -1 > > & instance, class ::Eigen::Matrix< float, -1, -1, 0, -1, -1 >  & param_out)     { instance.setZero() = param_out; }
+    void method_decorator_1b71ce43e9c3530a960c7c2dfc30197d(class ::Eigen::DenseBase< class ::Eigen::Matrix< float, -1, -1, 0, -1, -1 > > & instance, class ::Eigen::Matrix< float, -1, -1, 0, -1, -1 >  & param_out)     { instance.setOnes() = param_out; }
+    void method_decorator_e1788abacee75e1daa8903f37b27b0d0(class ::Eigen::DenseBase< class ::Eigen::Matrix< float, -1, -1, 0, -1, -1 > > & instance, class ::Eigen::Matrix< float, -1, -1, 0, -1, -1 >  & param_out)     { instance.setRandom() = param_out; }
+    void method_decorator_a18689c78f755438814d304b5864f8c7(class ::Eigen::DenseBase< class ::Eigen::Matrix< float, -1, -1, 0, -1, -1 > > & instance, float  const & param_in_0, class ::Eigen::Matrix< float, -1, -1, 0, -1, -1 >  & param_out)     { instance.operator*=(param_in_0) = param_out; }
 }
 
 
@@ -35,8 +28,8 @@ void wrapper_012fd27c65af5d76a51d685c95205b91()
     void  (::Eigen::DenseBase< ::Eigen::Matrix< float, -1, -1, 0, -1, -1 > >::*method_pointer_fbecfac5588e501789fab356786b2da6)() = &::Eigen::DenseBase< class ::Eigen::Matrix< float, -1, -1, 0, -1, -1 > >::transposeInPlace;
     void  (::Eigen::DenseBase< ::Eigen::Matrix< float, -1, -1, 0, -1, -1 > >::*method_pointer_6a5efc34bce25fa8b4f5baeba8722bc4)(float  const &) = &::Eigen::DenseBase< class ::Eigen::Matrix< float, -1, -1, 0, -1, -1 > >::fill;
     class ::Eigen::Matrix< float, -1, -1, 0, -1, -1 >  & (::Eigen::DenseBase< ::Eigen::Matrix< float, -1, -1, 0, -1, -1 > >::*method_pointer_67ca2169f27b5a07af00aef0ca874175)(float  const &) = &::Eigen::DenseBase< class ::Eigen::Matrix< float, -1, -1, 0, -1, -1 > >::setConstant;
-    class ::Eigen::Matrix< float, -1, -1, 0, -1, -1 >  & (::Eigen::DenseBase< ::Eigen::Matrix< float, -1, -1, 0, -1, -1 > >::*method_pointer_e8b172b3a59a5d338eb26d517f214590)(long int , float  const &, float  const &) = &::Eigen::DenseBase< class ::Eigen::Matrix< float, -1, -1, 0, -1, -1 > >::setLinSpaced;
-    class ::Eigen::Matrix< float, -1, -1, 0, -1, -1 >  & (::Eigen::DenseBase< ::Eigen::Matrix< float, -1, -1, 0, -1, -1 > >::*method_pointer_c601287ab12b576f9fd9aa2e88dfa1b0)(float  const &, float  const &) = &::Eigen::DenseBase< class ::Eigen::Matrix< float, -1, -1, 0, -1, -1 > >::setLinSpaced;
+// TODO // TODO     class ::Eigen::Matrix< float, -1, -1, 0, -1, -1 >  & (::Eigen::DenseBase< ::Eigen::Matrix< float, -1, -1, 0, -1, -1 > >::*method_pointer_e8b172b3a59a5d338eb26d517f214590)(long int , float  const &, float  const &) = &::Eigen::DenseBase< class ::Eigen::Matrix< float, -1, -1, 0, -1, -1 > >::setLinSpaced;
+// TODO // TODO     class ::Eigen::Matrix< float, -1, -1, 0, -1, -1 >  & (::Eigen::DenseBase< ::Eigen::Matrix< float, -1, -1, 0, -1, -1 > >::*method_pointer_c601287ab12b576f9fd9aa2e88dfa1b0)(float  const &, float  const &) = &::Eigen::DenseBase< class ::Eigen::Matrix< float, -1, -1, 0, -1, -1 > >::setLinSpaced;
     class ::Eigen::Matrix< float, -1, -1, 0, -1, -1 >  & (::Eigen::DenseBase< ::Eigen::Matrix< float, -1, -1, 0, -1, -1 > >::*method_pointer_0e287d8bb3655f0b865a125440043702)() = &::Eigen::DenseBase< class ::Eigen::Matrix< float, -1, -1, 0, -1, -1 > >::setZero;
     class ::Eigen::Matrix< float, -1, -1, 0, -1, -1 >  & (::Eigen::DenseBase< ::Eigen::Matrix< float, -1, -1, 0, -1, -1 > >::*method_pointer_1b71ce43e9c3530a960c7c2dfc30197d)() = &::Eigen::DenseBase< class ::Eigen::Matrix< float, -1, -1, 0, -1, -1 > >::setOnes;
     class ::Eigen::Matrix< float, -1, -1, 0, -1, -1 >  & (::Eigen::DenseBase< ::Eigen::Matrix< float, -1, -1, 0, -1, -1 > >::*method_pointer_e1788abacee75e1daa8903f37b27b0d0)() = &::Eigen::DenseBase< class ::Eigen::Matrix< float, -1, -1, 0, -1, -1 > >::setRandom;
@@ -70,10 +63,10 @@ void wrapper_012fd27c65af5d76a51d685c95205b91()
     class_012fd27c65af5d76a51d685c95205b91.def("fill", method_pointer_6a5efc34bce25fa8b4f5baeba8722bc4, "");
     class_012fd27c65af5d76a51d685c95205b91.def("set_constant", method_pointer_67ca2169f27b5a07af00aef0ca874175, boost::python::return_internal_reference<>(), "");
     class_012fd27c65af5d76a51d685c95205b91.def("set_constant", autowig::method_decorator_67ca2169f27b5a07af00aef0ca874175);
-    class_012fd27c65af5d76a51d685c95205b91.def("set_lin_spaced", method_pointer_e8b172b3a59a5d338eb26d517f214590, boost::python::return_internal_reference<>(), "");
-    class_012fd27c65af5d76a51d685c95205b91.def("set_lin_spaced", autowig::method_decorator_e8b172b3a59a5d338eb26d517f214590);
-    class_012fd27c65af5d76a51d685c95205b91.def("set_lin_spaced", method_pointer_c601287ab12b576f9fd9aa2e88dfa1b0, boost::python::return_internal_reference<>(), "");
-    class_012fd27c65af5d76a51d685c95205b91.def("set_lin_spaced", autowig::method_decorator_c601287ab12b576f9fd9aa2e88dfa1b0);
+// TODO // TODO     class_012fd27c65af5d76a51d685c95205b91.def("set_lin_spaced", method_pointer_e8b172b3a59a5d338eb26d517f214590, boost::python::return_internal_reference<>(), "");
+// TODO // TODO     class_012fd27c65af5d76a51d685c95205b91.def("set_lin_spaced", autowig::method_decorator_e8b172b3a59a5d338eb26d517f214590);
+// TODO // TODO     class_012fd27c65af5d76a51d685c95205b91.def("set_lin_spaced", method_pointer_c601287ab12b576f9fd9aa2e88dfa1b0, boost::python::return_internal_reference<>(), "");
+// TODO // TODO     class_012fd27c65af5d76a51d685c95205b91.def("set_lin_spaced", autowig::method_decorator_c601287ab12b576f9fd9aa2e88dfa1b0);
     class_012fd27c65af5d76a51d685c95205b91.def("set_zero", method_pointer_0e287d8bb3655f0b865a125440043702, boost::python::return_internal_reference<>(), "");
     class_012fd27c65af5d76a51d685c95205b91.def("set_zero", autowig::method_decorator_0e287d8bb3655f0b865a125440043702);
     class_012fd27c65af5d76a51d685c95205b91.def("set_ones", method_pointer_1b71ce43e9c3530a960c7c2dfc30197d, boost::python::return_internal_reference<>(), "");

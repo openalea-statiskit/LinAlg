@@ -3,20 +3,13 @@
 
 namespace autowig
 {
-    void method_decorator_a1097cc97c125bc89d9c3ab1e058e853(class ::Eigen::DenseBase< class ::Eigen::Matrix< struct ::std::complex< float >, 3, 1, 0, 3, 1 > > & instance, struct ::std::complex< float >  const & param_in_0, class ::Eigen::Matrix< struct ::std::complex< float >, 3, 1, 0, 3, 1 >  & param_out)
-    { instance.setConstant(param_in_0) = param_out; }
-    void method_decorator_ab43e6f66d8052e69bd9233d6495f315(class ::Eigen::DenseBase< class ::Eigen::Matrix< struct ::std::complex< float >, 3, 1, 0, 3, 1 > > & instance, long int  param_in_0, struct ::std::complex< float >  const & param_in_1, struct ::std::complex< float >  const & param_in_2, class ::Eigen::Matrix< struct ::std::complex< float >, 3, 1, 0, 3, 1 >  & param_out)
-    { instance.setLinSpaced(param_in_0, param_in_1, param_in_2) = param_out; }
-    void method_decorator_13618a4d47f358cb95f1b48c7b9a0672(class ::Eigen::DenseBase< class ::Eigen::Matrix< struct ::std::complex< float >, 3, 1, 0, 3, 1 > > & instance, struct ::std::complex< float >  const & param_in_0, struct ::std::complex< float >  const & param_in_1, class ::Eigen::Matrix< struct ::std::complex< float >, 3, 1, 0, 3, 1 >  & param_out)
-    { instance.setLinSpaced(param_in_0, param_in_1) = param_out; }
-    void method_decorator_6407e4ee41fb52ecb0f80d8dec2d8325(class ::Eigen::DenseBase< class ::Eigen::Matrix< struct ::std::complex< float >, 3, 1, 0, 3, 1 > > & instance, class ::Eigen::Matrix< struct ::std::complex< float >, 3, 1, 0, 3, 1 >  & param_out)
-    { instance.setZero() = param_out; }
-    void method_decorator_1683f121746453a481f4ca866c103dfb(class ::Eigen::DenseBase< class ::Eigen::Matrix< struct ::std::complex< float >, 3, 1, 0, 3, 1 > > & instance, class ::Eigen::Matrix< struct ::std::complex< float >, 3, 1, 0, 3, 1 >  & param_out)
-    { instance.setOnes() = param_out; }
-    void method_decorator_5ee44ccce4e75c0c99ff59e0416cf256(class ::Eigen::DenseBase< class ::Eigen::Matrix< struct ::std::complex< float >, 3, 1, 0, 3, 1 > > & instance, class ::Eigen::Matrix< struct ::std::complex< float >, 3, 1, 0, 3, 1 >  & param_out)
-    { instance.setRandom() = param_out; }
-    void method_decorator_58f582d0620d554cbb48e69b49c07459(class ::Eigen::DenseBase< class ::Eigen::Matrix< struct ::std::complex< float >, 3, 1, 0, 3, 1 > > & instance, struct ::std::complex< float >  const & param_in_0, class ::Eigen::Matrix< struct ::std::complex< float >, 3, 1, 0, 3, 1 >  & param_out)
-    { instance.operator*=(param_in_0) = param_out; }
+    void method_decorator_a1097cc97c125bc89d9c3ab1e058e853(class ::Eigen::DenseBase< class ::Eigen::Matrix< struct ::std::complex< float >, 3, 1, 0, 3, 1 > > & instance, struct ::std::complex< float >  const & param_in_0, class ::Eigen::Matrix< struct ::std::complex< float >, 3, 1, 0, 3, 1 >  & param_out)     { instance.setConstant(param_in_0) = param_out; }
+// TODO // TODO     void method_decorator_ab43e6f66d8052e69bd9233d6495f315(class ::Eigen::DenseBase< class ::Eigen::Matrix< struct ::std::complex< float >, 3, 1, 0, 3, 1 > > & instance, long int  param_in_0, struct ::std::complex< float >  const & param_in_1, struct ::std::complex< float >  const & param_in_2, class ::Eigen::Matrix< struct ::std::complex< float >, 3, 1, 0, 3, 1 >  & param_out)     { instance.setLinSpaced(param_in_0, param_in_1, param_in_2) = param_out; }
+// TODO // TODO // TODO // TODO     void method_decorator_13618a4d47f358cb95f1b48c7b9a0672(class ::Eigen::DenseBase< class ::Eigen::Matrix< struct ::std::complex< float >, 3, 1, 0, 3, 1 > > & instance, struct ::std::complex< float >  const & param_in_0, struct ::std::complex< float >  const & param_in_1, class ::Eigen::Matrix< struct ::std::complex< float >, 3, 1, 0, 3, 1 >  & param_out)     { instance.setLinSpaced(param_in_0, param_in_1) = param_out; }
+    void method_decorator_6407e4ee41fb52ecb0f80d8dec2d8325(class ::Eigen::DenseBase< class ::Eigen::Matrix< struct ::std::complex< float >, 3, 1, 0, 3, 1 > > & instance, class ::Eigen::Matrix< struct ::std::complex< float >, 3, 1, 0, 3, 1 >  & param_out)     { instance.setZero() = param_out; }
+    void method_decorator_1683f121746453a481f4ca866c103dfb(class ::Eigen::DenseBase< class ::Eigen::Matrix< struct ::std::complex< float >, 3, 1, 0, 3, 1 > > & instance, class ::Eigen::Matrix< struct ::std::complex< float >, 3, 1, 0, 3, 1 >  & param_out)     { instance.setOnes() = param_out; }
+    void method_decorator_5ee44ccce4e75c0c99ff59e0416cf256(class ::Eigen::DenseBase< class ::Eigen::Matrix< struct ::std::complex< float >, 3, 1, 0, 3, 1 > > & instance, class ::Eigen::Matrix< struct ::std::complex< float >, 3, 1, 0, 3, 1 >  & param_out)     { instance.setRandom() = param_out; }
+    void method_decorator_58f582d0620d554cbb48e69b49c07459(class ::Eigen::DenseBase< class ::Eigen::Matrix< struct ::std::complex< float >, 3, 1, 0, 3, 1 > > & instance, struct ::std::complex< float >  const & param_in_0, class ::Eigen::Matrix< struct ::std::complex< float >, 3, 1, 0, 3, 1 >  & param_out)     { instance.operator*=(param_in_0) = param_out; }
 }
 
 
@@ -35,8 +28,8 @@ void wrapper_93b0fb9c014a5638a999d3e5fa6d3d5b()
     void  (::Eigen::DenseBase< ::Eigen::Matrix< ::std::complex< float >, 3, 1, 0, 3, 1 > >::*method_pointer_148c747e9a0d538aae53c84767a054f2)() = &::Eigen::DenseBase< class ::Eigen::Matrix< struct ::std::complex< float >, 3, 1, 0, 3, 1 > >::transposeInPlace;
     void  (::Eigen::DenseBase< ::Eigen::Matrix< ::std::complex< float >, 3, 1, 0, 3, 1 > >::*method_pointer_648bb106e3f05fa7addf25f4c9eacb9f)(struct ::std::complex< float >  const &) = &::Eigen::DenseBase< class ::Eigen::Matrix< struct ::std::complex< float >, 3, 1, 0, 3, 1 > >::fill;
     class ::Eigen::Matrix< struct ::std::complex< float >, 3, 1, 0, 3, 1 >  & (::Eigen::DenseBase< ::Eigen::Matrix< ::std::complex< float >, 3, 1, 0, 3, 1 > >::*method_pointer_a1097cc97c125bc89d9c3ab1e058e853)(struct ::std::complex< float >  const &) = &::Eigen::DenseBase< class ::Eigen::Matrix< struct ::std::complex< float >, 3, 1, 0, 3, 1 > >::setConstant;
-    class ::Eigen::Matrix< struct ::std::complex< float >, 3, 1, 0, 3, 1 >  & (::Eigen::DenseBase< ::Eigen::Matrix< ::std::complex< float >, 3, 1, 0, 3, 1 > >::*method_pointer_ab43e6f66d8052e69bd9233d6495f315)(long int , struct ::std::complex< float >  const &, struct ::std::complex< float >  const &) = &::Eigen::DenseBase< class ::Eigen::Matrix< struct ::std::complex< float >, 3, 1, 0, 3, 1 > >::setLinSpaced;
-    class ::Eigen::Matrix< struct ::std::complex< float >, 3, 1, 0, 3, 1 >  & (::Eigen::DenseBase< ::Eigen::Matrix< ::std::complex< float >, 3, 1, 0, 3, 1 > >::*method_pointer_13618a4d47f358cb95f1b48c7b9a0672)(struct ::std::complex< float >  const &, struct ::std::complex< float >  const &) = &::Eigen::DenseBase< class ::Eigen::Matrix< struct ::std::complex< float >, 3, 1, 0, 3, 1 > >::setLinSpaced;
+// TODO // TODO // TODO // TODO     class ::Eigen::Matrix< struct ::std::complex< float >, 3, 1, 0, 3, 1 >  & (::Eigen::DenseBase< ::Eigen::Matrix< ::std::complex< float >, 3, 1, 0, 3, 1 > >::*method_pointer_ab43e6f66d8052e69bd9233d6495f315)(long int , struct ::std::complex< float >  const &, struct ::std::complex< float >  const &) = &::Eigen::DenseBase< class ::Eigen::Matrix< struct ::std::complex< float >, 3, 1, 0, 3, 1 > >::setLinSpaced;
+// TODO // TODO     class ::Eigen::Matrix< struct ::std::complex< float >, 3, 1, 0, 3, 1 >  & (::Eigen::DenseBase< ::Eigen::Matrix< ::std::complex< float >, 3, 1, 0, 3, 1 > >::*method_pointer_13618a4d47f358cb95f1b48c7b9a0672)(struct ::std::complex< float >  const &, struct ::std::complex< float >  const &) = &::Eigen::DenseBase< class ::Eigen::Matrix< struct ::std::complex< float >, 3, 1, 0, 3, 1 > >::setLinSpaced;
     class ::Eigen::Matrix< struct ::std::complex< float >, 3, 1, 0, 3, 1 >  & (::Eigen::DenseBase< ::Eigen::Matrix< ::std::complex< float >, 3, 1, 0, 3, 1 > >::*method_pointer_6407e4ee41fb52ecb0f80d8dec2d8325)() = &::Eigen::DenseBase< class ::Eigen::Matrix< struct ::std::complex< float >, 3, 1, 0, 3, 1 > >::setZero;
     class ::Eigen::Matrix< struct ::std::complex< float >, 3, 1, 0, 3, 1 >  & (::Eigen::DenseBase< ::Eigen::Matrix< ::std::complex< float >, 3, 1, 0, 3, 1 > >::*method_pointer_1683f121746453a481f4ca866c103dfb)() = &::Eigen::DenseBase< class ::Eigen::Matrix< struct ::std::complex< float >, 3, 1, 0, 3, 1 > >::setOnes;
     class ::Eigen::Matrix< struct ::std::complex< float >, 3, 1, 0, 3, 1 >  & (::Eigen::DenseBase< ::Eigen::Matrix< ::std::complex< float >, 3, 1, 0, 3, 1 > >::*method_pointer_5ee44ccce4e75c0c99ff59e0416cf256)() = &::Eigen::DenseBase< class ::Eigen::Matrix< struct ::std::complex< float >, 3, 1, 0, 3, 1 > >::setRandom;
@@ -53,12 +46,6 @@ void wrapper_93b0fb9c014a5638a999d3e5fa6d3d5b()
     struct ::std::complex< float >  (::Eigen::DenseBase< ::Eigen::Matrix< ::std::complex< float >, 3, 1, 0, 3, 1 > >::*method_pointer_0e30b942837b5cb9ba61cdd83d16b79d)() const = &::Eigen::DenseBase< class ::Eigen::Matrix< struct ::std::complex< float >, 3, 1, 0, 3, 1 > >::mean;
     struct ::std::complex< float >  (::Eigen::DenseBase< ::Eigen::Matrix< ::std::complex< float >, 3, 1, 0, 3, 1 > >::*method_pointer_4e1314a2f4dc58e3a7a292cafb269615)() const = &::Eigen::DenseBase< class ::Eigen::Matrix< struct ::std::complex< float >, 3, 1, 0, 3, 1 > >::trace;
     struct ::std::complex< float >  (::Eigen::DenseBase< ::Eigen::Matrix< ::std::complex< float >, 3, 1, 0, 3, 1 > >::*method_pointer_81fa823a31ce56118fa97642c7bcf9b3)() const = &::Eigen::DenseBase< class ::Eigen::Matrix< struct ::std::complex< float >, 3, 1, 0, 3, 1 > >::prod;
-    struct ::std::complex< float >  (::Eigen::DenseBase< ::Eigen::Matrix< ::std::complex< float >, 3, 1, 0, 3, 1 > >::*method_pointer_6342d12023e75ab6b88e5b93fc6348af)() const = &::Eigen::DenseBase< class ::Eigen::Matrix< struct ::std::complex< float >, 3, 1, 0, 3, 1 > >::minCoeff;
-    struct ::std::complex< float >  (::Eigen::DenseBase< ::Eigen::Matrix< ::std::complex< float >, 3, 1, 0, 3, 1 > >::*method_pointer_4e42391d4c6a50d488335b50030923b0)() const = &::Eigen::DenseBase< class ::Eigen::Matrix< struct ::std::complex< float >, 3, 1, 0, 3, 1 > >::maxCoeff;
-    struct ::std::complex< float >  const & (::Eigen::DenseBase< ::Eigen::Matrix< ::std::complex< float >, 3, 1, 0, 3, 1 > >::*method_pointer_c8925f0fb97751a9bd3321491b0e3d57)() const = &::Eigen::DenseBase< class ::Eigen::Matrix< struct ::std::complex< float >, 3, 1, 0, 3, 1 > >::value;
-    bool  (::Eigen::DenseBase< ::Eigen::Matrix< ::std::complex< float >, 3, 1, 0, 3, 1 > >::*method_pointer_3121381917695464a91cd407bd32a2e9)() const = &::Eigen::DenseBase< class ::Eigen::Matrix< struct ::std::complex< float >, 3, 1, 0, 3, 1 > >::all;
-    bool  (::Eigen::DenseBase< ::Eigen::Matrix< ::std::complex< float >, 3, 1, 0, 3, 1 > >::*method_pointer_68988e2972db5b1180addf0e347933e8)() const = &::Eigen::DenseBase< class ::Eigen::Matrix< struct ::std::complex< float >, 3, 1, 0, 3, 1 > >::any;
-    long int  (::Eigen::DenseBase< ::Eigen::Matrix< ::std::complex< float >, 3, 1, 0, 3, 1 > >::*method_pointer_a408386f7866511db004872ff03244e6)() const = &::Eigen::DenseBase< class ::Eigen::Matrix< struct ::std::complex< float >, 3, 1, 0, 3, 1 > >::count;
     void  (::Eigen::DenseBase< ::Eigen::Matrix< ::std::complex< float >, 3, 1, 0, 3, 1 > >::*method_pointer_fe16a6417a68539b9098cf7ffde617b9)() = &::Eigen::DenseBase< class ::Eigen::Matrix< struct ::std::complex< float >, 3, 1, 0, 3, 1 > >::reverseInPlace;
     boost::python::class_< class ::Eigen::DenseBase< class ::Eigen::Matrix< struct ::std::complex< float >, 3, 1, 0, 3, 1 > >, autowig::HeldType< class ::Eigen::DenseBase< class ::Eigen::Matrix< struct ::std::complex< float >, 3, 1, 0, 3, 1 > > >, boost::python::bases< class ::Eigen::DenseCoeffsBase< class ::Eigen::Matrix< struct ::std::complex< float >, 3, 1, 0, 3, 1 >, 3 > > > class_93b0fb9c014a5638a999d3e5fa6d3d5b("_DenseBase_93b0fb9c014a5638a999d3e5fa6d3d5b", "", boost::python::no_init);
     class_93b0fb9c014a5638a999d3e5fa6d3d5b.def("non_zeros", method_pointer_f087ac0b2b7e59b29d17b84e475ceafc, "");
@@ -70,10 +57,10 @@ void wrapper_93b0fb9c014a5638a999d3e5fa6d3d5b()
     class_93b0fb9c014a5638a999d3e5fa6d3d5b.def("fill", method_pointer_648bb106e3f05fa7addf25f4c9eacb9f, "");
     class_93b0fb9c014a5638a999d3e5fa6d3d5b.def("set_constant", method_pointer_a1097cc97c125bc89d9c3ab1e058e853, boost::python::return_internal_reference<>(), "");
     class_93b0fb9c014a5638a999d3e5fa6d3d5b.def("set_constant", autowig::method_decorator_a1097cc97c125bc89d9c3ab1e058e853);
-    class_93b0fb9c014a5638a999d3e5fa6d3d5b.def("set_lin_spaced", method_pointer_ab43e6f66d8052e69bd9233d6495f315, boost::python::return_internal_reference<>(), "");
-    class_93b0fb9c014a5638a999d3e5fa6d3d5b.def("set_lin_spaced", autowig::method_decorator_ab43e6f66d8052e69bd9233d6495f315);
-    class_93b0fb9c014a5638a999d3e5fa6d3d5b.def("set_lin_spaced", method_pointer_13618a4d47f358cb95f1b48c7b9a0672, boost::python::return_internal_reference<>(), "");
-    class_93b0fb9c014a5638a999d3e5fa6d3d5b.def("set_lin_spaced", autowig::method_decorator_13618a4d47f358cb95f1b48c7b9a0672);
+// TODO // TODO     class_93b0fb9c014a5638a999d3e5fa6d3d5b.def("set_lin_spaced", method_pointer_ab43e6f66d8052e69bd9233d6495f315, boost::python::return_internal_reference<>(), "");
+// TODO // TODO     class_93b0fb9c014a5638a999d3e5fa6d3d5b.def("set_lin_spaced", autowig::method_decorator_ab43e6f66d8052e69bd9233d6495f315);
+// TODO     class_93b0fb9c014a5638a999d3e5fa6d3d5b.def("set_lin_spaced", method_pointer_13618a4d47f358cb95f1b48c7b9a0672, boost::python::return_internal_reference<>(), "");
+// TODO     class_93b0fb9c014a5638a999d3e5fa6d3d5b.def("set_lin_spaced", autowig::method_decorator_13618a4d47f358cb95f1b48c7b9a0672);
     class_93b0fb9c014a5638a999d3e5fa6d3d5b.def("set_zero", method_pointer_6407e4ee41fb52ecb0f80d8dec2d8325, boost::python::return_internal_reference<>(), "");
     class_93b0fb9c014a5638a999d3e5fa6d3d5b.def("set_zero", autowig::method_decorator_6407e4ee41fb52ecb0f80d8dec2d8325);
     class_93b0fb9c014a5638a999d3e5fa6d3d5b.def("set_ones", method_pointer_1683f121746453a481f4ca866c103dfb, boost::python::return_internal_reference<>(), "");
@@ -94,12 +81,6 @@ void wrapper_93b0fb9c014a5638a999d3e5fa6d3d5b()
     class_93b0fb9c014a5638a999d3e5fa6d3d5b.def("mean", method_pointer_0e30b942837b5cb9ba61cdd83d16b79d, "");
     class_93b0fb9c014a5638a999d3e5fa6d3d5b.def("trace", method_pointer_4e1314a2f4dc58e3a7a292cafb269615, "");
     class_93b0fb9c014a5638a999d3e5fa6d3d5b.def("prod", method_pointer_81fa823a31ce56118fa97642c7bcf9b3, "");
-    class_93b0fb9c014a5638a999d3e5fa6d3d5b.def("min_coeff", method_pointer_6342d12023e75ab6b88e5b93fc6348af, "");
-    class_93b0fb9c014a5638a999d3e5fa6d3d5b.def("max_coeff", method_pointer_4e42391d4c6a50d488335b50030923b0, "");
-    class_93b0fb9c014a5638a999d3e5fa6d3d5b.def("value", method_pointer_c8925f0fb97751a9bd3321491b0e3d57, boost::python::return_value_policy< boost::python::return_by_value >(), "");
-    class_93b0fb9c014a5638a999d3e5fa6d3d5b.def("all", method_pointer_3121381917695464a91cd407bd32a2e9, "");
-    class_93b0fb9c014a5638a999d3e5fa6d3d5b.def("any", method_pointer_68988e2972db5b1180addf0e347933e8, "");
-    class_93b0fb9c014a5638a999d3e5fa6d3d5b.def("count", method_pointer_a408386f7866511db004872ff03244e6, "");
     class_93b0fb9c014a5638a999d3e5fa6d3d5b.def("reverse_in_place", method_pointer_fe16a6417a68539b9098cf7ffde617b9, "");
 
     if(std::is_class< autowig::HeldType< class ::Eigen::DenseBase< class ::Eigen::Matrix< struct ::std::complex< float >, 3, 1, 0, 3, 1 > > > >::value)

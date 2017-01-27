@@ -3,10 +3,8 @@
 
 namespace autowig
 {
-    void method_decorator_592bb53edebc52ddbd0be1a61e8db9d4(struct ::Eigen::EigenBase< class ::Eigen::Matrix< double, 2, 1, 0, 2, 1 > > & instance, class ::Eigen::Matrix< double, 2, 1, 0, 2, 1 >  & param_out)
-    { instance.derived() = param_out; }
-    void method_decorator_9028b08c38945c429cda0766af2c6f81(struct ::Eigen::EigenBase< class ::Eigen::Matrix< double, 2, 1, 0, 2, 1 > > const & instance, class ::Eigen::Matrix< double, 2, 1, 0, 2, 1 >  & param_out)
-    { instance.const_cast_derived() = param_out; }
+    void method_decorator_592bb53edebc52ddbd0be1a61e8db9d4(struct ::Eigen::EigenBase< class ::Eigen::Matrix< double, 2, 1, 0, 2, 1 > > & instance, class ::Eigen::Matrix< double, 2, 1, 0, 2, 1 >  & param_out)     { instance.derived() = param_out; }
+    void method_decorator_9028b08c38945c429cda0766af2c6f81(struct ::Eigen::EigenBase< class ::Eigen::Matrix< double, 2, 1, 0, 2, 1 > > const & instance, class ::Eigen::Matrix< double, 2, 1, 0, 2, 1 >  & param_out)     { instance.const_cast_derived() = param_out; }
 }
 
 

@@ -19,12 +19,7 @@ void wrapper_68b5275406765628b7d7a60ef672e48d()
     float  const & (::Eigen::DenseCoeffsBase< ::Eigen::Matrix< float, 4, 4, 0, 4, 4 >, 0 >::*method_pointer_62534c920a4b531c88ccfe97eff76d90)(long int , long int ) const = &::Eigen::DenseCoeffsBase< class ::Eigen::Matrix< float, 4, 4, 0, 4, 4 >, 0 >::coeffByOuterInner;
     float  const & (::Eigen::DenseCoeffsBase< ::Eigen::Matrix< float, 4, 4, 0, 4, 4 >, 0 >::*method_pointer_5de0bc228bfe5d1d9273905a14f8cfb8)(long int , long int ) const = &::Eigen::DenseCoeffsBase< class ::Eigen::Matrix< float, 4, 4, 0, 4, 4 >, 0 >::operator();
     float  const & (::Eigen::DenseCoeffsBase< ::Eigen::Matrix< float, 4, 4, 0, 4, 4 >, 0 >::*method_pointer_304bfa05415b5bd59eef73db3d3e72d1)(long int ) const = &::Eigen::DenseCoeffsBase< class ::Eigen::Matrix< float, 4, 4, 0, 4, 4 >, 0 >::coeff;
-    float  const & (::Eigen::DenseCoeffsBase< ::Eigen::Matrix< float, 4, 4, 0, 4, 4 >, 0 >::*method_pointer_663886ea1d9058a1b32f7d3898a069af)(long int ) const = &::Eigen::DenseCoeffsBase< class ::Eigen::Matrix< float, 4, 4, 0, 4, 4 >, 0 >::operator[];
     float  const & (::Eigen::DenseCoeffsBase< ::Eigen::Matrix< float, 4, 4, 0, 4, 4 >, 0 >::*method_pointer_3bd84e369bdc5b44839261e8cd7eefa3)(long int ) const = &::Eigen::DenseCoeffsBase< class ::Eigen::Matrix< float, 4, 4, 0, 4, 4 >, 0 >::operator();
-    float  const & (::Eigen::DenseCoeffsBase< ::Eigen::Matrix< float, 4, 4, 0, 4, 4 >, 0 >::*method_pointer_dcdd4c0068555e04bed64c2e6f967ae3)() const = &::Eigen::DenseCoeffsBase< class ::Eigen::Matrix< float, 4, 4, 0, 4, 4 >, 0 >::x;
-    float  const & (::Eigen::DenseCoeffsBase< ::Eigen::Matrix< float, 4, 4, 0, 4, 4 >, 0 >::*method_pointer_818d991a1d115fb1a8e8ee38a3a594ee)() const = &::Eigen::DenseCoeffsBase< class ::Eigen::Matrix< float, 4, 4, 0, 4, 4 >, 0 >::y;
-    float  const & (::Eigen::DenseCoeffsBase< ::Eigen::Matrix< float, 4, 4, 0, 4, 4 >, 0 >::*method_pointer_4487b239d89057378c451966cf1ac763)() const = &::Eigen::DenseCoeffsBase< class ::Eigen::Matrix< float, 4, 4, 0, 4, 4 >, 0 >::z;
-    float  const & (::Eigen::DenseCoeffsBase< ::Eigen::Matrix< float, 4, 4, 0, 4, 4 >, 0 >::*method_pointer_2977eb42ff6359a0b389a472c94ab9b5)() const = &::Eigen::DenseCoeffsBase< class ::Eigen::Matrix< float, 4, 4, 0, 4, 4 >, 0 >::w;
     boost::python::class_< class ::Eigen::DenseCoeffsBase< class ::Eigen::Matrix< float, 4, 4, 0, 4, 4 >, 0 >, autowig::HeldType< class ::Eigen::DenseCoeffsBase< class ::Eigen::Matrix< float, 4, 4, 0, 4, 4 >, 0 > >, boost::python::bases< struct ::Eigen::EigenBase< class ::Eigen::Matrix< float, 4, 4, 0, 4, 4 > > > > class_68b5275406765628b7d7a60ef672e48d("_DenseCoeffsBase_68b5275406765628b7d7a60ef672e48d", "", boost::python::no_init);
     class_68b5275406765628b7d7a60ef672e48d.def("row_index_by_outer_inner", method_pointer_2fb19dd153745970bbf2b4a066b73c27, "");
     class_68b5275406765628b7d7a60ef672e48d.def("col_index_by_outer_inner", method_pointer_8d1890d4a7d35490b63a9ea25ec59a6b, "");
@@ -32,12 +27,7 @@ void wrapper_68b5275406765628b7d7a60ef672e48d()
     class_68b5275406765628b7d7a60ef672e48d.def("coeff_by_outer_inner", method_pointer_62534c920a4b531c88ccfe97eff76d90, boost::python::return_value_policy< boost::python::return_by_value >(), "");
     class_68b5275406765628b7d7a60ef672e48d.def("__call__", method_pointer_5de0bc228bfe5d1d9273905a14f8cfb8, boost::python::return_value_policy< boost::python::return_by_value >(), "");
     class_68b5275406765628b7d7a60ef672e48d.def("coeff", method_pointer_304bfa05415b5bd59eef73db3d3e72d1, boost::python::return_value_policy< boost::python::return_by_value >(), "");
-    class_68b5275406765628b7d7a60ef672e48d.def("__getitem__", method_pointer_663886ea1d9058a1b32f7d3898a069af, boost::python::return_value_policy< boost::python::return_by_value >(), "");
     class_68b5275406765628b7d7a60ef672e48d.def("__call__", method_pointer_3bd84e369bdc5b44839261e8cd7eefa3, boost::python::return_value_policy< boost::python::return_by_value >(), "");
-    class_68b5275406765628b7d7a60ef672e48d.def("x", method_pointer_dcdd4c0068555e04bed64c2e6f967ae3, boost::python::return_value_policy< boost::python::return_by_value >(), "");
-    class_68b5275406765628b7d7a60ef672e48d.def("y", method_pointer_818d991a1d115fb1a8e8ee38a3a594ee, boost::python::return_value_policy< boost::python::return_by_value >(), "");
-    class_68b5275406765628b7d7a60ef672e48d.def("z", method_pointer_4487b239d89057378c451966cf1ac763, boost::python::return_value_policy< boost::python::return_by_value >(), "");
-    class_68b5275406765628b7d7a60ef672e48d.def("w", method_pointer_2977eb42ff6359a0b389a472c94ab9b5, boost::python::return_value_policy< boost::python::return_by_value >(), "");
 
     if(std::is_class< autowig::HeldType< class ::Eigen::DenseCoeffsBase< class ::Eigen::Matrix< float, 4, 4, 0, 4, 4 >, 0 > > >::value)
     {

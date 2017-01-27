@@ -3,26 +3,16 @@
 
 namespace autowig
 {
-    void method_decorator_25970ce1bc1b54cdb583f2b9bc095e02(class ::Eigen::DenseCoeffsBase< class ::Eigen::Matrix< float, 1, -1, 1, 1, -1 >, 1 > & instance, long int  param_in_0, long int  param_in_1, const float  & param_out)
-    { instance.coeffRef(param_in_0, param_in_1) = param_out; }
-    void method_decorator_4192cc93a4365abe9555f5cbeb0a36d7(class ::Eigen::DenseCoeffsBase< class ::Eigen::Matrix< float, 1, -1, 1, 1, -1 >, 1 > & instance, long int  param_in_0, long int  param_in_1, const float  & param_out)
-    { instance.coeffRefByOuterInner(param_in_0, param_in_1) = param_out; }
-    void method_decorator_3f594ef3d01651ed8f0239579d76d592(class ::Eigen::DenseCoeffsBase< class ::Eigen::Matrix< float, 1, -1, 1, 1, -1 >, 1 > & instance, long int  param_in_0, long int  param_in_1, const float  & param_out)
-    { instance.operator()(param_in_0, param_in_1) = param_out; }
-    void method_decorator_06ed4b8c43a75647a56df8610547069f(class ::Eigen::DenseCoeffsBase< class ::Eigen::Matrix< float, 1, -1, 1, 1, -1 >, 1 > & instance, long int  param_in_0, const float  & param_out)
-    { instance.coeffRef(param_in_0) = param_out; }
-    void method_decorator_57a7b46550215933a66d5a02c999fecd(class ::Eigen::DenseCoeffsBase< class ::Eigen::Matrix< float, 1, -1, 1, 1, -1 >, 1 > & instance, long int  param_in_0, const float  & param_out)
-    { instance.operator[](param_in_0) = param_out; }
-    void method_decorator_60c7795fa0f655c295b45bb6bcb40e36(class ::Eigen::DenseCoeffsBase< class ::Eigen::Matrix< float, 1, -1, 1, 1, -1 >, 1 > & instance, long int  param_in_0, const float  & param_out)
-    { instance.operator()(param_in_0) = param_out; }
-    void method_decorator_49cc68b0c71c54e497d6b55dda723fdf(class ::Eigen::DenseCoeffsBase< class ::Eigen::Matrix< float, 1, -1, 1, 1, -1 >, 1 > & instance, const float  & param_out)
-    { instance.x() = param_out; }
-    void method_decorator_c01fdba06e5c51edb660d284b1265fcd(class ::Eigen::DenseCoeffsBase< class ::Eigen::Matrix< float, 1, -1, 1, 1, -1 >, 1 > & instance, const float  & param_out)
-    { instance.y() = param_out; }
-    void method_decorator_edff52844dac5472985e56e64d475763(class ::Eigen::DenseCoeffsBase< class ::Eigen::Matrix< float, 1, -1, 1, 1, -1 >, 1 > & instance, const float  & param_out)
-    { instance.z() = param_out; }
-    void method_decorator_e1db930c5473512199a96bdcb6219a90(class ::Eigen::DenseCoeffsBase< class ::Eigen::Matrix< float, 1, -1, 1, 1, -1 >, 1 > & instance, const float  & param_out)
-    { instance.w() = param_out; }
+    void method_decorator_25970ce1bc1b54cdb583f2b9bc095e02(class ::Eigen::DenseCoeffsBase< class ::Eigen::Matrix< float, 1, -1, 1, 1, -1 >, 1 > & instance, long int  param_in_0, long int  param_in_1, const float  & param_out)     { instance.coeffRef(param_in_0, param_in_1) = param_out; }
+    void method_decorator_4192cc93a4365abe9555f5cbeb0a36d7(class ::Eigen::DenseCoeffsBase< class ::Eigen::Matrix< float, 1, -1, 1, 1, -1 >, 1 > & instance, long int  param_in_0, long int  param_in_1, const float  & param_out)     { instance.coeffRefByOuterInner(param_in_0, param_in_1) = param_out; }
+    void method_decorator_3f594ef3d01651ed8f0239579d76d592(class ::Eigen::DenseCoeffsBase< class ::Eigen::Matrix< float, 1, -1, 1, 1, -1 >, 1 > & instance, long int  param_in_0, long int  param_in_1, const float  & param_out)     { instance.operator()(param_in_0, param_in_1) = param_out; }
+    void method_decorator_06ed4b8c43a75647a56df8610547069f(class ::Eigen::DenseCoeffsBase< class ::Eigen::Matrix< float, 1, -1, 1, 1, -1 >, 1 > & instance, long int  param_in_0, const float  & param_out)     { instance.coeffRef(param_in_0) = param_out; }
+    void method_decorator_57a7b46550215933a66d5a02c999fecd(class ::Eigen::DenseCoeffsBase< class ::Eigen::Matrix< float, 1, -1, 1, 1, -1 >, 1 > & instance, long int  param_in_0, const float  & param_out)     { instance.operator[](param_in_0) = param_out; }
+    void method_decorator_60c7795fa0f655c295b45bb6bcb40e36(class ::Eigen::DenseCoeffsBase< class ::Eigen::Matrix< float, 1, -1, 1, 1, -1 >, 1 > & instance, long int  param_in_0, const float  & param_out)     { instance.operator()(param_in_0) = param_out; }
+    void method_decorator_49cc68b0c71c54e497d6b55dda723fdf(class ::Eigen::DenseCoeffsBase< class ::Eigen::Matrix< float, 1, -1, 1, 1, -1 >, 1 > & instance, const float  & param_out)     { instance.x() = param_out; }
+    void method_decorator_c01fdba06e5c51edb660d284b1265fcd(class ::Eigen::DenseCoeffsBase< class ::Eigen::Matrix< float, 1, -1, 1, 1, -1 >, 1 > & instance, const float  & param_out)     { instance.y() = param_out; }
+    void method_decorator_edff52844dac5472985e56e64d475763(class ::Eigen::DenseCoeffsBase< class ::Eigen::Matrix< float, 1, -1, 1, 1, -1 >, 1 > & instance, const float  & param_out)     { instance.z() = param_out; }
+    void method_decorator_e1db930c5473512199a96bdcb6219a90(class ::Eigen::DenseCoeffsBase< class ::Eigen::Matrix< float, 1, -1, 1, 1, -1 >, 1 > & instance, const float  & param_out)     { instance.w() = param_out; }
 }
 
 

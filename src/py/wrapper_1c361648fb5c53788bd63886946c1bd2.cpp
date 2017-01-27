@@ -3,14 +3,10 @@
 
 namespace autowig
 {
-    void method_decorator_d39fb559c11e5a1a9dd8246152d11a9d(class ::Eigen::MatrixBase< class ::Eigen::Matrix< struct ::std::complex< double >, 2, 1, 0, 2, 1 > > & instance, class ::Eigen::Matrix< struct ::std::complex< double >, 2, 1, 0, 2, 1 >  & param_out)
-    { instance.setIdentity() = param_out; }
-    void method_decorator_be77c31fd76653d5b14714c8f7ec63cf(class ::Eigen::MatrixBase< class ::Eigen::Matrix< struct ::std::complex< double >, 2, 1, 0, 2, 1 > > & instance, long int  param_in_0, long int  param_in_1, class ::Eigen::Matrix< struct ::std::complex< double >, 2, 1, 0, 2, 1 >  & param_out)
-    { instance.setIdentity(param_in_0, param_in_1) = param_out; }
-    void method_decorator_4490956d19595cba81f1be075f3df7bb(class ::Eigen::MatrixBase< class ::Eigen::Matrix< struct ::std::complex< double >, 2, 1, 0, 2, 1 > > & instance, class ::Eigen::Matrix< struct ::std::complex< double >, 2, 1, 0, 2, 1 >  & param_out)
-    { instance.forceAlignedAccess() = param_out; }
-    void method_decorator_c490d979b7dc56b7ba1aceccc8a46639(class ::Eigen::MatrixBase< class ::Eigen::Matrix< struct ::std::complex< double >, 2, 1, 0, 2, 1 > > & instance, class ::Eigen::MatrixBase< class ::Eigen::Matrix< struct ::std::complex< double >, 2, 1, 0, 2, 1 > >  & param_out)
-    { instance.matrix() = param_out; }
+    void method_decorator_d39fb559c11e5a1a9dd8246152d11a9d(class ::Eigen::MatrixBase< class ::Eigen::Matrix< struct ::std::complex< double >, 2, 1, 0, 2, 1 > > & instance, class ::Eigen::Matrix< struct ::std::complex< double >, 2, 1, 0, 2, 1 >  & param_out)     { instance.setIdentity() = param_out; }
+    void method_decorator_be77c31fd76653d5b14714c8f7ec63cf(class ::Eigen::MatrixBase< class ::Eigen::Matrix< struct ::std::complex< double >, 2, 1, 0, 2, 1 > > & instance, long int  param_in_0, long int  param_in_1, class ::Eigen::Matrix< struct ::std::complex< double >, 2, 1, 0, 2, 1 >  & param_out)     { instance.setIdentity(param_in_0, param_in_1) = param_out; }
+    void method_decorator_4490956d19595cba81f1be075f3df7bb(class ::Eigen::MatrixBase< class ::Eigen::Matrix< struct ::std::complex< double >, 2, 1, 0, 2, 1 > > & instance, class ::Eigen::Matrix< struct ::std::complex< double >, 2, 1, 0, 2, 1 >  & param_out)     { instance.forceAlignedAccess() = param_out; }
+    void method_decorator_c490d979b7dc56b7ba1aceccc8a46639(class ::Eigen::MatrixBase< class ::Eigen::Matrix< struct ::std::complex< double >, 2, 1, 0, 2, 1 > > & instance, class ::Eigen::MatrixBase< class ::Eigen::Matrix< struct ::std::complex< double >, 2, 1, 0, 2, 1 > >  & param_out)     { instance.matrix() = param_out; }
 }
 
 
@@ -45,9 +41,7 @@ void wrapper_1c361648fb5c53788bd63886946c1bd2()
     class ::Eigen::MatrixBase< class ::Eigen::Matrix< struct ::std::complex< double >, 2, 1, 0, 2, 1 > >  & (::Eigen::MatrixBase< ::Eigen::Matrix< ::std::complex< double >, 2, 1, 0, 2, 1 > >::*method_pointer_c490d979b7dc56b7ba1aceccc8a46639)() = &::Eigen::MatrixBase< class ::Eigen::Matrix< struct ::std::complex< double >, 2, 1, 0, 2, 1 > >::matrix;
     class ::Eigen::MatrixBase< class ::Eigen::Matrix< struct ::std::complex< double >, 2, 1, 0, 2, 1 > >  const & (::Eigen::MatrixBase< ::Eigen::Matrix< ::std::complex< double >, 2, 1, 0, 2, 1 > >::*method_pointer_4e8b5993d8ec58ab91a11410af47b7b3)() const = &::Eigen::MatrixBase< class ::Eigen::Matrix< struct ::std::complex< double >, 2, 1, 0, 2, 1 > >::matrix;
     struct ::std::complex< double >  (::Eigen::MatrixBase< ::Eigen::Matrix< ::std::complex< double >, 2, 1, 0, 2, 1 > >::*method_pointer_a5c634c72c6e530c9f4da5649d77d5c1)() const = &::Eigen::MatrixBase< class ::Eigen::Matrix< struct ::std::complex< double >, 2, 1, 0, 2, 1 > >::determinant;
-    class ::Eigen::Matrix< struct ::std::complex< double >, 1, 1, 0, 1, 1 >  (::Eigen::MatrixBase< ::Eigen::Matrix< ::std::complex< double >, 2, 1, 0, 2, 1 > >::*method_pointer_0c673573c1a8569c953344d96120f86d)() const = &::Eigen::MatrixBase< class ::Eigen::Matrix< struct ::std::complex< double >, 2, 1, 0, 2, 1 > >::eigenvalues;
     class ::Eigen::Matrix< struct ::std::complex< double >, 2, 1, 0, 2, 1 >  (::Eigen::MatrixBase< ::Eigen::Matrix< ::std::complex< double >, 2, 1, 0, 2, 1 > >::*method_pointer_a063e85726b4503895db8e1b6b003310)() const = &::Eigen::MatrixBase< class ::Eigen::Matrix< struct ::std::complex< double >, 2, 1, 0, 2, 1 > >::unitOrthogonal;
-    class ::Eigen::Matrix< struct ::std::complex< double >, 3, 1, 0, 3, 1 >  (::Eigen::MatrixBase< ::Eigen::Matrix< ::std::complex< double >, 2, 1, 0, 2, 1 > >::*method_pointer_ff019b834aea51f79eaf22a773ce080f)(long int , long int , long int ) const = &::Eigen::MatrixBase< class ::Eigen::Matrix< struct ::std::complex< double >, 2, 1, 0, 2, 1 > >::eulerAngles;
     void  (::Eigen::MatrixBase< ::Eigen::Matrix< ::std::complex< double >, 2, 1, 0, 2, 1 > >::*method_pointer_4a6397fb54875c98a6324d274772e52e)(struct ::std::complex< double >  &, double  &) = &::Eigen::MatrixBase< class ::Eigen::Matrix< struct ::std::complex< double >, 2, 1, 0, 2, 1 > >::makeHouseholderInPlace;
     boost::python::class_< class ::Eigen::MatrixBase< class ::Eigen::Matrix< struct ::std::complex< double >, 2, 1, 0, 2, 1 > >, autowig::HeldType< class ::Eigen::MatrixBase< class ::Eigen::Matrix< struct ::std::complex< double >, 2, 1, 0, 2, 1 > > >, boost::python::bases< class ::Eigen::DenseBase< class ::Eigen::Matrix< struct ::std::complex< double >, 2, 1, 0, 2, 1 > > > > class_1c361648fb5c53788bd63886946c1bd2("_MatrixBase_1c361648fb5c53788bd63886946c1bd2", "", boost::python::no_init);
     class_1c361648fb5c53788bd63886946c1bd2.def("diagonal_size", method_pointer_7149f9d76f3a5d9bae852e8af8cc3c4a, "");
@@ -78,9 +72,7 @@ void wrapper_1c361648fb5c53788bd63886946c1bd2()
     class_1c361648fb5c53788bd63886946c1bd2.def("matrix", autowig::method_decorator_c490d979b7dc56b7ba1aceccc8a46639);
     class_1c361648fb5c53788bd63886946c1bd2.def("matrix", method_pointer_4e8b5993d8ec58ab91a11410af47b7b3, boost::python::return_value_policy< boost::python::return_by_value >(), "");
     class_1c361648fb5c53788bd63886946c1bd2.def("determinant", method_pointer_a5c634c72c6e530c9f4da5649d77d5c1, "");
-    class_1c361648fb5c53788bd63886946c1bd2.def("eigenvalues", method_pointer_0c673573c1a8569c953344d96120f86d, "");
     class_1c361648fb5c53788bd63886946c1bd2.def("unit_orthogonal", method_pointer_a063e85726b4503895db8e1b6b003310, "");
-    class_1c361648fb5c53788bd63886946c1bd2.def("euler_angles", method_pointer_ff019b834aea51f79eaf22a773ce080f, "");
     class_1c361648fb5c53788bd63886946c1bd2.def("make_householder_in_place", method_pointer_4a6397fb54875c98a6324d274772e52e, "");
 
     if(std::is_class< autowig::HeldType< class ::Eigen::MatrixBase< class ::Eigen::Matrix< struct ::std::complex< double >, 2, 1, 0, 2, 1 > > > >::value)

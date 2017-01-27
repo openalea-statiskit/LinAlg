@@ -16,6 +16,10 @@ void wrapper_182fff2ad6d65df28fe454e367a101e8()
     long int  (::Eigen::Matrix< double, 3, 1, 0, 3, 1 >::*method_pointer_16bb8f7d9a8e53ddabe2cfd716ef4f81)() const = &::Eigen::Matrix< double, 3, 1, 0, 3, 1 >::innerStride;
     long int  (::Eigen::Matrix< double, 3, 1, 0, 3, 1 >::*method_pointer_8294c66699e5553fae7572e2e026dce7)() const = &::Eigen::Matrix< double, 3, 1, 0, 3, 1 >::outerStride;
     boost::python::class_< class ::Eigen::Matrix< double, 3, 1, 0, 3, 1 >, autowig::HeldType< class ::Eigen::Matrix< double, 3, 1, 0, 3, 1 > >, boost::python::bases< class ::Eigen::PlainObjectBase< class ::Eigen::Matrix< double, 3, 1, 0, 3, 1 > > > > class_182fff2ad6d65df28fe454e367a101e8("_Matrix_182fff2ad6d65df28fe454e367a101e8", "", boost::python::no_init);
+    class_182fff2ad6d65df28fe454e367a101e8.def(boost::python::init<  >(""));
+    class_182fff2ad6d65df28fe454e367a101e8.def(boost::python::init< struct ::Eigen::internal::constructor_without_unaligned_array_assert  >(""));
+    class_182fff2ad6d65df28fe454e367a101e8.def(boost::python::init< double  const &, double  const &, double  const & >(""));
+    class_182fff2ad6d65df28fe454e367a101e8.def(boost::python::init< class ::Eigen::Matrix< double, 3, 1, 0, 3, 1 >  const & >(""));
     class_182fff2ad6d65df28fe454e367a101e8.def("inner_stride", method_pointer_16bb8f7d9a8e53ddabe2cfd716ef4f81, "");
     class_182fff2ad6d65df28fe454e367a101e8.def("outer_stride", method_pointer_8294c66699e5553fae7572e2e026dce7, "");
 

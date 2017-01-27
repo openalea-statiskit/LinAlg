@@ -3,26 +3,16 @@
 
 namespace autowig
 {
-    void method_decorator_52c05bfdfcb859b2a2fdffdfc7994721(class ::Eigen::DenseCoeffsBase< class ::Eigen::Matrix< struct ::std::complex< double >, 1, 2, 1, 1, 2 >, 1 > & instance, long int  param_in_0, long int  param_in_1, struct ::std::complex< double >  & param_out)
-    { instance.coeffRef(param_in_0, param_in_1) = param_out; }
-    void method_decorator_c8d0c724089c506f8e3d1b60aae172ee(class ::Eigen::DenseCoeffsBase< class ::Eigen::Matrix< struct ::std::complex< double >, 1, 2, 1, 1, 2 >, 1 > & instance, long int  param_in_0, long int  param_in_1, struct ::std::complex< double >  & param_out)
-    { instance.coeffRefByOuterInner(param_in_0, param_in_1) = param_out; }
-    void method_decorator_e6be5053731d5d15bab3744b49423f02(class ::Eigen::DenseCoeffsBase< class ::Eigen::Matrix< struct ::std::complex< double >, 1, 2, 1, 1, 2 >, 1 > & instance, long int  param_in_0, long int  param_in_1, struct ::std::complex< double >  & param_out)
-    { instance.operator()(param_in_0, param_in_1) = param_out; }
-    void method_decorator_2859fc67050f5f4abf7fe6d49e82d38a(class ::Eigen::DenseCoeffsBase< class ::Eigen::Matrix< struct ::std::complex< double >, 1, 2, 1, 1, 2 >, 1 > & instance, long int  param_in_0, struct ::std::complex< double >  & param_out)
-    { instance.coeffRef(param_in_0) = param_out; }
-    void method_decorator_3298c1db1969592e90d6adb9766c0ffa(class ::Eigen::DenseCoeffsBase< class ::Eigen::Matrix< struct ::std::complex< double >, 1, 2, 1, 1, 2 >, 1 > & instance, long int  param_in_0, struct ::std::complex< double >  & param_out)
-    { instance.operator[](param_in_0) = param_out; }
-    void method_decorator_3ca8aaefe3445ddba2254b3b494acc00(class ::Eigen::DenseCoeffsBase< class ::Eigen::Matrix< struct ::std::complex< double >, 1, 2, 1, 1, 2 >, 1 > & instance, long int  param_in_0, struct ::std::complex< double >  & param_out)
-    { instance.operator()(param_in_0) = param_out; }
-    void method_decorator_11039d811c5b577788ee92d5fd043f46(class ::Eigen::DenseCoeffsBase< class ::Eigen::Matrix< struct ::std::complex< double >, 1, 2, 1, 1, 2 >, 1 > & instance, struct ::std::complex< double >  & param_out)
-    { instance.x() = param_out; }
-    void method_decorator_28d70cfb9fd05b1bae9666644e32690f(class ::Eigen::DenseCoeffsBase< class ::Eigen::Matrix< struct ::std::complex< double >, 1, 2, 1, 1, 2 >, 1 > & instance, struct ::std::complex< double >  & param_out)
-    { instance.y() = param_out; }
-    void method_decorator_541e7311a9a25a9fb406341f22b9464f(class ::Eigen::DenseCoeffsBase< class ::Eigen::Matrix< struct ::std::complex< double >, 1, 2, 1, 1, 2 >, 1 > & instance, struct ::std::complex< double >  & param_out)
-    { instance.z() = param_out; }
-    void method_decorator_6bda015149355c3989954314d30d9751(class ::Eigen::DenseCoeffsBase< class ::Eigen::Matrix< struct ::std::complex< double >, 1, 2, 1, 1, 2 >, 1 > & instance, struct ::std::complex< double >  & param_out)
-    { instance.w() = param_out; }
+    void method_decorator_52c05bfdfcb859b2a2fdffdfc7994721(class ::Eigen::DenseCoeffsBase< class ::Eigen::Matrix< struct ::std::complex< double >, 1, 2, 1, 1, 2 >, 1 > & instance, long int  param_in_0, long int  param_in_1, struct ::std::complex< double >  & param_out)     { instance.coeffRef(param_in_0, param_in_1) = param_out; }
+    void method_decorator_c8d0c724089c506f8e3d1b60aae172ee(class ::Eigen::DenseCoeffsBase< class ::Eigen::Matrix< struct ::std::complex< double >, 1, 2, 1, 1, 2 >, 1 > & instance, long int  param_in_0, long int  param_in_1, struct ::std::complex< double >  & param_out)     { instance.coeffRefByOuterInner(param_in_0, param_in_1) = param_out; }
+    void method_decorator_e6be5053731d5d15bab3744b49423f02(class ::Eigen::DenseCoeffsBase< class ::Eigen::Matrix< struct ::std::complex< double >, 1, 2, 1, 1, 2 >, 1 > & instance, long int  param_in_0, long int  param_in_1, struct ::std::complex< double >  & param_out)     { instance.operator()(param_in_0, param_in_1) = param_out; }
+    void method_decorator_2859fc67050f5f4abf7fe6d49e82d38a(class ::Eigen::DenseCoeffsBase< class ::Eigen::Matrix< struct ::std::complex< double >, 1, 2, 1, 1, 2 >, 1 > & instance, long int  param_in_0, struct ::std::complex< double >  & param_out)     { instance.coeffRef(param_in_0) = param_out; }
+    void method_decorator_3298c1db1969592e90d6adb9766c0ffa(class ::Eigen::DenseCoeffsBase< class ::Eigen::Matrix< struct ::std::complex< double >, 1, 2, 1, 1, 2 >, 1 > & instance, long int  param_in_0, struct ::std::complex< double >  & param_out)     { instance.operator[](param_in_0) = param_out; }
+    void method_decorator_3ca8aaefe3445ddba2254b3b494acc00(class ::Eigen::DenseCoeffsBase< class ::Eigen::Matrix< struct ::std::complex< double >, 1, 2, 1, 1, 2 >, 1 > & instance, long int  param_in_0, struct ::std::complex< double >  & param_out)     { instance.operator()(param_in_0) = param_out; }
+    void method_decorator_11039d811c5b577788ee92d5fd043f46(class ::Eigen::DenseCoeffsBase< class ::Eigen::Matrix< struct ::std::complex< double >, 1, 2, 1, 1, 2 >, 1 > & instance, struct ::std::complex< double >  & param_out)     { instance.x() = param_out; }
+    void method_decorator_28d70cfb9fd05b1bae9666644e32690f(class ::Eigen::DenseCoeffsBase< class ::Eigen::Matrix< struct ::std::complex< double >, 1, 2, 1, 1, 2 >, 1 > & instance, struct ::std::complex< double >  & param_out)     { instance.y() = param_out; }
+// TODO     void method_decorator_541e7311a9a25a9fb406341f22b9464f(class ::Eigen::DenseCoeffsBase< class ::Eigen::Matrix< struct ::std::complex< double >, 1, 2, 1, 1, 2 >, 1 > & instance, struct ::std::complex< double >  & param_out)     { instance.z() = param_out; }
+// TODO     void method_decorator_6bda015149355c3989954314d30d9751(class ::Eigen::DenseCoeffsBase< class ::Eigen::Matrix< struct ::std::complex< double >, 1, 2, 1, 1, 2 >, 1 > & instance, struct ::std::complex< double >  & param_out)     { instance.w() = param_out; }
 }
 
 
@@ -41,8 +31,8 @@ void wrapper_1a1807e537f05c9894a727fb8fde6996()
     struct ::std::complex< double >  & (::Eigen::DenseCoeffsBase< ::Eigen::Matrix< ::std::complex< double >, 1, 2, 1, 1, 2 >, 1 >::*method_pointer_3ca8aaefe3445ddba2254b3b494acc00)(long int ) = &::Eigen::DenseCoeffsBase< class ::Eigen::Matrix< struct ::std::complex< double >, 1, 2, 1, 1, 2 >, 1 >::operator();
     struct ::std::complex< double >  & (::Eigen::DenseCoeffsBase< ::Eigen::Matrix< ::std::complex< double >, 1, 2, 1, 1, 2 >, 1 >::*method_pointer_11039d811c5b577788ee92d5fd043f46)() = &::Eigen::DenseCoeffsBase< class ::Eigen::Matrix< struct ::std::complex< double >, 1, 2, 1, 1, 2 >, 1 >::x;
     struct ::std::complex< double >  & (::Eigen::DenseCoeffsBase< ::Eigen::Matrix< ::std::complex< double >, 1, 2, 1, 1, 2 >, 1 >::*method_pointer_28d70cfb9fd05b1bae9666644e32690f)() = &::Eigen::DenseCoeffsBase< class ::Eigen::Matrix< struct ::std::complex< double >, 1, 2, 1, 1, 2 >, 1 >::y;
-    struct ::std::complex< double >  & (::Eigen::DenseCoeffsBase< ::Eigen::Matrix< ::std::complex< double >, 1, 2, 1, 1, 2 >, 1 >::*method_pointer_541e7311a9a25a9fb406341f22b9464f)() = &::Eigen::DenseCoeffsBase< class ::Eigen::Matrix< struct ::std::complex< double >, 1, 2, 1, 1, 2 >, 1 >::z;
-    struct ::std::complex< double >  & (::Eigen::DenseCoeffsBase< ::Eigen::Matrix< ::std::complex< double >, 1, 2, 1, 1, 2 >, 1 >::*method_pointer_6bda015149355c3989954314d30d9751)() = &::Eigen::DenseCoeffsBase< class ::Eigen::Matrix< struct ::std::complex< double >, 1, 2, 1, 1, 2 >, 1 >::w;
+// TODO // TODO     struct ::std::complex< double >  & (::Eigen::DenseCoeffsBase< ::Eigen::Matrix< ::std::complex< double >, 1, 2, 1, 1, 2 >, 1 >::*method_pointer_541e7311a9a25a9fb406341f22b9464f)() = &::Eigen::DenseCoeffsBase< class ::Eigen::Matrix< struct ::std::complex< double >, 1, 2, 1, 1, 2 >, 1 >::z;
+// TODO // TODO     struct ::std::complex< double >  & (::Eigen::DenseCoeffsBase< ::Eigen::Matrix< ::std::complex< double >, 1, 2, 1, 1, 2 >, 1 >::*method_pointer_6bda015149355c3989954314d30d9751)() = &::Eigen::DenseCoeffsBase< class ::Eigen::Matrix< struct ::std::complex< double >, 1, 2, 1, 1, 2 >, 1 >::w;
     boost::python::class_< class ::Eigen::DenseCoeffsBase< class ::Eigen::Matrix< struct ::std::complex< double >, 1, 2, 1, 1, 2 >, 1 >, autowig::HeldType< class ::Eigen::DenseCoeffsBase< class ::Eigen::Matrix< struct ::std::complex< double >, 1, 2, 1, 1, 2 >, 1 > >, boost::python::bases< class ::Eigen::DenseCoeffsBase< class ::Eigen::Matrix< struct ::std::complex< double >, 1, 2, 1, 1, 2 >, 0 > > > class_1a1807e537f05c9894a727fb8fde6996("_DenseCoeffsBase_1a1807e537f05c9894a727fb8fde6996", "", boost::python::no_init);
     class_1a1807e537f05c9894a727fb8fde6996.def("coeff_ref", method_pointer_52c05bfdfcb859b2a2fdffdfc7994721, boost::python::return_internal_reference<>(), "");
     class_1a1807e537f05c9894a727fb8fde6996.def("coeff_ref", autowig::method_decorator_52c05bfdfcb859b2a2fdffdfc7994721);
@@ -60,10 +50,10 @@ void wrapper_1a1807e537f05c9894a727fb8fde6996()
     class_1a1807e537f05c9894a727fb8fde6996.def("x", autowig::method_decorator_11039d811c5b577788ee92d5fd043f46);
     class_1a1807e537f05c9894a727fb8fde6996.def("y", method_pointer_28d70cfb9fd05b1bae9666644e32690f, boost::python::return_internal_reference<>(), "");
     class_1a1807e537f05c9894a727fb8fde6996.def("y", autowig::method_decorator_28d70cfb9fd05b1bae9666644e32690f);
-    class_1a1807e537f05c9894a727fb8fde6996.def("z", method_pointer_541e7311a9a25a9fb406341f22b9464f, boost::python::return_internal_reference<>(), "");
-    class_1a1807e537f05c9894a727fb8fde6996.def("z", autowig::method_decorator_541e7311a9a25a9fb406341f22b9464f);
-    class_1a1807e537f05c9894a727fb8fde6996.def("w", method_pointer_6bda015149355c3989954314d30d9751, boost::python::return_internal_reference<>(), "");
-    class_1a1807e537f05c9894a727fb8fde6996.def("w", autowig::method_decorator_6bda015149355c3989954314d30d9751);
+// TODO // TODO     class_1a1807e537f05c9894a727fb8fde6996.def("z", method_pointer_541e7311a9a25a9fb406341f22b9464f, boost::python::return_internal_reference<>(), "");
+// TODO // TODO     class_1a1807e537f05c9894a727fb8fde6996.def("z", autowig::method_decorator_541e7311a9a25a9fb406341f22b9464f);
+// TODO // TODO     class_1a1807e537f05c9894a727fb8fde6996.def("w", method_pointer_6bda015149355c3989954314d30d9751, boost::python::return_internal_reference<>(), "");
+// TODO // TODO     class_1a1807e537f05c9894a727fb8fde6996.def("w", autowig::method_decorator_6bda015149355c3989954314d30d9751);
 
     if(std::is_class< autowig::HeldType< class ::Eigen::DenseCoeffsBase< class ::Eigen::Matrix< struct ::std::complex< double >, 1, 2, 1, 1, 2 >, 1 > > >::value)
     {

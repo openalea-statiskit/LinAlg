@@ -3,20 +3,13 @@
 
 namespace autowig
 {
-    void method_decorator_e87c0dcd14905582a49ed5231073d7b4(class ::Eigen::DenseBase< class ::Eigen::Matrix< int, 1, 4, 1, 1, 4 > > & instance, int  const & param_in_0, class ::Eigen::Matrix< int, 1, 4, 1, 1, 4 >  & param_out)
-    { instance.setConstant(param_in_0) = param_out; }
-    void method_decorator_1d49e07018205ecd85e78f127c29b629(class ::Eigen::DenseBase< class ::Eigen::Matrix< int, 1, 4, 1, 1, 4 > > & instance, long int  param_in_0, int  const & param_in_1, int  const & param_in_2, class ::Eigen::Matrix< int, 1, 4, 1, 1, 4 >  & param_out)
-    { instance.setLinSpaced(param_in_0, param_in_1, param_in_2) = param_out; }
-    void method_decorator_d46f6c231a245ce6b8f532d9f14331fc(class ::Eigen::DenseBase< class ::Eigen::Matrix< int, 1, 4, 1, 1, 4 > > & instance, int  const & param_in_0, int  const & param_in_1, class ::Eigen::Matrix< int, 1, 4, 1, 1, 4 >  & param_out)
-    { instance.setLinSpaced(param_in_0, param_in_1) = param_out; }
-    void method_decorator_44e6c421c9b15c1c9c1cfc35d225f810(class ::Eigen::DenseBase< class ::Eigen::Matrix< int, 1, 4, 1, 1, 4 > > & instance, class ::Eigen::Matrix< int, 1, 4, 1, 1, 4 >  & param_out)
-    { instance.setZero() = param_out; }
-    void method_decorator_f7610dbce21754379df7a18534ef7885(class ::Eigen::DenseBase< class ::Eigen::Matrix< int, 1, 4, 1, 1, 4 > > & instance, class ::Eigen::Matrix< int, 1, 4, 1, 1, 4 >  & param_out)
-    { instance.setOnes() = param_out; }
-    void method_decorator_c7cb5e5b050b5fa290d00c344ab3f42c(class ::Eigen::DenseBase< class ::Eigen::Matrix< int, 1, 4, 1, 1, 4 > > & instance, class ::Eigen::Matrix< int, 1, 4, 1, 1, 4 >  & param_out)
-    { instance.setRandom() = param_out; }
-    void method_decorator_4b8d5b9ec9055e1ba05937ad39836d8b(class ::Eigen::DenseBase< class ::Eigen::Matrix< int, 1, 4, 1, 1, 4 > > & instance, int  const & param_in_0, class ::Eigen::Matrix< int, 1, 4, 1, 1, 4 >  & param_out)
-    { instance.operator*=(param_in_0) = param_out; }
+    void method_decorator_e87c0dcd14905582a49ed5231073d7b4(class ::Eigen::DenseBase< class ::Eigen::Matrix< int, 1, 4, 1, 1, 4 > > & instance, int  const & param_in_0, class ::Eigen::Matrix< int, 1, 4, 1, 1, 4 >  & param_out)     { instance.setConstant(param_in_0) = param_out; }
+    void method_decorator_1d49e07018205ecd85e78f127c29b629(class ::Eigen::DenseBase< class ::Eigen::Matrix< int, 1, 4, 1, 1, 4 > > & instance, long int  param_in_0, int  const & param_in_1, int  const & param_in_2, class ::Eigen::Matrix< int, 1, 4, 1, 1, 4 >  & param_out)     { instance.setLinSpaced(param_in_0, param_in_1, param_in_2) = param_out; }
+    void method_decorator_d46f6c231a245ce6b8f532d9f14331fc(class ::Eigen::DenseBase< class ::Eigen::Matrix< int, 1, 4, 1, 1, 4 > > & instance, int  const & param_in_0, int  const & param_in_1, class ::Eigen::Matrix< int, 1, 4, 1, 1, 4 >  & param_out)     { instance.setLinSpaced(param_in_0, param_in_1) = param_out; }
+    void method_decorator_44e6c421c9b15c1c9c1cfc35d225f810(class ::Eigen::DenseBase< class ::Eigen::Matrix< int, 1, 4, 1, 1, 4 > > & instance, class ::Eigen::Matrix< int, 1, 4, 1, 1, 4 >  & param_out)     { instance.setZero() = param_out; }
+    void method_decorator_f7610dbce21754379df7a18534ef7885(class ::Eigen::DenseBase< class ::Eigen::Matrix< int, 1, 4, 1, 1, 4 > > & instance, class ::Eigen::Matrix< int, 1, 4, 1, 1, 4 >  & param_out)     { instance.setOnes() = param_out; }
+    void method_decorator_c7cb5e5b050b5fa290d00c344ab3f42c(class ::Eigen::DenseBase< class ::Eigen::Matrix< int, 1, 4, 1, 1, 4 > > & instance, class ::Eigen::Matrix< int, 1, 4, 1, 1, 4 >  & param_out)     { instance.setRandom() = param_out; }
+    void method_decorator_4b8d5b9ec9055e1ba05937ad39836d8b(class ::Eigen::DenseBase< class ::Eigen::Matrix< int, 1, 4, 1, 1, 4 > > & instance, int  const & param_in_0, class ::Eigen::Matrix< int, 1, 4, 1, 1, 4 >  & param_out)     { instance.operator*=(param_in_0) = param_out; }
 }
 
 
@@ -55,7 +48,6 @@ void wrapper_b7bad788af595c6d972d406665ff55d8()
     int  (::Eigen::DenseBase< ::Eigen::Matrix< int, 1, 4, 1, 1, 4 > >::*method_pointer_69af2f1e39ab56b3b0c93184bc7b825b)() const = &::Eigen::DenseBase< class ::Eigen::Matrix< int, 1, 4, 1, 1, 4 > >::prod;
     int  (::Eigen::DenseBase< ::Eigen::Matrix< int, 1, 4, 1, 1, 4 > >::*method_pointer_fd0b443ee93b5de4beaa2f0b8db0a742)() const = &::Eigen::DenseBase< class ::Eigen::Matrix< int, 1, 4, 1, 1, 4 > >::minCoeff;
     int  (::Eigen::DenseBase< ::Eigen::Matrix< int, 1, 4, 1, 1, 4 > >::*method_pointer_901c561c08c35c17bbe51563df1f9eab)() const = &::Eigen::DenseBase< class ::Eigen::Matrix< int, 1, 4, 1, 1, 4 > >::maxCoeff;
-    int  const & (::Eigen::DenseBase< ::Eigen::Matrix< int, 1, 4, 1, 1, 4 > >::*method_pointer_b735f9a2ef2d518e8e6e769f5c760036)() const = &::Eigen::DenseBase< class ::Eigen::Matrix< int, 1, 4, 1, 1, 4 > >::value;
     bool  (::Eigen::DenseBase< ::Eigen::Matrix< int, 1, 4, 1, 1, 4 > >::*method_pointer_4b827ca8099b5aee95cacbd3a25597cc)() const = &::Eigen::DenseBase< class ::Eigen::Matrix< int, 1, 4, 1, 1, 4 > >::all;
     bool  (::Eigen::DenseBase< ::Eigen::Matrix< int, 1, 4, 1, 1, 4 > >::*method_pointer_e78a951dae575fe39111bbb1720be069)() const = &::Eigen::DenseBase< class ::Eigen::Matrix< int, 1, 4, 1, 1, 4 > >::any;
     long int  (::Eigen::DenseBase< ::Eigen::Matrix< int, 1, 4, 1, 1, 4 > >::*method_pointer_2c217e430d7a5e689740a91bb7ffd5d1)() const = &::Eigen::DenseBase< class ::Eigen::Matrix< int, 1, 4, 1, 1, 4 > >::count;
@@ -96,7 +88,6 @@ void wrapper_b7bad788af595c6d972d406665ff55d8()
     class_b7bad788af595c6d972d406665ff55d8.def("prod", method_pointer_69af2f1e39ab56b3b0c93184bc7b825b, "");
     class_b7bad788af595c6d972d406665ff55d8.def("min_coeff", method_pointer_fd0b443ee93b5de4beaa2f0b8db0a742, "");
     class_b7bad788af595c6d972d406665ff55d8.def("max_coeff", method_pointer_901c561c08c35c17bbe51563df1f9eab, "");
-    class_b7bad788af595c6d972d406665ff55d8.def("value", method_pointer_b735f9a2ef2d518e8e6e769f5c760036, boost::python::return_value_policy< boost::python::return_by_value >(), "");
     class_b7bad788af595c6d972d406665ff55d8.def("all", method_pointer_4b827ca8099b5aee95cacbd3a25597cc, "");
     class_b7bad788af595c6d972d406665ff55d8.def("any", method_pointer_e78a951dae575fe39111bbb1720be069, "");
     class_b7bad788af595c6d972d406665ff55d8.def("count", method_pointer_2c217e430d7a5e689740a91bb7ffd5d1, "");
