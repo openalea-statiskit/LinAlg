@@ -42,12 +42,12 @@ requirements:
     - libboost
     - python
 
-test:
-  # source_files:
-  #   - test
-  # requires:
-  #   - libdev
-  #   - python-dev
-  #   - python-dbg
-  commands:
-    - python -c "import statiskit.linalg._linalg"
+# test:
+#   # source_files:
+#   #   - test
+#   # requires:
+#   #   - libdev
+#   #   - python-dev
+#   #   - python-dbg
+#   commands:
+#     - python -c "import statiskit.linalg._linalg"
