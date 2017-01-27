@@ -13,13 +13,8 @@ SOLVER = ['partialPivLu',
           'llt',
           'ldlt',
           'jacobiSvd']
-#SIZE = ['2', '3', '4', 'X']
-SIZE = ['X']
-ELT = ['d']
-#ELT = ['i', 'f', 'd', 'cf', 'cd']
-OBJ = ['Matrix', 'Vector', 'RowVector']
 
-from mako.template import Template
+OBJ = ['Matrix', 'Vector', 'RowVector']
 
 header = """\
 #ifndef STATISKIT_LINALG_EIGEN_H
