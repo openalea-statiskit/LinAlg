@@ -50,4 +50,4 @@ test:
   #   - python-dev
   #   - python-dbg
   commands:
-    - python -c "import statiskit.linalg.__linalg"
+    - python -c "import statiskit.linalg._linalg"
