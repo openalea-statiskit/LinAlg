@@ -36,9 +36,11 @@ requirements:
     - libstatiskit_linalg
     - python-dev
     - libboost
+    - python
   run:
     - libstatiskit_linalg
     - libboost
+    - python
 
 test:
   source_files:
