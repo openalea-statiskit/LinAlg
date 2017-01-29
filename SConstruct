@@ -38,6 +38,8 @@ header = """\
 #define eigen_assert(x) \
   if (!(x)) { throw (std::runtime_error("Eigen")); }
 
+#define EIGEN_DEFAULT_DENSE_INDEX_TYPE int
+
 #include <eigen3/Eigen/Dense>
 
 #if defined WIN32 || defined _WIN32 || defined __CYGWIN__
@@ -108,27 +110,28 @@ with open('src/cpp/Eigen.h', 'w') as filehandler:
     filehandler.write('\t\tSTATISKIT_LINALG_API VectorXd solve(const MatrixXd& A, const VectorXd& b, const solver_type& solver);\n')
     filehandler.write('\t\tSTATISKIT_LINALG_API MatrixXd solve(const MatrixXd& A, const MatrixXd& b, const solver_type& solver);\n')
     filehandler.write('\t}\n}\n\n#ifdef EIGEN_NO_STATIC_ASSERT\n\n')
-    for obj in OBJ:
-        typedef = ['double']
-        coef = 2 if obj == 'Matrix' else 1
-        if obj == 'RowVector':
-            typedef.extend(['1'])
-        typedef.extend(['Eigen::Dynamic'] * coef)
-        if obj == 'Vector':
-            typedef.extend(['1'])
-        filehandler.write('STATISKIT_LINALG_IMP template class STATISKIT_LINALG_API Eigen::Matrix< ' + ', '.join(typedef) + ' >;\n')
-        if obj == 'Matrix':
-            for solver in SOLVER:
-                if solver in ['llt', 'ldlt']:
-                    solver = solver.upper()
-                else:
-                    solver = solver[0].upper() + solver[1:]
-                    if solver.endswith('Svd'):
-                        solver = solver[:-3] + 'SVD'
-                    else:
-                        solver = solver[:-1] + solver[-1].upper()        
-                filehandler.write('STATISKIT_LINALG_IMP template class STATISKIT_LINALG_API Eigen::' + solver + '< Eigen::Matrix< ' + ', '.join(typedef) + ' > >;\n')
-    filehandler.write('\n\n#endif\n#endif')
+    # for obj in OBJ:
+    #     typedef = ['double']
+    #     coef = 2 if obj == 'Matrix' else 1
+    #     if obj == 'RowVector':
+    #         typedef.extend(['1'])
+    #     typedef.extend(['Eigen::Dynamic'] * coef)
+    #     if obj == 'Vector':
+    #         typedef.extend(['1'])
+    #     filehandler.write('STATISKIT_LINALG_IMP template class STATISKIT_LINALG_API Eigen::Matrix< ' + ', '.join(typedef) + ' >;\n')
+    #     if obj == 'Matrix':
+    #         for solver in SOLVER:
+    #             if solver in ['llt', 'ldlt']:
+    #                 solver = solver.upper()
+    #             else:
+    #                 solver = solver[0].upper() + solver[1:]
+    #                 if solver.endswith('Svd'):
+    #                     solver = solver[:-3] + 'SVD'
+    #                 else:
+    #                     solver = solver[:-1] + solver[-1].upper()        
+    #             filehandler.write('STATISKIT_LINALG_IMP template class STATISKIT_LINALG_API Eigen::' + solver + '< Eigen::Matrix< ' + ', '.join(typedef) + ' > >;\n')
+    filehandler.write('\n\n#endif')
+    filehandler.write('\n#endif')
 
 with open('src/cpp/Eigen.cpp', 'w') as filehandler:
     filehandler.write('#include "Eigen.h"\n\n')

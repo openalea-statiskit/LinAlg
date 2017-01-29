@@ -5,18 +5,29 @@ import pickle
 import itertools
 import subprocess
 
+%pdb
+
 asg = autowig.AbstractSemanticGraph()
 
 asg = autowig.parser(asg, [os.path.join(sys.prefix, 'include', 'statiskit', 'linalg', 'Eigen.h')],
                      ['-x', 'c++', '-std=c++11', '-ferror-limit=0', '-I' + os.path.join(sys.prefix, 'include')],
                      bootstrap=1)
+with open('parsed.pkl', 'w') as filehandler:
+    pickle.dump(asg, filehandler)
 
+with open('parsed.pkl', 'r') as filehandler:
+    asg = pickle.load(filehandler)
 if os.path.exists('controller.py'):
     from controller_Xd import ieigen_controller
     autowig.controller['linalg'] = ieigen_controller
     autowig.controller.plugin = 'linalg'
 asg = autowig.controller(asg)
 
+with open('controlled.pkl', 'w') as filehandler:
+    pickle.dump(asg, filehandler)
+    
+with open('controlled.pkl', 'r') as filehandler:
+    asg = pickle.load(filehandler)
 autowig.generator.plugin = 'boost_python'
 nodes = [typedef.qualified_type.unqualified_type for typedef in asg['::statiskit::linalg'].typedefs()]
 nodes = list(itertools.chain(*[node.bases(inherited=True) for node in nodes])) + nodes + asg['::statiskit::linalg'].declarations()
@@ -45,3 +56,5 @@ for i in range(11):
                                            src_dir='src')
     s = subprocess.Popen(['scons', 'py', '-j7', '-k', '--eigen-static-assert=yes'], stderr=subprocess.PIPE)
     out, err = s.communicate()
+
+#

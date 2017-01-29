@@ -12,6 +12,6 @@ void wrapper_623522582e05548395749eede420699c()
     boost::python::object module_fcf05ce9829d59fbac7dfcc9a3fbd7b4(boost::python::handle<  >(boost::python::borrowed(PyImport_AddModule(name_fcf05ce9829d59fbac7dfcc9a3fbd7b4.c_str()))));
     boost::python::scope().attr("linalg") = module_fcf05ce9829d59fbac7dfcc9a3fbd7b4;
     boost::python::scope scope_fcf05ce9829d59fbac7dfcc9a3fbd7b4 = module_fcf05ce9829d59fbac7dfcc9a3fbd7b4;
-    class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 >  (*function_pointer_623522582e05548395749eede420699c)(class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 >  const &, class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 >  const &, enum ::statiskit::linalg::solver_type  const &) = ::statiskit::linalg::solve;
+    ::statiskit::linalg::VectorXd  (*function_pointer_623522582e05548395749eede420699c)(::statiskit::linalg::MatrixXd  const &, ::statiskit::linalg::VectorXd  const &, enum ::statiskit::linalg::solver_type  const &) = ::statiskit::linalg::solve;
     boost::python::def("solve", function_pointer_623522582e05548395749eede420699c, "");
 }

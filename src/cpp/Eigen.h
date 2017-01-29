@@ -5,6 +5,8 @@
 #undef eigen_assert
 #define eigen_assert(x)   if (!(x)) { throw (std::runtime_error("Eigen")); }
 
+#define EIGEN_DEFAULT_DENSE_INDEX_TYPE int
+
 #include <eigen3/Eigen/Dense>
 
 #if defined WIN32 || defined _WIN32 || defined __CYGWIN__
@@ -74,17 +76,6 @@ namespace statiskit
 
 #ifdef EIGEN_NO_STATIC_ASSERT
 
-STATISKIT_LINALG_IMP template class STATISKIT_LINALG_API Eigen::Matrix< double, Eigen::Dynamic, Eigen::Dynamic >;
-STATISKIT_LINALG_IMP template class STATISKIT_LINALG_API Eigen::PartialPivLU< Eigen::Matrix< double, Eigen::Dynamic, Eigen::Dynamic > >;
-STATISKIT_LINALG_IMP template class STATISKIT_LINALG_API Eigen::FullPivLU< Eigen::Matrix< double, Eigen::Dynamic, Eigen::Dynamic > >;
-STATISKIT_LINALG_IMP template class STATISKIT_LINALG_API Eigen::HouseholderQR< Eigen::Matrix< double, Eigen::Dynamic, Eigen::Dynamic > >;
-STATISKIT_LINALG_IMP template class STATISKIT_LINALG_API Eigen::ColPivHouseholderQR< Eigen::Matrix< double, Eigen::Dynamic, Eigen::Dynamic > >;
-STATISKIT_LINALG_IMP template class STATISKIT_LINALG_API Eigen::FullPivHouseholderQR< Eigen::Matrix< double, Eigen::Dynamic, Eigen::Dynamic > >;
-STATISKIT_LINALG_IMP template class STATISKIT_LINALG_API Eigen::LLT< Eigen::Matrix< double, Eigen::Dynamic, Eigen::Dynamic > >;
-STATISKIT_LINALG_IMP template class STATISKIT_LINALG_API Eigen::LDLT< Eigen::Matrix< double, Eigen::Dynamic, Eigen::Dynamic > >;
-STATISKIT_LINALG_IMP template class STATISKIT_LINALG_API Eigen::JacobiSVD< Eigen::Matrix< double, Eigen::Dynamic, Eigen::Dynamic > >;
-STATISKIT_LINALG_IMP template class STATISKIT_LINALG_API Eigen::Matrix< double, Eigen::Dynamic, 1 >;
-STATISKIT_LINALG_IMP template class STATISKIT_LINALG_API Eigen::Matrix< double, 1, Eigen::Dynamic >;
 
 
 #endif
