@@ -42,7 +42,7 @@ setup(packages = packages.keys(),
       description = config['about']['brief'],
       long_description = long_description,
       license = config['license']['plugin'],
-      package_data = {package: [ "*.so", "*.dll", "*.lib", ".exp"] for package in packages},
+      package_data = {package: [ "*.so", "*.dll", "*.lib", "*.exp"] for package in packages},
       zip_safe = False
     )
 
