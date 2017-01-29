@@ -43,7 +43,7 @@ void wrapper_e3eac3c0866e52c2b8ebc04ab597d6d5()
     ::Eigen::DenseBase< class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > >::EvalReturnType  (::Eigen::DenseBase< ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > >::*method_pointer_ab35c515b4765ebf930eb9bae572e840)() const = &::Eigen::DenseBase< class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > >::eval;
     ::Eigen::DenseBase< class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > >::Scalar  (::Eigen::DenseBase< ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > >::*method_pointer_bb3fd042cda6581495fb71a6c393edf7)() const = &::Eigen::DenseBase< class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > >::sum;
     ::Eigen::DenseBase< class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > >::Scalar  (::Eigen::DenseBase< ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > >::*method_pointer_008b17e9886d53e98b7702bd19b7607b)() const = &::Eigen::DenseBase< class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > >::mean;
-    ::Eigen::DenseBase< class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > >::Scalar  (::Eigen::DenseBase< ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > >::*method_pointer_a653d4714fba5350aa35117be6720e98)() const = &::Eigen::DenseBase< class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > >::trace;
+    // ::Eigen::DenseBase< class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > >::Scalar  (::Eigen::DenseBase< ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > >::*method_pointer_a653d4714fba5350aa35117be6720e98)() const = &::Eigen::DenseBase< class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > >::trace;
     ::Eigen::DenseBase< class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > >::Scalar  (::Eigen::DenseBase< ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > >::*method_pointer_fa9ea5ff8881572893fa47a94bd80862)() const = &::Eigen::DenseBase< class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > >::prod;
     double  (::Eigen::DenseBase< ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > >::*method_pointer_d7c18cd844ba5120a0a2859d73133cce)() const = &::Eigen::DenseBase< class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > >::minCoeff;
     double  (::Eigen::DenseBase< ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > >::*method_pointer_34f35dfa71c756c885b35f9e1ae4fd28)() const = &::Eigen::DenseBase< class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > >::maxCoeff;
@@ -83,7 +83,7 @@ void wrapper_e3eac3c0866e52c2b8ebc04ab597d6d5()
     class_e3eac3c0866e52c2b8ebc04ab597d6d5.def("eval", method_pointer_ab35c515b4765ebf930eb9bae572e840, boost::python::return_value_policy< boost::python::return_by_value >(), "");
     class_e3eac3c0866e52c2b8ebc04ab597d6d5.def("sum", method_pointer_bb3fd042cda6581495fb71a6c393edf7, "");
     class_e3eac3c0866e52c2b8ebc04ab597d6d5.def("mean", method_pointer_008b17e9886d53e98b7702bd19b7607b, "");
-    class_e3eac3c0866e52c2b8ebc04ab597d6d5.def("trace", method_pointer_a653d4714fba5350aa35117be6720e98, "");
+    // class_e3eac3c0866e52c2b8ebc04ab597d6d5.def("trace", method_pointer_a653d4714fba5350aa35117be6720e98, "");
     class_e3eac3c0866e52c2b8ebc04ab597d6d5.def("prod", method_pointer_fa9ea5ff8881572893fa47a94bd80862, "");
     class_e3eac3c0866e52c2b8ebc04ab597d6d5.def("min_coeff", method_pointer_d7c18cd844ba5120a0a2859d73133cce, "");
     class_e3eac3c0866e52c2b8ebc04ab597d6d5.def("max_coeff", method_pointer_34f35dfa71c756c885b35f9e1ae4fd28, "");
