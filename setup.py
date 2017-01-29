@@ -1,16 +1,16 @@
 ##################################################################################
 #                                                                                #
-# AutoWIG: Automatic Wrapper and Interface Generator                             #
+# PyClangLite: Python bindings for Clang                                         #
 #                                                                                #
-# Homepage: http://autowig.readthedocs.io                                        #
+# Homepage: http://pyclanglite.readthedocs.io/                                   #
 #                                                                                #
 # Copyright (c) 2016 Pierre Fernique                                             #
 #                                                                                #
-# This software is distributed under the CeCILL license. You should have       #
+# This software is distributed under the CeCILL-C license. You should have       #
 # received a copy of the legalcode along with this work. If not, see             #
-# <http://www.cecill.info/licences/Licence_CeCILL_V2.1-en.html>.                 #
+# <http://www.cecill.info/licences/Licence_CeCILL-C_V1-en.html>.                 #
 #                                                                                #
-# File authors: Pierre Fernique <pfernique@gmail.com> (19)                       #
+# File authors: Pierre Fernique <pfernique@gmail.com> (9)                        #
 #                                                                                #
 ##################################################################################
 
@@ -21,20 +21,29 @@ packages = {"" : "src" + os.sep + "py"}
 for package in find_packages("src" + os.sep + "py"):
     packages[package] = "src" + os.sep + "py"
 
-from pkg.metadata import load_metadata
-metadata = load_metadata('.')
+try:
+    from pkg.config import load_config
+    config = load_config('.')
+except:
+    import os
+    import yaml
+    with open('.' + os.sep + '.pkg.yml', 'r') as filehandler:
+        config = yaml.load(filehandler.read())
+
+with open('README.rst', 'r') as filehandler:
+    long_description = filehandler.read()
 
 setup(packages = packages.keys(),
       package_dir = {"" : "src" + os.sep + "py"},
-      name = metadata.name,
-      version = metadata.version,
-      author = metadata.authors,
-      author_email = metadata.email,
-      description = metadata.description,
-      long_description = metadata.long_description,
-      license = metadata.license,
+      name = config['about']['name'],
+      version = config['about']['version'],
+      author = config['about']['authors'],
+      author_email = config['about']['email'],
+      description = config['about']['brief'],
+      long_description = long_description,
+      license = config['license']['plugin'],
       package_data = {package: [ "*.so", "*.dll"] for package in packages},
-       zip_safe = False
+      zip_safe = False
     )
 
 

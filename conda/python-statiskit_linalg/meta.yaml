@@ -26,6 +26,7 @@ build:
   script:
     - scons py --prefix=$PREFIX -j$CPU_COUNT                         [not win]
     - scons py --prefix=%LIBRARY_PREFIX% -j%CPU_COUNT% --arch=%ARCH% [win]
+    - python setup.py install
 
 about:
   home: statiskit.readthedocs.org

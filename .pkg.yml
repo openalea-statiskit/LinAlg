@@ -1,12 +1,12 @@
 about:
   authors:
-  - Pierre Fernique
-  brief: !!python/unicode ' interactive Eigen'
+  - !!python/unicode 'Pierre Fernique'
+  brief: !!python/unicode 'Minimal interfaces for the Eigen C++ template library'
   email: !!python/unicode 'statiskit@googlegroups.com'
-  homepage: http://ieigen.readthedocs.io
-  name: !!python/unicode 'iEigen'
+  homepage: !!python/unicode 'http://statiskit.readthedocs.io/'
+  name: !!python/unicode 'StatisKit.LinAlg'
   plugin: github
-  version: v1.0.0
+  version: v1.0
 authors:
   basename: CONTRIBUTORS.rst
   format: '* `{name} <{email}>`_ ({score})'
@@ -16,8 +16,8 @@ license:
   exclude:
   - ./.git/*
   - ./build/*
-  - ./.pkg.yml
+  - ./.pkgtk.yml
   - ./CONTRIBUTORS.rst
   - ./LICENSE.rst
-  plugin: CeCILL
+  plugin: CeCILL-C
   width: 78
