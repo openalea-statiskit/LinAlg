@@ -3,6 +3,7 @@
 
 namespace autowig
 {
+    void method_decorator_9f3116f2a8c05d22a71eda0fd8fdb5f5(class ::Eigen::MatrixBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > > & instance, ::Eigen::MatrixBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::NonConstRealReturnType  param_out)     { instance.real() = param_out; }
     void method_decorator_98ad7e6dda285fe29a37cd0d97687f76(class ::Eigen::MatrixBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > > & instance, class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > & param_out)     { instance.setIdentity() = param_out; }
     void method_decorator_fc1e1dedd3905ea78b18cc3624e6b871(class ::Eigen::MatrixBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > > & instance, ::Eigen::Index  param_in_0, ::Eigen::Index  param_in_1, class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > & param_out)     { instance.setIdentity(param_in_0, param_in_1) = param_out; }
     void method_decorator_06840a3e23a7526d8ba22a531bc93d38(class ::Eigen::MatrixBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > > & instance, class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > & param_out)     { instance.forceAlignedAccess() = param_out; }
@@ -53,6 +54,7 @@ void wrapper_188d9a4d2cfb562385c42fe005cf6a4c()
     class_188d9a4d2cfb562385c42fe005cf6a4c.def("conjugate", method_pointer_b1739ec0fe9b50279eae0fc36fd2ce15, boost::python::return_value_policy< boost::python::return_by_value >(), "");
     class_188d9a4d2cfb562385c42fe005cf6a4c.def("real", method_pointer_1ee01396c8245cae9c843ad389c0046f, boost::python::return_value_policy< boost::python::return_by_value >(), "");
     class_188d9a4d2cfb562385c42fe005cf6a4c.def("real", method_pointer_9f3116f2a8c05d22a71eda0fd8fdb5f5, boost::python::return_internal_reference<>(), "");
+    class_188d9a4d2cfb562385c42fe005cf6a4c.def("real", autowig::method_decorator_9f3116f2a8c05d22a71eda0fd8fdb5f5);
     class_188d9a4d2cfb562385c42fe005cf6a4c.def("squared_norm", method_pointer_6369d2847d475b9bb03dd13f1bae51f5, "");
     class_188d9a4d2cfb562385c42fe005cf6a4c.def("norm", method_pointer_1b5bf3d31a8654729fc3ba85b53e7851, "");
     class_188d9a4d2cfb562385c42fe005cf6a4c.def("stable_norm", method_pointer_3eb2e32ba44e5ea7b694884ad4190ebe, "");

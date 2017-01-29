@@ -5,15 +5,15 @@ import pickle
 import itertools
 import subprocess
 
-%pdb
+# %pdb
 
-asg = autowig.AbstractSemanticGraph()
+# asg = autowig.AbstractSemanticGraph()
 
-asg = autowig.parser(asg, [os.path.join(sys.prefix, 'include', 'statiskit', 'linalg', 'Eigen.h')],
-                     ['-x', 'c++', '-std=c++11', '-ferror-limit=0', '-I' + os.path.join(sys.prefix, 'include')],
-                     bootstrap=1)
-with open('parsed.pkl', 'w') as filehandler:
-    pickle.dump(asg, filehandler)
+# asg = autowig.parser(asg, [os.path.join(sys.prefix, 'include', 'statiskit', 'linalg', 'Eigen.h')],
+#                      ['-x', 'c++', '-std=c++11', '-ferror-limit=0', '-I' + os.path.join(sys.prefix, 'include')],
+#                      bootstrap=1)
+# with open('parsed.pkl', 'w') as filehandler:
+#     pickle.dump(asg, filehandler)
 
 with open('parsed.pkl', 'r') as filehandler:
     asg = pickle.load(filehandler)
@@ -34,6 +34,7 @@ nodes = list(itertools.chain(*[node.bases(inherited=True) for node in nodes])) +
 wrappers = autowig.generator(asg, nodes, module='src/py/_linalg.cpp',
                                          decorator='src/py/statiskit/linalg/_linalg.py',
                                          closure=False)
+asg['class ::Eigen::PlainObjectBase< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 > >'].boost_python_export.content
 wrappers.write()
 
 s = subprocess.Popen(['scons', 'py', '-j7', '-k', '--eigen-static-assert=yes'], stderr=subprocess.PIPE)
@@ -49,6 +50,9 @@ while not codes or codes[-1].strip():
         wrappers.write()
         s = subprocess.Popen(['scons', 'py', '-j7', '-k', '--eigen-static-assert=yes'], stderr=subprocess.PIPE)
         out, err = s.communicate()
+    if len(codes) > 2:
+        if codes[-1] == codes[-2]:
+            break
 
 autowig.feedback.plugin = 'comment'
 for i in range(11):
