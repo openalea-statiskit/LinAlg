@@ -12,6 +12,6 @@ void wrapper_44919ff66aef53608e0cd82064ceedc8()
     boost::python::object module_fcf05ce9829d59fbac7dfcc9a3fbd7b4(boost::python::handle<  >(boost::python::borrowed(PyImport_AddModule(name_fcf05ce9829d59fbac7dfcc9a3fbd7b4.c_str()))));
     boost::python::scope().attr("linalg") = module_fcf05ce9829d59fbac7dfcc9a3fbd7b4;
     boost::python::scope scope_fcf05ce9829d59fbac7dfcc9a3fbd7b4 = module_fcf05ce9829d59fbac7dfcc9a3fbd7b4;
-    ::statiskit::linalg::MatrixXd  (*function_pointer_44919ff66aef53608e0cd82064ceedc8)(::statiskit::linalg::MatrixXd  const &, ::statiskit::linalg::MatrixXd  const &, enum ::statiskit::linalg::solver_type  const &) = ::statiskit::linalg::solve;
+    ::statiskit::linalg::MatrixXd  (*function_pointer_44919ff66aef53608e0cd82064ceedc8)(::statiskit::linalg::MatrixXd const &, ::statiskit::linalg::MatrixXd const &, enum ::statiskit::linalg::solver_type const &) = ::statiskit::linalg::solve;
     boost::python::def("solve", function_pointer_44919ff66aef53608e0cd82064ceedc8, "");
 }
