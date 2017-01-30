@@ -27,7 +27,11 @@ build:
     - scons py --prefix=$PREFIX -j$CPU_COUNT                         [not win]
     - scons py --prefix=%LIBRARY_PREFIX% -j%CPU_COUNT% --arch=%ARCH% [win]
     - python setup.py install
-
+  features:
+    - vc9   # [win and py27]
+    - vc10  # [win and py34]
+    - vc14  # [win and py>=35]
+        
 about:
   home: statiskit.readthedocs.org
   license: CeCILL-C
@@ -40,12 +44,18 @@ requirements:
     - python
     - msvc_runtime                                [win]
     - opencv                                      [win]
+    - vc 9  # [win and py27]
+    - vc 10  # [win and py34]
+    - vc 14  # [win and py>=35]
   run:
     - libstatiskit_linalg
     - libboost
     - python
     - msvc_runtime                                [win]
     - opencv                                      [win]
+    - vc 9  # [win and py27]
+    - vc 10  # [win and py34]
+    - vc 14  # [win and py>=35]
 test:                                                           
   # source_files:                                 [not win]
   #   - test                                      [not win]
