@@ -4,7 +4,7 @@ platform:
 
 environment:
   matrix:
-    - RECIPE: libstatiskit_linalg
+    # - RECIPE: libstatiskit_linalg
     - RECIPE: python-statiskit_linalg
 
 install:
