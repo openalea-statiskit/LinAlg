@@ -38,17 +38,19 @@ requirements:
     - python-dev
     - libboost
     - python
+    - msvc_runtime
   run:
     - libstatiskit_linalg
     - libboost
     - python
+    - msvc_runtime
 
-test:                                             [not win]              
+test:                                                           
   # source_files:                                 [not win]
   #   - test                                      [not win]
   # requires:                                     [not win]
   #   - libdev                                    [not win]
   #   - python-dev                                [not win]
   #   - python-dbg                                [not win]
-  commands:                                       [not win]
-   - python -c "import statiskit.linalg.__linalg" [not win]
+  commands:                                       
+   - python -c "import statiskit.linalg.__linalg" 
