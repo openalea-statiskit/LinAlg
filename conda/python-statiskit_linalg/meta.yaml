@@ -39,12 +39,13 @@ requirements:
     - libboost
     - python
     - msvc_runtime                                [win]
+    - opencv                                      [win]
   run:
     - libstatiskit_linalg
     - libboost
     - python
     - msvc_runtime                                [win]
-
+    - opencv                                      [win]
 test:                                                           
   # source_files:                                 [not win]
   #   - test                                      [not win]
