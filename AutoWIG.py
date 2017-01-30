@@ -5,36 +5,26 @@ import pickle
 import itertools
 import subprocess
 
-# %pdb
+asg = autowig.AbstractSemanticGraph()
 
-# asg = autowig.AbstractSemanticGraph()
+asg = autowig.parser(asg, [os.path.join(sys.prefix, 'include', 'statiskit', 'linalg', 'Eigen.h')],
+                     ['-x', 'c++', '-std=c++11', '-ferror-limit=0', '-I' + os.path.join(sys.prefix, 'include')],
+                     bootstrap=1)
 
-# asg = autowig.parser(asg, [os.path.join(sys.prefix, 'include', 'statiskit', 'linalg', 'Eigen.h')],
-#                      ['-x', 'c++', '-std=c++11', '-ferror-limit=0', '-I' + os.path.join(sys.prefix, 'include')],
-#                      bootstrap=1)
-# with open('parsed.pkl', 'w') as filehandler:
-#     pickle.dump(asg, filehandler)
-
-with open('parsed.pkl', 'r') as filehandler:
-    asg = pickle.load(filehandler)
-if os.path.exists('controller.py'):
-    from controller_Xd import ieigen_controller
-    autowig.controller['linalg'] = ieigen_controller
-    autowig.controller.plugin = 'linalg'
 asg = autowig.controller(asg)
+for cls in ['class ::Eigen::DenseBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >',
+            'class ::Eigen::DenseBase< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 > >',
+            'class ::Eigen::DenseBase< class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > >']:
+    for mtd in asg[cls].methods(access='public'):
+        if mtd.localname == 'trace':
+            mtd.boost_python_export = False
 
-with open('controlled.pkl', 'w') as filehandler:
-    pickle.dump(asg, filehandler)
-    
-with open('controlled.pkl', 'r') as filehandler:
-    asg = pickle.load(filehandler)
 autowig.generator.plugin = 'boost_python'
 nodes = [typedef.qualified_type.unqualified_type for typedef in asg['::statiskit::linalg'].typedefs()]
 nodes = list(itertools.chain(*[node.bases(inherited=True) for node in nodes])) + nodes + asg['::statiskit::linalg'].declarations()
 wrappers = autowig.generator(asg, nodes, module='src/py/_linalg.cpp',
                                          decorator='src/py/statiskit/linalg/_linalg.py',
                                          closure=False)
-asg['class ::Eigen::PlainObjectBase< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 > >'].boost_python_export.content
 wrappers.write()
 
 s = subprocess.Popen(['scons', 'py', '-j7', '-k', '--eigen-static-assert=yes'], stderr=subprocess.PIPE)
@@ -61,4 +51,5 @@ for i in range(11):
     s = subprocess.Popen(['scons', 'py', '-j7', '-k', '--eigen-static-assert=yes'], stderr=subprocess.PIPE)
     out, err = s.communicate()
 
-#
+with open('ASG.pkl', 'w') as filehandler:
+    pickle.dump(asg, filehandler)

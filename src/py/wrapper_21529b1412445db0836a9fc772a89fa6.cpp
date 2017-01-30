@@ -58,7 +58,7 @@ void wrapper_21529b1412445db0836a9fc772a89fa6()
 // TODO     ::Eigen::MatrixBase< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 > >::PlainObject  (::Eigen::MatrixBase< ::Eigen::Matrix< double, -1, -1, 0, -1, -1 > >::*method_pointer_5c2bdb7d1aea57cfb21ddd7e8f652558)() const = &::Eigen::MatrixBase< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 > >::unitOrthogonal;
 // TODO     class ::Eigen::Matrix< double, 3, 1, 0, 3, 1 >  (::Eigen::MatrixBase< ::Eigen::Matrix< double, -1, -1, 0, -1, -1 > >::*method_pointer_9293da81cdcd51129a1272f1a99ca01b)(::Eigen::Index , ::Eigen::Index , ::Eigen::Index ) const = &::Eigen::MatrixBase< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 > >::eulerAngles;
     void  (::Eigen::MatrixBase< ::Eigen::Matrix< double, -1, -1, 0, -1, -1 > >::*method_pointer_d0aa73deb1b258d99d0ea759a5e84537)(::Eigen::MatrixBase< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 > >::Scalar &, ::Eigen::MatrixBase< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 > >::RealScalar &) = &::Eigen::MatrixBase< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 > >::makeHouseholderInPlace;
-    boost::python::class_< class ::Eigen::MatrixBase< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 > >, autowig::HeldType< class ::Eigen::MatrixBase< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 > > >, boost::python::bases< class ::Eigen::DenseBase< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 > > > > class_21529b1412445db0836a9fc772a89fa6("_MatrixBase_21529b1412445db0836a9fc772a89fa6", "", boost::python::no_init);
+    boost::python::class_< class ::Eigen::MatrixBase< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 > >, autowig::Held< class ::Eigen::MatrixBase< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 > > >::Type, boost::python::bases< class ::Eigen::DenseBase< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 > > > > class_21529b1412445db0836a9fc772a89fa6("_MatrixBase_21529b1412445db0836a9fc772a89fa6", "", boost::python::no_init);
     class_21529b1412445db0836a9fc772a89fa6.def("diagonal_size", method_pointer_9e9ccdc8129a57a38544b6a8fe879560, "");
     class_21529b1412445db0836a9fc772a89fa6.def("conjugate", method_pointer_8b7661d091495d7c9b4f9f6c48ee840a, boost::python::return_value_policy< boost::python::return_by_value >(), "");
     class_21529b1412445db0836a9fc772a89fa6.def("real", method_pointer_af383671d67650489a9a21dd5f2ca378, boost::python::return_value_policy< boost::python::return_by_value >(), "");
@@ -105,9 +105,9 @@ void wrapper_21529b1412445db0836a9fc772a89fa6()
 // TODO     class_21529b1412445db0836a9fc772a89fa6.def("euler_angles", method_pointer_9293da81cdcd51129a1272f1a99ca01b, "");
     class_21529b1412445db0836a9fc772a89fa6.def("make_householder_in_place", method_pointer_d0aa73deb1b258d99d0ea759a5e84537, "");
 
-    if(std::is_class< autowig::HeldType< class ::Eigen::MatrixBase< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 > > > >::value)
+    if(std::is_class< autowig::Held< class ::Eigen::MatrixBase< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 > > >::Type >::value)
     {
-        boost::python::implicitly_convertible< autowig::HeldType< class ::Eigen::MatrixBase< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 > > >, autowig::HeldType< class ::Eigen::DenseBase< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 > > > >();
+        boost::python::implicitly_convertible< autowig::Held< class ::Eigen::MatrixBase< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 > > >::Type, autowig::Held< class ::Eigen::DenseBase< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 > > >::Type >();
     }
 
 }

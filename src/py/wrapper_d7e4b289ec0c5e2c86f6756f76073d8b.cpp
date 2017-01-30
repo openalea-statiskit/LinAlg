@@ -33,7 +33,7 @@ void wrapper_d7e4b289ec0c5e2c86f6756f76073d8b()
     ::Eigen::FullPivLU< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 > >::MatrixType  (::Eigen::FullPivLU< ::Eigen::Matrix< double, -1, -1, 0, -1, -1 > >::*method_pointer_bb92c36ab53858199438156c659fbe7e)() const = &::Eigen::FullPivLU< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 > >::reconstructedMatrix;
     ::Eigen::Index  (::Eigen::FullPivLU< ::Eigen::Matrix< double, -1, -1, 0, -1, -1 > >::*method_pointer_bfa8f4283a5e5e0c8f7b09615995177b)() const = &::Eigen::FullPivLU< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 > >::rows;
     ::Eigen::Index  (::Eigen::FullPivLU< ::Eigen::Matrix< double, -1, -1, 0, -1, -1 > >::*method_pointer_dca806b9b7225afdb176d2d96ced1203)() const = &::Eigen::FullPivLU< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 > >::cols;
-    boost::python::class_< class ::Eigen::FullPivLU< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 > >, autowig::HeldType< class ::Eigen::FullPivLU< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 > > >, boost::python::bases< class ::Eigen::SolverBase< class ::Eigen::FullPivLU< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 > > > > > class_d7e4b289ec0c5e2c86f6756f76073d8b("_FullPivLU_d7e4b289ec0c5e2c86f6756f76073d8b", "", boost::python::no_init);
+    boost::python::class_< class ::Eigen::FullPivLU< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 > >, autowig::Held< class ::Eigen::FullPivLU< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 > > >::Type, boost::python::bases< class ::Eigen::SolverBase< class ::Eigen::FullPivLU< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 > > > > > class_d7e4b289ec0c5e2c86f6756f76073d8b("_FullPivLU_d7e4b289ec0c5e2c86f6756f76073d8b", "", boost::python::no_init);
     class_d7e4b289ec0c5e2c86f6756f76073d8b.def(boost::python::init<  >(""));
     class_d7e4b289ec0c5e2c86f6756f76073d8b.def(boost::python::init< ::Eigen::Index , ::Eigen::Index  >(""));
     class_d7e4b289ec0c5e2c86f6756f76073d8b.def("matrix_lu", method_pointer_9b6c9bc34ed7581cbbc6e12ca5a40775, boost::python::return_value_policy< boost::python::return_by_value >(), "");
@@ -57,9 +57,9 @@ void wrapper_d7e4b289ec0c5e2c86f6756f76073d8b()
     class_d7e4b289ec0c5e2c86f6756f76073d8b.def("rows", method_pointer_bfa8f4283a5e5e0c8f7b09615995177b, "");
     class_d7e4b289ec0c5e2c86f6756f76073d8b.def("cols", method_pointer_dca806b9b7225afdb176d2d96ced1203, "");
 
-    if(std::is_class< autowig::HeldType< class ::Eigen::FullPivLU< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 > > > >::value)
+    if(std::is_class< autowig::Held< class ::Eigen::FullPivLU< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 > > >::Type >::value)
     {
-        boost::python::implicitly_convertible< autowig::HeldType< class ::Eigen::FullPivLU< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 > > >, autowig::HeldType< class ::Eigen::SolverBase< class ::Eigen::FullPivLU< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 > > > > >();
+        boost::python::implicitly_convertible< autowig::Held< class ::Eigen::FullPivLU< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 > > >::Type, autowig::Held< class ::Eigen::SolverBase< class ::Eigen::FullPivLU< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 > > > >::Type >();
     }
 
 }

@@ -51,7 +51,7 @@ void wrapper_f895004a7da65a24a43fec6025d85c8f()
     class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > & (::Eigen::PlainObjectBase< ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::*method_pointer_709032c78fc55b1dbd8e705c6a487b6d)(::Eigen::Index ) = &::Eigen::PlainObjectBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::setRandom;
     class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > & (::Eigen::PlainObjectBase< ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::*method_pointer_e97a8490d4d45420b24e8e74696f3b3d)(::Eigen::Index , ::Eigen::Index ) = &::Eigen::PlainObjectBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::setRandom;
     void  (*method_pointer_e8430524858452afb18e0fc96e43d83b)() = ::Eigen::PlainObjectBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::_check_template_params;
-    boost::python::class_< class ::Eigen::PlainObjectBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >, autowig::HeldType< class ::Eigen::PlainObjectBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > > >, boost::python::bases< class ::Eigen::MatrixBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > > >, boost::noncopyable > class_f895004a7da65a24a43fec6025d85c8f("_PlainObjectBase_f895004a7da65a24a43fec6025d85c8f", "", boost::python::no_init);
+    boost::python::class_< class ::Eigen::PlainObjectBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >, autowig::Held< class ::Eigen::PlainObjectBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > > >::Type, boost::python::bases< class ::Eigen::MatrixBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > > >, boost::noncopyable > class_f895004a7da65a24a43fec6025d85c8f("_PlainObjectBase_f895004a7da65a24a43fec6025d85c8f", "", boost::python::no_init);
     class_f895004a7da65a24a43fec6025d85c8f.def("base", method_pointer_d2ca45f40af8598fa561d85359b9d63d, boost::python::return_internal_reference<>(), "");
     class_f895004a7da65a24a43fec6025d85c8f.def("base", autowig::method_decorator_d2ca45f40af8598fa561d85359b9d63d);
     class_f895004a7da65a24a43fec6025d85c8f.def("base", method_pointer_60afebb504f15682a760301985265a20, boost::python::return_value_policy< boost::python::return_by_value >(), "");
@@ -92,9 +92,9 @@ void wrapper_f895004a7da65a24a43fec6025d85c8f()
     class_f895004a7da65a24a43fec6025d85c8f.def("check_template_params", method_pointer_e8430524858452afb18e0fc96e43d83b, "");
     class_f895004a7da65a24a43fec6025d85c8f.staticmethod("check_template_params");
 
-    if(std::is_class< autowig::HeldType< class ::Eigen::PlainObjectBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > > > >::value)
+    if(std::is_class< autowig::Held< class ::Eigen::PlainObjectBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > > >::Type >::value)
     {
-        boost::python::implicitly_convertible< autowig::HeldType< class ::Eigen::PlainObjectBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > > >, autowig::HeldType< class ::Eigen::MatrixBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > > > >();
+        boost::python::implicitly_convertible< autowig::Held< class ::Eigen::PlainObjectBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > > >::Type, autowig::Held< class ::Eigen::MatrixBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > > >::Type >();
     }
 
 }
