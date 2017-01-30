@@ -38,12 +38,12 @@ requirements:
     - python-dev
     - libboost
     - python
-    - msvc_runtime
+    - msvc_runtime                                [win]
   run:
     - libstatiskit_linalg
     - libboost
     - python
-    - msvc_runtime
+    - msvc_runtime                                [win]
 
 test:                                                           
   # source_files:                                 [not win]
