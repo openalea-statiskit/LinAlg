@@ -91,7 +91,7 @@ void wrapper_e3eac3c0866e52c2b8ebc04ab597d6d5()
     class_e3eac3c0866e52c2b8ebc04ab597d6d5.def("count", method_pointer_c5fb51680e625fbfaae18ff3de045fdd, "");
     class_e3eac3c0866e52c2b8ebc04ab597d6d5.def("reverse_in_place", method_pointer_0861435ff236521abf854a9a9ab3a9b2, "");
 
-    if(std::is_class< autowig::Held< class ::Eigen::DenseBase< class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > > >::Type >::value)
+    if(autowig::Held< class ::Eigen::DenseBase< class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > > >::is_class)
     {
         boost::python::implicitly_convertible< autowig::Held< class ::Eigen::DenseBase< class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > > >::Type, autowig::Held< class ::Eigen::DenseCoeffsBase< class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 >, 3 > >::Type >();
     }

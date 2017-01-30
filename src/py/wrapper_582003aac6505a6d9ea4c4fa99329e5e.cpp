@@ -24,7 +24,7 @@ void wrapper_582003aac6505a6d9ea4c4fa99329e5e()
     class_582003aac6505a6d9ea4c4fa99329e5e.def("inner_stride", method_pointer_b56afc7a8c2353ab883944457788298f, "");
     class_582003aac6505a6d9ea4c4fa99329e5e.def("outer_stride", method_pointer_992f8240a80759b49f02e38fcc77710b, "");
 
-    if(std::is_class< autowig::Held< class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > >::Type >::value)
+    if(autowig::Held< class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > >::is_class)
     {
         boost::python::implicitly_convertible< autowig::Held< class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > >::Type, autowig::Held< class ::Eigen::PlainObjectBase< class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > > >::Type >();
     }

@@ -9,6 +9,7 @@ namespace autowig
 {
      template<class T> struct Held {
         typedef T* Type;
+        static bool const is_class = false;
     };
 }
 

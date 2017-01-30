@@ -57,7 +57,7 @@ void wrapper_d7e4b289ec0c5e2c86f6756f76073d8b()
     class_d7e4b289ec0c5e2c86f6756f76073d8b.def("rows", method_pointer_bfa8f4283a5e5e0c8f7b09615995177b, "");
     class_d7e4b289ec0c5e2c86f6756f76073d8b.def("cols", method_pointer_dca806b9b7225afdb176d2d96ced1203, "");
 
-    if(std::is_class< autowig::Held< class ::Eigen::FullPivLU< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 > > >::Type >::value)
+    if(autowig::Held< class ::Eigen::FullPivLU< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 > > >::is_class)
     {
         boost::python::implicitly_convertible< autowig::Held< class ::Eigen::FullPivLU< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 > > >::Type, autowig::Held< class ::Eigen::SolverBase< class ::Eigen::FullPivLU< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 > > > >::Type >();
     }
