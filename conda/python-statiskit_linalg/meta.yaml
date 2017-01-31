@@ -41,6 +41,7 @@ requirements:
     - libdev
     - python-dev
     - libboost
+    - eigen 3.3.1
     - libstatiskit_linalg
     - python
   run:
