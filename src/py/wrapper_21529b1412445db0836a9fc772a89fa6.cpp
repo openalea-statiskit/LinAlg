@@ -105,7 +105,7 @@ void wrapper_21529b1412445db0836a9fc772a89fa6()
 // TODO     class_21529b1412445db0836a9fc772a89fa6.def("euler_angles", method_pointer_9293da81cdcd51129a1272f1a99ca01b, "");
     class_21529b1412445db0836a9fc772a89fa6.def("make_householder_in_place", method_pointer_d0aa73deb1b258d99d0ea759a5e84537, "");
 
-    if(std::is_class< autowig::Held< class ::Eigen::MatrixBase< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 > > >::Type >::value)
+    if(autowig::Held< class ::Eigen::MatrixBase< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 > > >::is_class)
     {
         boost::python::implicitly_convertible< autowig::Held< class ::Eigen::MatrixBase< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 > > >::Type, autowig::Held< class ::Eigen::DenseBase< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 > > >::Type >();
     }

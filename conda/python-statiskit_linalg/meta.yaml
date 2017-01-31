@@ -27,7 +27,11 @@ build:
     - scons py --prefix=$PREFIX -j$CPU_COUNT                         [not win]
     - scons py --prefix=%LIBRARY_PREFIX% -j%CPU_COUNT% --arch=%ARCH% [win]
     - python setup.py install
-
+  features:
+    - vc9   # [win and py27]
+    - vc10  # [win and py34]
+    - vc14  # [win and py>=35]
+        
 about:
   home: statiskit.readthedocs.org
   license: CeCILL-C
@@ -45,12 +49,12 @@ requirements:
     - libboost
     - python
 
-test:                                             
+test:                                                           
   # source_files:                                 [not win]
   #   - test                                      [not win]
   # requires:                                     [not win]
   #   - libdev                                    [not win]
   #   - python-dev                                [not win]
   #   - python-dbg                                [not win]
-  commands:
-   - python -c "import statiskit.linalg.__linalg"
+  commands:                                       
+   - python -c "import statiskit.linalg.__linalg" 

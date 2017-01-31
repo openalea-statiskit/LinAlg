@@ -39,7 +39,7 @@ void wrapper_acfd714a9c0854cfb56aa7e4c3f02c5b()
     class_acfd714a9c0854cfb56aa7e4c3f02c5b.def("z", method_pointer_4a25e7c718915ecaafc19b0ff6c56404, boost::python::return_value_policy< boost::python::return_by_value >(), "");
     class_acfd714a9c0854cfb56aa7e4c3f02c5b.def("w", method_pointer_d504b4534126599aa72eeaffbe5d711b, boost::python::return_value_policy< boost::python::return_by_value >(), "");
 
-    if(std::is_class< autowig::Held< class ::Eigen::DenseCoeffsBase< class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 >, 0 > >::Type >::value)
+    if(autowig::Held< class ::Eigen::DenseCoeffsBase< class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 >, 0 > >::is_class)
     {
         boost::python::implicitly_convertible< autowig::Held< class ::Eigen::DenseCoeffsBase< class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 >, 0 > >::Type, autowig::Held< struct ::Eigen::EigenBase< class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > > >::Type >();
     }

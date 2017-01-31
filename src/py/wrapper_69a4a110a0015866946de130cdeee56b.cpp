@@ -92,7 +92,7 @@ void wrapper_69a4a110a0015866946de130cdeee56b()
     class_69a4a110a0015866946de130cdeee56b.def("check_template_params", method_pointer_ec0941d371af527aaad7fbddff413068, "");
     class_69a4a110a0015866946de130cdeee56b.staticmethod("check_template_params");
 
-    if(std::is_class< autowig::Held< class ::Eigen::PlainObjectBase< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 > > >::Type >::value)
+    if(autowig::Held< class ::Eigen::PlainObjectBase< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 > > >::is_class)
     {
         boost::python::implicitly_convertible< autowig::Held< class ::Eigen::PlainObjectBase< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 > > >::Type, autowig::Held< class ::Eigen::MatrixBase< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 > > >::Type >();
     }

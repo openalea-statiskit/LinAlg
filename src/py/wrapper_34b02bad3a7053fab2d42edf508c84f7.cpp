@@ -17,7 +17,7 @@ void wrapper_34b02bad3a7053fab2d42edf508c84f7()
     class_34b02bad3a7053fab2d42edf508c84f7.def(boost::python::init<  >(""));
     class_34b02bad3a7053fab2d42edf508c84f7.def(boost::python::init< class ::Eigen::SolverBase< class ::Eigen::PartialPivLU< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 > > > const & >(""));
 
-    if(std::is_class< autowig::Held< class ::Eigen::SolverBase< class ::Eigen::PartialPivLU< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 > > > >::Type >::value)
+    if(autowig::Held< class ::Eigen::SolverBase< class ::Eigen::PartialPivLU< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 > > > >::is_class)
     {
         boost::python::implicitly_convertible< autowig::Held< class ::Eigen::SolverBase< class ::Eigen::PartialPivLU< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 > > > >::Type, autowig::Held< struct ::Eigen::EigenBase< class ::Eigen::PartialPivLU< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 > > > >::Type >();
     }
