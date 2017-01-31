@@ -34,11 +34,13 @@ about:
 
 requirements:
   build:
-    - libstatiskit_linalg
+    - libdev
     - python-dev
     - libboost
+    - libstatiskit_linalg
     - python
   run:
+    - librun
     - libstatiskit_linalg
     - libboost
     - python

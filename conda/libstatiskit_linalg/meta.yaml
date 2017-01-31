@@ -36,4 +36,4 @@ requirements:
     - eigen 3.3.1
     - libdev
   run:
-    - eigen 3.3.1
+    - librun
