@@ -1,7 +1,7 @@
 #include "_linalg.h"
 
 
-void wrapper_623522582e05548395749eede420699c()
+void wrapper_a7c53f676d8852f99def74503134543b()
 {
 
     std::string name_fa414b05d29e5f4ea0b6d6cb5cf81b01 = boost::python::extract< std::string >(boost::python::scope().attr("__name__") + ".statiskit");
@@ -12,6 +12,4 @@ void wrapper_623522582e05548395749eede420699c()
     boost::python::object module_fcf05ce9829d59fbac7dfcc9a3fbd7b4(boost::python::handle<  >(boost::python::borrowed(PyImport_AddModule(name_fcf05ce9829d59fbac7dfcc9a3fbd7b4.c_str()))));
     boost::python::scope().attr("linalg") = module_fcf05ce9829d59fbac7dfcc9a3fbd7b4;
     boost::python::scope scope_fcf05ce9829d59fbac7dfcc9a3fbd7b4 = module_fcf05ce9829d59fbac7dfcc9a3fbd7b4;
-    ::statiskit::linalg::Vector  (*function_pointer_623522582e05548395749eede420699c)(::statiskit::linalg::Matrix const &, ::statiskit::linalg::Vector const &, enum ::statiskit::linalg::solver_type const &) = ::statiskit::linalg::solve;
-    boost::python::def("solve", function_pointer_623522582e05548395749eede420699c, "");
 }

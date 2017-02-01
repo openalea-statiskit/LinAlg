@@ -4,9 +4,9 @@ namespace statiskit
 {	namespace linalg 
 {
 
-		MatrixXd solve(const MatrixXd& A, const MatrixXd& b, const solver_type& solver)
+		Matrix solve(const Matrix& A, const Matrix& b, const solver_type& solver)
 		{
-			MatrixXd x;
+			Matrix x;
 			switch(solver)
 		{
 				case partialPivLu:
@@ -37,9 +37,9 @@ namespace statiskit
 			return x;
 		}
 
-		VectorXd solve(const MatrixXd& A, const VectorXd& b, const solver_type& solver)
+		Vector solve(const Matrix& A, const Vector& b, const solver_type& solver)
 		{
-			VectorXd x;
+			Vector x;
 			switch(solver)
 		{
 				case partialPivLu:

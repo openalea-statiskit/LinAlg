@@ -93,7 +93,7 @@ with open('src/cpp/Eigen.h', 'w') as filehandler:
         typedef.extend(['Eigen::Dynamic'] * coef)
         if obj == 'Vector':
             typedef.extend(['1'])
-        filehandler.write('\t\ttypedef Eigen::Matrix< ' + ', '.join(typedef) + ' > ' + obj + 'Xd;\n')
+        filehandler.write('\t\ttypedef Eigen::Matrix< ' + ', '.join(typedef) + ' > ' + obj + ';\n')
         if obj == 'Matrix':
             for solver in SOLVER:
                 if solver in ['llt', 'ldlt']:
@@ -105,10 +105,10 @@ with open('src/cpp/Eigen.h', 'w') as filehandler:
                     else:
                         solver = solver[:-1] + solver[-1].upper()
                 #filehandler.write('\tSTATISKIT_LINALG_IMP template class STATISKIT_LINALG_API Eigen::' + solver + '< Eigen::Matrix< ' + ', '.join(typedef) + ' > >;\n')
-                filehandler.write('\t\ttypedef Eigen::' + solver + '< Eigen::Matrix< ' + ', '.join(typedef) + ' > > ' + solver + obj + 'Xd;\n')
+                filehandler.write('\t\ttypedef Eigen::' + solver + '< Eigen::Matrix< ' + ', '.join(typedef) + ' > > ' + solver + obj + ';\n')
         filehandler.write('\n')
-    filehandler.write('\t\tSTATISKIT_LINALG_API VectorXd solve(const MatrixXd& A, const VectorXd& b, const solver_type& solver);\n')
-    filehandler.write('\t\tSTATISKIT_LINALG_API MatrixXd solve(const MatrixXd& A, const MatrixXd& b, const solver_type& solver);\n')
+    filehandler.write('\t\tSTATISKIT_LINALG_API Vector solve(const Matrix& A, const Vector& b, const solver_type& solver);\n')
+    filehandler.write('\t\tSTATISKIT_LINALG_API Matrix solve(const Matrix& A, const Matrix& b, const solver_type& solver);\n')
     filehandler.write('\t}\n}\n\n#ifdef EIGEN_NO_STATIC_ASSERT\n\n')
     # for obj in OBJ:
     #     typedef = ['double']
@@ -138,9 +138,9 @@ with open('src/cpp/Eigen.cpp', 'w') as filehandler:
     filehandler.write('namespace statiskit \n{')
     filehandler.write('\tnamespace linalg \n{\n')
     for obj in ['Matrix', 'Vector']:
-        filehandler.write('\n\t\t' + obj + 'Xd solve(const MatrixXd& A, const ' + obj + 'Xd& b, const solver_type& solver)\n')
+        filehandler.write('\n\t\t' + obj + ' solve(const Matrix& A, const ' + obj + '& b, const solver_type& solver)\n')
         filehandler.write('\t\t{\n')
-        filehandler.write('\t\t\t' + obj + 'Xd x;\n')
+        filehandler.write('\t\t\t' + obj + ' x;\n')
         filehandler.write('\t\t\tswitch(solver)\n\t\t{\n')
         for solver in SOLVER:
             filehandler.write('\t\t\t\tcase ' + solver + ':\n')
