@@ -30,6 +30,15 @@ def wrapper__init__(f):
 Matrix.__init__ = wrapper__init__(Matrix.__init__)
 del wrapper__init__
 
+def __eq__(self, other):
+    if isinstance(other, Matrix):
+        return all(all(self[row, col] == other[row, col] for col in range(self.cols)) for row in range(self.rows))
+    else:
+        return False
+
+Matrix.__eq__ = __eq__
+del __eq__
+
 Matrix.rows = property(Matrix.rows)
 Matrix.cols = property(Matrix.cols)
 

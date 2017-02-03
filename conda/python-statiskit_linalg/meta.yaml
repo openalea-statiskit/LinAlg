@@ -23,14 +23,6 @@ source:
 
 build:
   number: 0
-  script:
-    - scons py --prefix=$PREFIX -j$CPU_COUNT                         [not win]
-    - scons py --prefix=%LIBRARY_PREFIX% -j%CPU_COUNT% --arch=%ARCH% [win]
-    - python setup.py install
-  features:
-    - vc9   # [win and py27]
-    - vc10  # [win and py34]
-    - vc14  # [win and py>=35]
         
 about:
   home: statiskit.readthedocs.org
@@ -51,11 +43,9 @@ requirements:
     - python
 
 test:                                                           
-  # source_files:                                 [not win]
-  #   - test                                      [not win]
-  # requires:                                     [not win]
-  #   - libdev                                    [not win]
-  #   - python-dev                                [not win]
-  #   - python-dbg                                [not win]
+  source_files:                                
+    - test
+  requires:
+    - python-dbg
   commands:                                       
-   - python -c "import statiskit.linalg.__linalg" 
+   - nosetests test -x -s -v --with-coverage --cover-tests --cover-package=statiskit.linalg
