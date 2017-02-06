@@ -11,6 +11,6 @@ exclude = """
 
 sources = [source for source in cppenv.Glob('*.*') if not source.name in exclude]
 
-targets = cppenv.BuildCpp("statiskit_linalg", sources)
+targets = cppenv.CppLibrary("statiskit_linalg", sources)
 Alias("cpp", targets)
 Alias("install", targets)
