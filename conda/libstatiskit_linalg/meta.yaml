@@ -23,10 +23,7 @@ source:
 
 build:
   number: 0
-  script:
-    - scons cpp --prefix=$PREFIX -j$CPU_COUNT                         [not win]
-    - scons cpp --prefix=%LIBRARY_PREFIX% -j%CPU_COUNT% --arch=%ARCH% [win]
-
+  
 about:
   home: statiskit.readthedocs.org
   license: CeCILL-C
