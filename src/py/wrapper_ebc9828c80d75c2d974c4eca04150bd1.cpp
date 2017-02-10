@@ -21,8 +21,8 @@ void wrapper_ebc9828c80d75c2d974c4eca04150bd1()
     ::Eigen::LDLT< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 >, 1 >::MatrixType const & (::Eigen::LDLT< ::Eigen::Matrix< double, -1, -1, 0, -1, -1 >, 1 >::*method_pointer_4943c3dcc62b5829b0f69508839cacf5)() const = &::Eigen::LDLT< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 >, 1 >::matrixLDLT;
     ::Eigen::LDLT< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 >, 1 >::MatrixType  (::Eigen::LDLT< ::Eigen::Matrix< double, -1, -1, 0, -1, -1 >, 1 >::*method_pointer_eabe73580856515886dba190b2bc5adc)() const = &::Eigen::LDLT< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 >, 1 >::reconstructedMatrix;
     class ::Eigen::LDLT< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 >, 1 > const & (::Eigen::LDLT< ::Eigen::Matrix< double, -1, -1, 0, -1, -1 >, 1 >::*method_pointer_f02d576be1cc5516b00e69093b9ef61a)() const = &::Eigen::LDLT< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 >, 1 >::adjoint;
-// TODO // TODO // TODO     ::Eigen::LDLT::Index  (::Eigen::LDLT< ::Eigen::Matrix< double, -1, -1, 0, -1, -1 >, 1 >::*method_pointer_f034ec7fa4bc55cfb29b07b093f5a08a)() const = &::Eigen::LDLT< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 >, 1 >::rows;
-// TODO // TODO // TODO     ::Eigen::LDLT::Index  (::Eigen::LDLT< ::Eigen::Matrix< double, -1, -1, 0, -1, -1 >, 1 >::*method_pointer_0bd184e6963f5362bbed791b177dc88d)() const = &::Eigen::LDLT< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 >, 1 >::cols;
+    ::Eigen::LDLT< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 >, 1 >::Index  (::Eigen::LDLT< ::Eigen::Matrix< double, -1, -1, 0, -1, -1 >, 1 >::*method_pointer_f034ec7fa4bc55cfb29b07b093f5a08a)() const = &::Eigen::LDLT< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 >, 1 >::rows;
+    ::Eigen::LDLT< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 >, 1 >::Index  (::Eigen::LDLT< ::Eigen::Matrix< double, -1, -1, 0, -1, -1 >, 1 >::*method_pointer_0bd184e6963f5362bbed791b177dc88d)() const = &::Eigen::LDLT< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 >, 1 >::cols;
     enum ::Eigen::ComputationInfo  (::Eigen::LDLT< ::Eigen::Matrix< double, -1, -1, 0, -1, -1 >, 1 >::*method_pointer_b403caa2f32055e88dd1ad81d3634e4b)() const = &::Eigen::LDLT< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 >, 1 >::info;
     boost::python::class_< class ::Eigen::LDLT< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 >, 1 >, autowig::Held< class ::Eigen::LDLT< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 >, 1 > >::Type > class_ebc9828c80d75c2d974c4eca04150bd1("_LDLT_ebc9828c80d75c2d974c4eca04150bd1", "", boost::python::no_init);
     class_ebc9828c80d75c2d974c4eca04150bd1.def("set_zero", method_pointer_ca268eca22445c44bdfd7c45e5610a5c, "");
@@ -33,8 +33,8 @@ void wrapper_ebc9828c80d75c2d974c4eca04150bd1()
     class_ebc9828c80d75c2d974c4eca04150bd1.def("matrix_ldlt", method_pointer_4943c3dcc62b5829b0f69508839cacf5, boost::python::return_value_policy< boost::python::return_by_value >(), "");
     class_ebc9828c80d75c2d974c4eca04150bd1.def("reconstructed_matrix", method_pointer_eabe73580856515886dba190b2bc5adc, "");
     class_ebc9828c80d75c2d974c4eca04150bd1.def("adjoint", method_pointer_f02d576be1cc5516b00e69093b9ef61a, boost::python::return_value_policy< boost::python::return_by_value >(), "");
-// TODO     class_ebc9828c80d75c2d974c4eca04150bd1.def("rows", method_pointer_f034ec7fa4bc55cfb29b07b093f5a08a, "");
-// TODO     class_ebc9828c80d75c2d974c4eca04150bd1.def("cols", method_pointer_0bd184e6963f5362bbed791b177dc88d, "");
+    class_ebc9828c80d75c2d974c4eca04150bd1.def("rows", method_pointer_f034ec7fa4bc55cfb29b07b093f5a08a, "");
+    class_ebc9828c80d75c2d974c4eca04150bd1.def("cols", method_pointer_0bd184e6963f5362bbed791b177dc88d, "");
     class_ebc9828c80d75c2d974c4eca04150bd1.def("info", method_pointer_b403caa2f32055e88dd1ad81d3634e4b, "");
 
 }
