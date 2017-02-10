@@ -8,3 +8,4 @@ build
 *.pyc
 *.dblite
 ASG.pkl
+.coverage

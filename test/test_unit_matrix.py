@@ -17,7 +17,6 @@ class TestMatrix(unittest.TestCase):
 
     def test__assignement(self):
         """Test matrix assignement"""
-        from statiskit import linalg
         M = linalg.Matrix(3,3)
         self.assertEqual(M[0,0], 0.)
         M[0, 0] = 1.
