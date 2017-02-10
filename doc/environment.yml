@@ -1,0 +1,9 @@
+name: statiskit-linalg-doc
+channels:
+  - statiskit
+  - conda-forge
+dependencies:
+  - python
+  - python-doc
+  - libstatiskit_linalg
+  - python-statiskit_linalg
