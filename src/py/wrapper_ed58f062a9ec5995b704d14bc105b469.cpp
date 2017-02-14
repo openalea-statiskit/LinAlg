@@ -1,6 +1,15 @@
 #include "_linalg.h"
 
 
+#if defined(_MSC_VER)
+    #if (_MSC_VER == 1900)
+namespace boost
+{
+    template <> class ::Eigen::SVDBase< class ::Eigen::JacobiSVD< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 >, 2 > > const volatile * get_pointer<class ::Eigen::SVDBase< class ::Eigen::JacobiSVD< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 >, 2 > > const volatile >(class ::Eigen::SVDBase< class ::Eigen::JacobiSVD< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 >, 2 > > const volatile *c) { return c; }
+}
+    #endif
+#endif
+
 namespace autowig
 {
     void method_decorator_3697020c45e55f06a417cc36514f353e(class ::Eigen::SVDBase< class ::Eigen::JacobiSVD< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 >, 2 > > & instance, class ::Eigen::JacobiSVD< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 >, 2 > & param_out)     { instance.derived() = param_out; }

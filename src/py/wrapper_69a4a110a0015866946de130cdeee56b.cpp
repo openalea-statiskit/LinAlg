@@ -1,6 +1,15 @@
 #include "_linalg.h"
 
 
+#if defined(_MSC_VER)
+    #if (_MSC_VER == 1900)
+namespace boost
+{
+    template <> class ::Eigen::PlainObjectBase< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 > > const volatile * get_pointer<class ::Eigen::PlainObjectBase< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 > > const volatile >(class ::Eigen::PlainObjectBase< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 > > const volatile *c) { return c; }
+}
+    #endif
+#endif
+
 namespace autowig
 {
     void method_decorator_443a13d2c88c59abb16cf816d5723369(class ::Eigen::PlainObjectBase< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 > > & instance, ::Eigen::PlainObjectBase< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 > >::Base & param_out)     { instance.base() = param_out; }

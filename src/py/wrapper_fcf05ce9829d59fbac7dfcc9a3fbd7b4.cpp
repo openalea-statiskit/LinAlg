@@ -1,7 +1,7 @@
 #include "_linalg.h"
 
 
-void wrapper_48e77655645b5410b34732a3ca66cf06()
+void wrapper_fcf05ce9829d59fbac7dfcc9a3fbd7b4()
 {
 
     std::string name_fa414b05d29e5f4ea0b6d6cb5cf81b01 = boost::python::extract< std::string >(boost::python::scope().attr("__name__") + ".statiskit");

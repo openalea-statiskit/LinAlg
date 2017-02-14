@@ -1,6 +1,15 @@
 #include "_linalg.h"
 
 
+#if defined(_MSC_VER)
+    #if (_MSC_VER == 1900)
+namespace boost
+{
+    template <> struct ::Eigen::EigenBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > > const volatile * get_pointer<struct ::Eigen::EigenBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > > const volatile >(struct ::Eigen::EigenBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > > const volatile *c) { return c; }
+}
+    #endif
+#endif
+
 namespace autowig
 {
     void method_decorator_bfc6f38e7fb85ae7ab7436b90d1fd518(struct ::Eigen::EigenBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > > & instance, class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > & param_out)     { instance.derived() = param_out; }

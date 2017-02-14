@@ -1,6 +1,15 @@
 #include "_linalg.h"
 
 
+#if defined(_MSC_VER)
+    #if (_MSC_VER == 1900)
+namespace boost
+{
+    template <> class ::Eigen::ColPivHouseholderQR< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 > > const volatile * get_pointer<class ::Eigen::ColPivHouseholderQR< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 > > const volatile >(class ::Eigen::ColPivHouseholderQR< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 > > const volatile *c) { return c; }
+}
+    #endif
+#endif
+
 namespace autowig
 {
     void method_decorator_81d91164d6115360a1b4c017fc04048a(class ::Eigen::ColPivHouseholderQR< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 > > & instance, ::Eigen::ColPivHouseholderQR< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 > >::RealScalar const & param_in_0, class ::Eigen::ColPivHouseholderQR< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 > > & param_out)     { instance.setThreshold(param_in_0) = param_out; }

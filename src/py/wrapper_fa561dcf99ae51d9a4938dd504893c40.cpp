@@ -1,6 +1,15 @@
 #include "_linalg.h"
 
 
+#if defined(_MSC_VER)
+    #if (_MSC_VER == 1900)
+namespace boost
+{
+    template <> class ::Eigen::DenseCoeffsBase< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 >, 3 > const volatile * get_pointer<class ::Eigen::DenseCoeffsBase< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 >, 3 > const volatile >(class ::Eigen::DenseCoeffsBase< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 >, 3 > const volatile *c) { return c; }
+}
+    #endif
+#endif
+
 namespace autowig
 {
 }
