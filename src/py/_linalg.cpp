@@ -1,30 +1,20 @@
 #include "_linalg.h"
 
-void wrapper_03e44dd16ded57c99312e2e18a9635a1();
-void wrapper_089c9dd3e01b547783e5718e2b3a0a26();
 void wrapper_1a2a88b1ab9057fbbdb3e368e51ab77d();
 void wrapper_2612ff275aa950bc811dcd5b25a1c4cc();
 void wrapper_32d9268c82ed5cc19bc33d4ee72a3380();
 void wrapper_44919ff66aef53608e0cd82064ceedc8();
-void wrapper_48e77655645b5410b34732a3ca66cf06();
 void wrapper_4c0d89cd71ea55ae91d655e0dc1e1317();
-void wrapper_5a2e4a3c31e2530dbf7489b7f57df352();
 void wrapper_623522582e05548395749eede420699c();
-void wrapper_6e3dc59cc313511186d5858c2c6492c4();
-void wrapper_726546b0489c51acb7e0aae79ba09806();
-void wrapper_7ae8ebcbe0ff56b78a7d8bdf3c6400ac();
-void wrapper_7e12cb1633365fa9a06d15560ca28ffc();
 void wrapper_81ee7ad6d9c95f98acffdfcee8c9dbf5();
 void wrapper_84d76c287d805c1588f98afbc1f9cb57();
-void wrapper_a7c53f676d8852f99def74503134543b();
 void wrapper_afe331da4a5453b7a4e8518767008816();
-void wrapper_b1911d7df66c5240a7678c091de1595b();
-void wrapper_b6cff2d8bc6e51b6850bdcb066cbc645();
 void wrapper_ba842f1f143455d780ab0a38939a9234();
 void wrapper_d3d92a58e15159f18a6f2e86b8f30242();
 void wrapper_ea663b46fa65508cbc52fc4554bcd0c7();
 void wrapper_ebc9828c80d75c2d974c4eca04150bd1();
 void wrapper_ed58f062a9ec5995b704d14bc105b469();
+void wrapper_fcf05ce9829d59fbac7dfcc9a3fbd7b4();
 void wrapper_01f3cd0bda4c508686210d07db1d886d();
 void wrapper_1ad276e1df57537d99fde283e155646e();
 void wrapper_34b02bad3a7053fab2d42edf508c84f7();
@@ -56,31 +46,21 @@ boost::python::docstring_options docstring_options(1, 0, 0);
 
 BOOST_PYTHON_MODULE(__linalg)
 {
-    wrapper_03e44dd16ded57c99312e2e18a9635a1();
-    wrapper_089c9dd3e01b547783e5718e2b3a0a26();
     wrapper_1a2a88b1ab9057fbbdb3e368e51ab77d();
     wrapper_2612ff275aa950bc811dcd5b25a1c4cc();
     wrapper_32d9268c82ed5cc19bc33d4ee72a3380();
     wrapper_44919ff66aef53608e0cd82064ceedc8();
-    wrapper_48e77655645b5410b34732a3ca66cf06();
     wrapper_4c0d89cd71ea55ae91d655e0dc1e1317();
-    wrapper_5a2e4a3c31e2530dbf7489b7f57df352();
     wrapper_623522582e05548395749eede420699c();
-    wrapper_6e3dc59cc313511186d5858c2c6492c4();
-    wrapper_726546b0489c51acb7e0aae79ba09806();
-    wrapper_7ae8ebcbe0ff56b78a7d8bdf3c6400ac();
-    wrapper_7e12cb1633365fa9a06d15560ca28ffc();
     wrapper_81ee7ad6d9c95f98acffdfcee8c9dbf5();
     wrapper_84d76c287d805c1588f98afbc1f9cb57();
-    wrapper_a7c53f676d8852f99def74503134543b();
     wrapper_afe331da4a5453b7a4e8518767008816();
-    wrapper_b1911d7df66c5240a7678c091de1595b();
-    wrapper_b6cff2d8bc6e51b6850bdcb066cbc645();
     wrapper_ba842f1f143455d780ab0a38939a9234();
     wrapper_d3d92a58e15159f18a6f2e86b8f30242();
     wrapper_ea663b46fa65508cbc52fc4554bcd0c7();
     wrapper_ebc9828c80d75c2d974c4eca04150bd1();
     wrapper_ed58f062a9ec5995b704d14bc105b469();
+    wrapper_fcf05ce9829d59fbac7dfcc9a3fbd7b4();
     wrapper_01f3cd0bda4c508686210d07db1d886d();
     wrapper_1ad276e1df57537d99fde283e155646e();
     wrapper_34b02bad3a7053fab2d42edf508c84f7();
