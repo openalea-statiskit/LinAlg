@@ -56,7 +56,7 @@ void wrapper_188d9a4d2cfb562385c42fe005cf6a4c()
     ::Eigen::MatrixBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::Scalar  (::Eigen::MatrixBase< ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::*method_pointer_8a8aa80a58915cfdbb0706646b0711dd)() const = &::Eigen::MatrixBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::determinant;
     ::Eigen::MatrixBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::EigenvaluesReturnType  (::Eigen::MatrixBase< ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::*method_pointer_743a1ca6b1e65f0aa961613c41ba5809)() const = &::Eigen::MatrixBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::eigenvalues;
     ::Eigen::MatrixBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::PlainObject  (::Eigen::MatrixBase< ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::*method_pointer_b095a1297c13541d80eb6e462144ea29)() const = &::Eigen::MatrixBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::unitOrthogonal;
-// TODO     class ::Eigen::Matrix< double, 3, 1, 0, 3, 1 >  (::Eigen::MatrixBase< ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::*method_pointer_9060776305cc5769987ea50e712b2153)(::Eigen::Index , ::Eigen::Index , ::Eigen::Index ) const = &::Eigen::MatrixBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::eulerAngles;
+    class ::Eigen::Matrix< double, 3, 1, 0, 3, 1 >  (::Eigen::MatrixBase< ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::*method_pointer_9060776305cc5769987ea50e712b2153)(::Eigen::Index , ::Eigen::Index , ::Eigen::Index ) const = &::Eigen::MatrixBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::eulerAngles;
     void  (::Eigen::MatrixBase< ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::*method_pointer_c5ff66690587562fa9a4b3decb87c064)(::Eigen::MatrixBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::Scalar &, ::Eigen::MatrixBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::RealScalar &) = &::Eigen::MatrixBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::makeHouseholderInPlace;
     boost::python::class_< class ::Eigen::MatrixBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >, autowig::Held< class ::Eigen::MatrixBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > > >::Type, boost::python::bases< class ::Eigen::DenseBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > > > > class_188d9a4d2cfb562385c42fe005cf6a4c("_MatrixBase_188d9a4d2cfb562385c42fe005cf6a4c", "", boost::python::no_init);
     class_188d9a4d2cfb562385c42fe005cf6a4c.def("diagonal_size", method_pointer_bf27f693997c5cd1bd6b0ee4ed88e63b, "");
@@ -93,7 +93,7 @@ void wrapper_188d9a4d2cfb562385c42fe005cf6a4c()
     class_188d9a4d2cfb562385c42fe005cf6a4c.def("determinant", method_pointer_8a8aa80a58915cfdbb0706646b0711dd, "");
     class_188d9a4d2cfb562385c42fe005cf6a4c.def("eigenvalues", method_pointer_743a1ca6b1e65f0aa961613c41ba5809, "");
     class_188d9a4d2cfb562385c42fe005cf6a4c.def("unit_orthogonal", method_pointer_b095a1297c13541d80eb6e462144ea29, "");
-// TODO     class_188d9a4d2cfb562385c42fe005cf6a4c.def("euler_angles", method_pointer_9060776305cc5769987ea50e712b2153, "");
+    class_188d9a4d2cfb562385c42fe005cf6a4c.def("euler_angles", method_pointer_9060776305cc5769987ea50e712b2153, "");
     class_188d9a4d2cfb562385c42fe005cf6a4c.def("make_householder_in_place", method_pointer_c5ff66690587562fa9a4b3decb87c064, "");
 
     if(autowig::Held< class ::Eigen::MatrixBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > > >::is_class)

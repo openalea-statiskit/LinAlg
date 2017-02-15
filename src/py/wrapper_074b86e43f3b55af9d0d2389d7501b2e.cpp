@@ -34,6 +34,7 @@ void wrapper_074b86e43f3b55af9d0d2389d7501b2e()
     ::Eigen::Index  (::Eigen::DenseBase< ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::*method_pointer_7e39eb629a7a5eb29e16bff9226c766f)() const = &::Eigen::DenseBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::innerSize;
     void  (::Eigen::DenseBase< ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::*method_pointer_431c2aa8d32f5304950c1e3145f4b512)(::Eigen::Index ) = &::Eigen::DenseBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::resize;
     void  (::Eigen::DenseBase< ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::*method_pointer_cd9080927b435d30b2ad601f31cb27e0)(::Eigen::Index , ::Eigen::Index ) = &::Eigen::DenseBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::resize;
+    void  (::Eigen::DenseBase< ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::*method_pointer_b2523b4a4faf5c57b406c3477e1c963d)() = &::Eigen::DenseBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::transposeInPlace;
     void  (::Eigen::DenseBase< ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::*method_pointer_1b6aa159101e51ffaffb45eb0d659902)(::Eigen::DenseBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::Scalar const &) = &::Eigen::DenseBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::fill;
     class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > & (::Eigen::DenseBase< ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::*method_pointer_b73c0647a05c57868956b08ed38c68df)(::Eigen::DenseBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::Scalar const &) = &::Eigen::DenseBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::setConstant;
     class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > & (::Eigen::DenseBase< ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::*method_pointer_79231cb54bc157de9d2b960d209a3eb6)(::Eigen::Index , ::Eigen::DenseBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::Scalar const &, ::Eigen::DenseBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::Scalar const &) = &::Eigen::DenseBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::setLinSpaced;
@@ -66,6 +67,7 @@ void wrapper_074b86e43f3b55af9d0d2389d7501b2e()
     class_074b86e43f3b55af9d0d2389d7501b2e.def("inner_size", method_pointer_7e39eb629a7a5eb29e16bff9226c766f, "");
     class_074b86e43f3b55af9d0d2389d7501b2e.def("resize", method_pointer_431c2aa8d32f5304950c1e3145f4b512, "");
     class_074b86e43f3b55af9d0d2389d7501b2e.def("resize", method_pointer_cd9080927b435d30b2ad601f31cb27e0, "");
+    class_074b86e43f3b55af9d0d2389d7501b2e.def("transpose_in_place", method_pointer_b2523b4a4faf5c57b406c3477e1c963d, "");
     class_074b86e43f3b55af9d0d2389d7501b2e.def("fill", method_pointer_1b6aa159101e51ffaffb45eb0d659902, "");
     class_074b86e43f3b55af9d0d2389d7501b2e.def("set_constant", method_pointer_b73c0647a05c57868956b08ed38c68df, boost::python::return_internal_reference<>(), "");
     class_074b86e43f3b55af9d0d2389d7501b2e.def("set_constant", autowig::method_decorator_b73c0647a05c57868956b08ed38c68df);
