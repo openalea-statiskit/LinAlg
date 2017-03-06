@@ -31,7 +31,7 @@ wrappers = autowig.generator(asg, nodes, module='src/py/_linalg.cpp',
                                          helder='std::shared_ptr')
 wrappers.write()
 
-s = subprocess.Popen(['scons', 'py', '-j7', '-k', '--eigen-static-assert=yes'], stderr=subprocess.PIPE)
+s = subprocess.Popen(['scons', 'py', '-j7', '-k', '--eigen-static-assert=yes', '--diagnostics-color=never'], stderr=subprocess.PIPE)
 out, err = s.communicate()
 
 autowig.feedback.plugin = 'edit'
@@ -42,7 +42,7 @@ while not codes or codes[-1].strip():
     if codes[-1]:
         exec(codes[-1], locals())
         wrappers.write()
-        s = subprocess.Popen(['scons', 'py', '-j7', '-k', '--eigen-static-assert=yes'], stderr=subprocess.PIPE)
+        s = subprocess.Popen(['scons', 'py', '-j7', '-k', '--eigen-static-assert=yes', '--diagnostics-color=never'], stderr=subprocess.PIPE)
         out, err = s.communicate()
     if len(codes) > 2:
         if codes[-1] == codes[-2]:
@@ -52,7 +52,7 @@ autowig.feedback.plugin = 'comment'
 for i in range(11):
     curr = autowig.feedback(err, '.', asg, variant_dir='build',
                                            src_dir='src')
-    s = subprocess.Popen(['scons', 'py', '-j7', '-k', '--eigen-static-assert=yes'], stderr=subprocess.PIPE)
+    s = subprocess.Popen(['scons', 'py', '-j7', '-k', '--eigen-static-assert=yes', '--diagnostics-color=never'], stderr=subprocess.PIPE)
     out, err = s.communicate()
 
 with open('ASG.pkl', 'w') as filehandler:
