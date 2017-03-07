@@ -14,7 +14,7 @@ namespace autowig
 {
     void method_decorator_9f3116f2a8c05d22a71eda0fd8fdb5f5(class ::Eigen::MatrixBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > > & instance, ::Eigen::MatrixBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::NonConstRealReturnType  param_out)     { instance.real() = param_out; }
     void method_decorator_98ad7e6dda285fe29a37cd0d97687f76(class ::Eigen::MatrixBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > > & instance, class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > & param_out)     { instance.setIdentity() = param_out; }
-    void method_decorator_fc1e1dedd3905ea78b18cc3624e6b871(class ::Eigen::MatrixBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > > & instance, ::Eigen::Index  param_in_0, ::Eigen::Index  param_in_1, class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > & param_out)     { instance.setIdentity(param_in_0, param_in_1) = param_out; }
+    void method_decorator_22d32bfd6c635510a02afd967240a041(class ::Eigen::MatrixBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > > & instance, ::Eigen::Index  param_in_0, ::Eigen::Index  param_in_1, class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > & param_out)     { instance.setIdentity(param_in_0, param_in_1) = param_out; }
     void method_decorator_06840a3e23a7526d8ba22a531bc93d38(class ::Eigen::MatrixBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > > & instance, class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > & param_out)     { instance.forceAlignedAccess() = param_out; }
     void method_decorator_0e2e904fbba256629a3383e363838541(class ::Eigen::MatrixBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > > & instance, class ::Eigen::MatrixBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > > & param_out)     { instance.matrix() = param_out; }
 }
@@ -42,7 +42,7 @@ void wrapper_188d9a4d2cfb562385c42fe005cf6a4c()
     void  (::Eigen::MatrixBase< ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::*method_pointer_82fcead8ab02572ab528dfd3f92caf6c)() = &::Eigen::MatrixBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::stableNormalize;
     void  (::Eigen::MatrixBase< ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::*method_pointer_71e08f157323524ba8d30c222b5bf7e0)() = &::Eigen::MatrixBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::adjointInPlace;
     class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > & (::Eigen::MatrixBase< ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::*method_pointer_98ad7e6dda285fe29a37cd0d97687f76)() = &::Eigen::MatrixBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::setIdentity;
-    class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > & (::Eigen::MatrixBase< ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::*method_pointer_fc1e1dedd3905ea78b18cc3624e6b871)(::Eigen::Index , ::Eigen::Index ) = &::Eigen::MatrixBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::setIdentity;
+    class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > & (::Eigen::MatrixBase< ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::*method_pointer_22d32bfd6c635510a02afd967240a041)(::Eigen::Index , ::Eigen::Index ) = &::Eigen::MatrixBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::setIdentity;
     bool  (::Eigen::MatrixBase< ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::*method_pointer_231b9c20f88f5112b9cfbae51948753b)(::Eigen::MatrixBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::RealScalar const &) const = &::Eigen::MatrixBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::isIdentity;
     bool  (::Eigen::MatrixBase< ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::*method_pointer_f0ddd4ff84e5529097c503433929acdb)(::Eigen::MatrixBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::RealScalar const &) const = &::Eigen::MatrixBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::isDiagonal;
     bool  (::Eigen::MatrixBase< ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::*method_pointer_7eea48c623545711a3cdca5bddfda47d)(::Eigen::MatrixBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::RealScalar const &) const = &::Eigen::MatrixBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::isUpperTriangular;
@@ -54,9 +54,7 @@ void wrapper_188d9a4d2cfb562385c42fe005cf6a4c()
     class ::Eigen::MatrixBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > > & (::Eigen::MatrixBase< ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::*method_pointer_0e2e904fbba256629a3383e363838541)() = &::Eigen::MatrixBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::matrix;
     class ::Eigen::MatrixBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > > const & (::Eigen::MatrixBase< ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::*method_pointer_3e8dbb6e60b45690a48389b344f523f7)() const = &::Eigen::MatrixBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::matrix;
     ::Eigen::MatrixBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::Scalar  (::Eigen::MatrixBase< ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::*method_pointer_8a8aa80a58915cfdbb0706646b0711dd)() const = &::Eigen::MatrixBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::determinant;
-    ::Eigen::MatrixBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::EigenvaluesReturnType  (::Eigen::MatrixBase< ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::*method_pointer_743a1ca6b1e65f0aa961613c41ba5809)() const = &::Eigen::MatrixBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::eigenvalues;
     ::Eigen::MatrixBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::PlainObject  (::Eigen::MatrixBase< ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::*method_pointer_b095a1297c13541d80eb6e462144ea29)() const = &::Eigen::MatrixBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::unitOrthogonal;
-// TODO     class ::Eigen::Matrix< double, 3, 1, 0, 3, 1 >  (::Eigen::MatrixBase< ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::*method_pointer_9060776305cc5769987ea50e712b2153)(::Eigen::Index , ::Eigen::Index , ::Eigen::Index ) const = &::Eigen::MatrixBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::eulerAngles;
     void  (::Eigen::MatrixBase< ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::*method_pointer_c5ff66690587562fa9a4b3decb87c064)(::Eigen::MatrixBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::Scalar &, ::Eigen::MatrixBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::RealScalar &) = &::Eigen::MatrixBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::makeHouseholderInPlace;
     boost::python::class_< class ::Eigen::MatrixBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >, autowig::Held< class ::Eigen::MatrixBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > > >::Type, boost::python::bases< class ::Eigen::DenseBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > > > > class_188d9a4d2cfb562385c42fe005cf6a4c("_MatrixBase_188d9a4d2cfb562385c42fe005cf6a4c", "", boost::python::no_init);
     class_188d9a4d2cfb562385c42fe005cf6a4c.def("diagonal_size", method_pointer_bf27f693997c5cd1bd6b0ee4ed88e63b, "");
@@ -76,8 +74,8 @@ void wrapper_188d9a4d2cfb562385c42fe005cf6a4c()
     class_188d9a4d2cfb562385c42fe005cf6a4c.def("adjoint_in_place", method_pointer_71e08f157323524ba8d30c222b5bf7e0, "");
     class_188d9a4d2cfb562385c42fe005cf6a4c.def("set_identity", method_pointer_98ad7e6dda285fe29a37cd0d97687f76, boost::python::return_internal_reference<>(), "");
     class_188d9a4d2cfb562385c42fe005cf6a4c.def("set_identity", autowig::method_decorator_98ad7e6dda285fe29a37cd0d97687f76);
-    class_188d9a4d2cfb562385c42fe005cf6a4c.def("set_identity", method_pointer_fc1e1dedd3905ea78b18cc3624e6b871, boost::python::return_internal_reference<>(), "");
-    class_188d9a4d2cfb562385c42fe005cf6a4c.def("set_identity", autowig::method_decorator_fc1e1dedd3905ea78b18cc3624e6b871);
+    class_188d9a4d2cfb562385c42fe005cf6a4c.def("set_identity", method_pointer_22d32bfd6c635510a02afd967240a041, boost::python::return_internal_reference<>(), "");
+    class_188d9a4d2cfb562385c42fe005cf6a4c.def("set_identity", autowig::method_decorator_22d32bfd6c635510a02afd967240a041);
     class_188d9a4d2cfb562385c42fe005cf6a4c.def("is_identity", method_pointer_231b9c20f88f5112b9cfbae51948753b, "");
     class_188d9a4d2cfb562385c42fe005cf6a4c.def("is_diagonal", method_pointer_f0ddd4ff84e5529097c503433929acdb, "");
     class_188d9a4d2cfb562385c42fe005cf6a4c.def("is_upper_triangular", method_pointer_7eea48c623545711a3cdca5bddfda47d, "");
@@ -91,9 +89,7 @@ void wrapper_188d9a4d2cfb562385c42fe005cf6a4c()
     class_188d9a4d2cfb562385c42fe005cf6a4c.def("matrix", autowig::method_decorator_0e2e904fbba256629a3383e363838541);
     class_188d9a4d2cfb562385c42fe005cf6a4c.def("matrix", method_pointer_3e8dbb6e60b45690a48389b344f523f7, boost::python::return_value_policy< boost::python::return_by_value >(), "");
     class_188d9a4d2cfb562385c42fe005cf6a4c.def("determinant", method_pointer_8a8aa80a58915cfdbb0706646b0711dd, "");
-    class_188d9a4d2cfb562385c42fe005cf6a4c.def("eigenvalues", method_pointer_743a1ca6b1e65f0aa961613c41ba5809, "");
     class_188d9a4d2cfb562385c42fe005cf6a4c.def("unit_orthogonal", method_pointer_b095a1297c13541d80eb6e462144ea29, "");
-// TODO     class_188d9a4d2cfb562385c42fe005cf6a4c.def("euler_angles", method_pointer_9060776305cc5769987ea50e712b2153, "");
     class_188d9a4d2cfb562385c42fe005cf6a4c.def("make_householder_in_place", method_pointer_c5ff66690587562fa9a4b3decb87c064, "");
 
     if(autowig::Held< class ::Eigen::MatrixBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > > >::is_class)

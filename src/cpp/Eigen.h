@@ -5,8 +5,6 @@
 #undef eigen_assert
 #define eigen_assert(x)   if (!(x)) { throw (std::runtime_error("Eigen")); }
 
-#define EIGEN_DEFAULT_DENSE_INDEX_TYPE int
-
 #include <eigen3/Eigen/Dense>
 
 #if defined WIN32 || defined _WIN32 || defined __CYGWIN__
