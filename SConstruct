@@ -11,7 +11,7 @@ AddOption('--eigen-static-assert',
           nargs=1,
           action='store',
           help='installation prefix',
-          default='no')
+          default='yes' if os.environ.get('AutWIG', 'false') == 'true' else 'no')
 
 env = Environment(tools = ['toolchain'])
 env['EIGEN_STATIC_ASSERT'] = GetOption('eigen-static-assert')
