@@ -1,17 +1,10 @@
 #include "_linalg.h"
 
 
-#if defined(_MSC_VER)
-    #if (_MSC_VER == 1900)
-namespace boost
-{
-    template <> class ::Eigen::PlainObjectBase< class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > > const volatile * get_pointer<class ::Eigen::PlainObjectBase< class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > > const volatile >(class ::Eigen::PlainObjectBase< class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > > const volatile *c) { return c; }
-}
-    #endif
-#endif
 
 namespace autowig
 {
+
     void method_decorator_154ffa07a02459a1a7e6ebc1d5df0411(class ::Eigen::PlainObjectBase< class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > > & instance, ::Eigen::PlainObjectBase< class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > >::Base & param_out)     { instance.base() = param_out; }
     void method_decorator_419f266b1ccd52a5a42837900b45cf4e(class ::Eigen::PlainObjectBase< class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > > & instance, ::Eigen::Index  param_in_0, ::Eigen::Index  param_in_1, const ::Eigen::PlainObjectBase< class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > >::Scalar & param_out)     { instance.coeffRef(param_in_0, param_in_1) = param_out; }
     void method_decorator_6e659a480fb2599ba37b6f5a4c7c87d7(class ::Eigen::PlainObjectBase< class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > > & instance, ::Eigen::Index  param_in_0, const ::Eigen::PlainObjectBase< class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > >::Scalar & param_out)     { instance.coeffRef(param_in_0) = param_out; }
@@ -24,6 +17,16 @@ namespace autowig
     void method_decorator_f0fea311685e51559f1a3d28f7060617(class ::Eigen::PlainObjectBase< class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > > & instance, ::Eigen::Index  param_in_0, class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > & param_out)     { instance.setRandom(param_in_0) = param_out; }
     void method_decorator_e609a4c8cd435d7fbc7b0ee3d5c97107(class ::Eigen::PlainObjectBase< class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > > & instance, ::Eigen::Index  param_in_0, ::Eigen::Index  param_in_1, class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > & param_out)     { instance.setRandom(param_in_0, param_in_1) = param_out; }
 }
+
+#if defined(_MSC_VER)
+    #if (_MSC_VER == 1900)
+namespace boost
+{
+    template <> class ::Eigen::PlainObjectBase< class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > > const volatile * get_pointer<class ::Eigen::PlainObjectBase< class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > > const volatile >(class ::Eigen::PlainObjectBase< class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > > const volatile *c) { return c; }
+}
+    #endif
+#endif
+
 
 
 void wrapper_5391cabac5f95f278a515f77cb95023c()

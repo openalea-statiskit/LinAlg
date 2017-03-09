@@ -1,6 +1,14 @@
 #include "_linalg.h"
 
 
+
+namespace autowig
+{
+
+    void method_decorator_bfc6f38e7fb85ae7ab7436b90d1fd518(struct ::Eigen::EigenBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > > & instance, class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > & param_out)     { instance.derived() = param_out; }
+    void method_decorator_97ddc4b7036d57139fdffed4caba8892(struct ::Eigen::EigenBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > > const & instance, class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > & param_out)     { instance.const_cast_derived() = param_out; }
+}
+
 #if defined(_MSC_VER)
     #if (_MSC_VER == 1900)
 namespace boost
@@ -10,11 +18,6 @@ namespace boost
     #endif
 #endif
 
-namespace autowig
-{
-    void method_decorator_bfc6f38e7fb85ae7ab7436b90d1fd518(struct ::Eigen::EigenBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > > & instance, class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > & param_out)     { instance.derived() = param_out; }
-    void method_decorator_97ddc4b7036d57139fdffed4caba8892(struct ::Eigen::EigenBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > > const & instance, class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > & param_out)     { instance.const_cast_derived() = param_out; }
-}
 
 
 void wrapper_ea663b46fa65508cbc52fc4554bcd0c7()
