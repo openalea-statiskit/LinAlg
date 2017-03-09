@@ -1,6 +1,12 @@
 #include "_linalg.h"
 
 
+
+namespace autowig
+{
+
+}
+
 #if defined(_MSC_VER)
     #if (_MSC_VER == 1900)
 namespace boost
@@ -10,9 +16,6 @@ namespace boost
     #endif
 #endif
 
-namespace autowig
-{
-}
 
 
 void wrapper_d3d92a58e15159f18a6f2e86b8f30242()

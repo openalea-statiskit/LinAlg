@@ -1,6 +1,14 @@
 #include "_linalg.h"
 
 
+
+namespace autowig
+{
+
+    void method_decorator_f43732f846a8545c9ed00719034ff108(struct ::Eigen::EigenBase< class ::Eigen::FullPivLU< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 > > > & instance, class ::Eigen::FullPivLU< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 > > & param_out)     { instance.derived() = param_out; }
+    void method_decorator_c6ed876e455d54c0ae9818b8b4f9380e(struct ::Eigen::EigenBase< class ::Eigen::FullPivLU< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 > > > const & instance, class ::Eigen::FullPivLU< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 > > & param_out)     { instance.const_cast_derived() = param_out; }
+}
+
 #if defined(_MSC_VER)
     #if (_MSC_VER == 1900)
 namespace boost
@@ -10,11 +18,6 @@ namespace boost
     #endif
 #endif
 
-namespace autowig
-{
-    void method_decorator_f43732f846a8545c9ed00719034ff108(struct ::Eigen::EigenBase< class ::Eigen::FullPivLU< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 > > > & instance, class ::Eigen::FullPivLU< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 > > & param_out)     { instance.derived() = param_out; }
-    void method_decorator_c6ed876e455d54c0ae9818b8b4f9380e(struct ::Eigen::EigenBase< class ::Eigen::FullPivLU< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 > > > const & instance, class ::Eigen::FullPivLU< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 > > & param_out)     { instance.const_cast_derived() = param_out; }
-}
 
 
 void wrapper_32d9268c82ed5cc19bc33d4ee72a3380()
