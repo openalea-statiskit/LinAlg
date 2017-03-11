@@ -1,35 +1,152 @@
 # -*-python-*-
 
+SOLVER = ['partialPivLu',
+          'fullPivLu',
+          'householderQr',
+          'colPivHouseholderQr',
+          'fullPivHouseholderQr',
+          'llt',
+          'ldlt',
+          'jacobiSvd']
+
+OBJ = ['Matrix', 'Vector', 'RowVector']
+
+header = """\
+#ifndef STATISKIT_LINALG_EIGEN_H
+#define STATISKIT_LINALG_EIGEN_H
+
+#include <stdexcept>
+#undef eigen_assert
+#define eigen_assert(x) \
+  if (!(x)) { throw (std::runtime_error("Eigen")); }
+
+#include <eigen3/Eigen/Dense>
+
+#if defined WIN32 || defined _WIN32 || defined __CYGWIN__
+    #ifdef LIBSTATISKIT_LINALG
+        #ifdef __GNUC__
+            #define STATISKIT_LINALG_API __attribute__ ((dllexport))
+            #define STATISKIT_LINALG_IMP
+        #else
+            #define STATISKIT_LINALG_API __declspec(dllexport)
+            #define STATISKIT_LINALG_IMP
+        #endif
+    #else
+        #ifdef __GNUC__
+            #define STATISKIT_LINALG_API __attribute__ ((dllimport))
+            #define STATISKIT_LINALG_IMP extern
+        #else
+            #define STATISKIT_LINALG_API __declspec(dllimport)
+            #define STATISKIT_LINALG_IMP extern
+        #endif
+    #endif
+#else
+    #if __GNUC__ >= 4
+        #define STATISKIT_LINALG_API __attribute__ ((visibility ("default")))
+    #else
+        #define STATISKIT_LINALG_API
+    #endif
+    #ifdef LIBSTATISKIT_LINALG
+        #define STATISKIT_LINALG_IMP
+    #else
+        #define STATISKIT_LINALG_IMP extern
+    #endif
+#endif
+
+namespace statiskit
+{
+    namespace linalg
+    {
+"""
+
+with open('Eigen.h', 'w') as filehandler:
+    filehandler.write(header)
+    filehandler.write('\t\tenum solver_type {\n')
+    for solver in SOLVER:
+        filehandler.write('\t\t\t' + solver + ',\n')
+    filehandler.write('\t\t};\n\n')
+    for obj in OBJ:
+        typedef = ['double']
+        coef = 2 if obj == 'Matrix' else 1
+        if obj == 'RowVector':
+            typedef.extend(['1'])
+        typedef.extend(['Eigen::Dynamic'] * coef)
+        if obj == 'Vector':
+            typedef.extend(['1'])
+        filehandler.write('\t\ttypedef Eigen::Matrix< ' + ', '.join(typedef) + ' > ' + obj + ';\n')
+        if obj == 'Matrix':
+            for solver in SOLVER:
+                if solver in ['llt', 'ldlt']:
+                    solver = solver.upper()
+                else:
+                    solver = solver[0].upper() + solver[1:]
+                    if solver.endswith('Svd'):
+                        solver = solver[:-3] + 'SVD'
+                    else:
+                        solver = solver[:-1] + solver[-1].upper()
+                filehandler.write('\t\ttypedef Eigen::' + solver + '< Eigen::Matrix< ' + ', '.join(typedef) + ' > > ' + solver + obj + ';\n')
+        filehandler.write('\n')
+    filehandler.write('\t\tSTATISKIT_LINALG_API Vector solve(const Matrix& A, const Vector& b, const solver_type& solver);\n')
+    filehandler.write('\t\tSTATISKIT_LINALG_API Matrix solve(const Matrix& A, const Matrix& b, const solver_type& solver);\n')
+    filehandler.write('\t}\n}\n\n#ifdef EIGEN_NO_STATIC_ASSERT\n\n')
+    filehandler.write('\n\n#endif')
+    filehandler.write('\n#endif')
+
+with open('Eigen.cpp', 'w') as filehandler:
+    filehandler.write('#include "Eigen.h"\n\n')
+    filehandler.write('namespace statiskit \n{')
+    filehandler.write('\tnamespace linalg \n{\n')
+    for obj in ['Matrix', 'Vector']:
+        filehandler.write('\n\t\t' + obj + ' solve(const Matrix& A, const ' + obj + '& b, const solver_type& solver)\n')
+        filehandler.write('\t\t{\n')
+        filehandler.write('\t\t\t' + obj + ' x;\n')
+        filehandler.write('\t\t\tswitch(solver)\n\t\t{\n')
+        for solver in SOLVER:
+            filehandler.write('\t\t\t\tcase ' + solver + ':\n')
+            filehandler.write('\t\t\t\t\tx = A.' + solver + '().solve(b);\n')
+            filehandler.write('\t\t\t\t\tbreak;\n')
+        filehandler.write('\t\t\t}\n\t\t\treturn x;\n')
+        filehandler.write('\t\t}\n')
+    filehandler.write('\t}\n}')
+
 from SCons.Errors import EnvironmentError
 
-Import("env")
-
-cppenv = env.Clone(tools = ['cpp'])
-
-cppenv.AppendUnique(CPPDEFINES = ['LIBSTATISKIT_LINALG'])
-
-exclude = """
-""".split()
-
-sources = [source for source in cppenv.Glob('*.*') if not source.name in exclude]
-
-targets = cppenv.CppLibrary("statiskit_linalg", sources)
-Alias("cpp", targets)
-Alias("autowig", targets)
-Alias("install", targets)
-
 try:
-    wigenv = cppenv.Clone(tools = ['wig'])
+    Import("env")
 
-    targets = wigenv.BoostPythonWIG('statiskit_linalg', [target for target in targets if target.name.endswith('.h')],
-                                    module='../py/_linalg.cpp',
-                                    decorator='../py/statiskit/linalg/_linalg.py',
-                                    parser_bootstrap=1,
-                                    controller='AutoWIG.py',
-                                    generator='AutoWIG.py')
+    cppenv = env.Clone(tools = ['cpp'])
+
+    cppenv.AppendUnique(CPPDEFINES = ['LIBSTATISKIT_LINALG'])
+
+    exclude = """
+    """.split()
+
+    sources = [source for source in cppenv.Glob('*.*') if not source.name in exclude]
+
+    targets = cppenv.CppLibrary("statiskit_linalg", sources)
+    Alias("cpp", targets)
     Alias("autowig", targets)
     Alias("install", targets)
+    try:
+        wigenv = cppenv.Clone(tools = ['wig'])
+
+        targets = wigenv.BoostPythonWIG('statiskit_linalg', [target for target in targets if target.name.endswith('.h')],
+                                        module='../py/_linalg.cpp',
+                                        decorator='../py/statiskit/linalg/_linalg.py',
+                                        parser_bootstrap=1,
+                                        controller='AutoWIG.py',
+                                        generator='AutoWIG.py')
+        Alias("autowig", targets)
+        wigenv.Depends(targets, "cpp")
+    except EnvironmentError:
+        Alias("autowig", [])
+        pass
+    except Exception:
+        raise
 except EnvironmentError:
+    Alias("cpp", [])
+    Alias("autowig", [])
+    Alias("install", [])
     pass
 except Exception:
     raise

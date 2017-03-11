@@ -29,7 +29,7 @@ del wrapper__init__
 
 def __eq__(self, other):
     if isinstance(other, self.__class__):
-        return all(all(self[index] == other[index] for index in range(len(self))))
+        return all(self[index] == other[index] for index in range(len(self)))
     else:
         return False
 
@@ -61,31 +61,36 @@ RowVector.__getitem__ = wrapper__getitem__(RowVector.coeff)
 
 def wrapper__setitem__(f):
     @wraps(f)
-    def __setitem__(self, item, value):
+    def __setitem__(self, index, value):
         if index < 0:
             index += len(self)
         if not 0 <= index < len(self):
             raise IndexError('`index` parameter should be positive and strictly inferior to ' + str(len(self)))
-        return f(self, index)
-        return f(self, index, value)
+        f(self, index, value)
     return __setitem__
 
 Vector.__setitem__ = wrapper__setitem__(Vector.coeff_ref)
 RowVector.__setitem__ = wrapper__setitem__(RowVector.coeff_ref)
 # del Vector.coeff_ref,  RowVector.coeff_ref, wrapper__setitem__
 
-# def __repr__(self):
-#     lengths = [0] * self.cols
-#     for row in range(self.rows):
-#         for col in range(self.cols):
-#             lengths[col] = max(lengths[col], len(str(self[row, col])))
-#     return "\n".join("[" + ", ".join(str(self[row, col]).rjust(lengths[col]) for col in range(self.cols)) + "]" for row in range(self.rows))
+def __repr__(self):
+    length = 0
+    for element in self:
+        length = max(length, len(str(element)))
+    return "\n".join("[" + str(self[row]).rjust(length) + "]" for row in range(self.rows))
     
-# Matrix.__repr__ = __repr__
-# del __repr__
+Vector.__repr__ = __repr__
+del __repr__
 
-# def _repr_latex_(self):
-#     return "$\\begin{pmatrix}\n" + str(self).replace("[", "").replace("]", "\\\\").replace(", ", " & ").replace("\n", "\t\n") + "\n\\end{pmatrix}$"
+def __repr__(self):
+    return "[" + ", ".join(str(element) for element in self) + "]"
 
-# Matrix._repr_latex_ = _repr_latex_
-# #del _repr_latex_
+RowVector.__repr__ = __repr__
+del __repr__
+
+def _repr_latex_(self):
+    return "$\\begin{pmatrix}\n\t" + str(self).replace("[", "").replace("]", "\\\\").replace(", ", " & ").replace("\n", "\n\t") + "\n\\end{pmatrix}$"
+
+Vector._repr_latex_ = _repr_latex_
+RowVector._repr_latex_ = _repr_latex_
+del _repr_latex_
