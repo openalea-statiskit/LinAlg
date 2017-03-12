@@ -12,9 +12,9 @@ for filepath in os.listdir(os.path.join(autowig.__path__[0], 'site', 'ASG')):
     with open(os.path.join(autowig.__path__[0], 'site', 'ASG', filepath), 'r') as filehandler:
         asgs[filepath] = pickle.load(filehandler)
 
-subprocess.call(['scons', '-j' + jobs, '-c'])
+subprocess.call(['scons', 'autowig', '-j' + jobs, '-c'])
 
-variant_dir = 'build'
+variant_dir = 'build/src'
 src_dir = 'src'
 
 asgs = [asg for filepath, asg in asgs.items() if not os.path.exists(filepath)]
@@ -29,7 +29,7 @@ for asg in asgs:
             for bpe in bpm.exports:
                 bpe.remove()
 
-s = subprocess.Popen(['scons', '-j' + jobs, '-k', '--diagnostics-color=never'], stderr=subprocess.PIPE)
+s = subprocess.Popen(['scons', 'autowig', '-j' + jobs, '-k', '--diagnostics-color=never'], stderr=subprocess.PIPE)
 out, err = s.communicate()
 
 os.environ['AutoWIG'] = 'true'
@@ -56,7 +56,6 @@ while changed and not prev == curr:
 
 autowig.feedback.plugin = 'comment'
 prev = ''
-curr = err
 while not prev == curr:
     prev = curr
     for asg in asgs:

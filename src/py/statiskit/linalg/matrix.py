@@ -31,7 +31,7 @@ Matrix.__init__ = wrapper__init__(Matrix.__init__)
 del wrapper__init__
 
 def __eq__(self, other):
-    if isinstance(other, Matrix):
+    if isinstance(other, Matrix) and self.rows == other.rows and self.cols == other.cols:
         return all(all(self[row, col] == other[row, col] for col in range(self.cols)) for row in range(self.rows))
     else:
         return False
@@ -58,7 +58,7 @@ def wrapper__getitem__(f):
     return __getitem__
 
 Matrix.__getitem__ = wrapper__getitem__(Matrix.coeff)
-#del __linalg.eigen._PlainObjectBase_5391cabac5f95f278a515f77cb95023c.coeff, wrapper__getitem__
+# del Matrix.coeff, wrapper__getitem__
 
 def wrapper__setitem__(f):
     @wraps(f)
@@ -76,7 +76,7 @@ def wrapper__setitem__(f):
     return __setitem__
 
 Matrix.__setitem__ = wrapper__setitem__(Matrix.coeff_ref)
-#del __linalg.eigen._PlainObjectBase_5391cabac5f95f278a515f77cb95023c.coeff_ref, wrapper__setitem__
+# del Matrix.coeff_ref, wrapper__setitem__
 
 def __repr__(self):
     lengths = [0] * self.cols
@@ -89,7 +89,7 @@ Matrix.__repr__ = __repr__
 del __repr__
 
 def _repr_latex_(self):
-    return "$\\begin{pmatrix}\n" + str(self).replace("[", "").replace("]", "\\\\").replace(", ", " & ").replace("\n", "\t\n") + "\n\\end{pmatrix}$"
+    return "$\\begin{pmatrix}\n\t" + str(self).replace("[", "").replace("]", "\\\\").replace(", ", " & ").replace("\n", "\n\t") + "\n\\end{pmatrix}$"
 
 Matrix._repr_latex_ = _repr_latex_
-#del _repr_latex_
+del _repr_latex_
