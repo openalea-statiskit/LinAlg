@@ -1,6 +1,20 @@
-import unittest
+try:
+    import matplotlib
+    matplotlib.use('Agg')
+    from matplotlib import pyplot
+except:
+    import warnings
+    warnings.warn("No module named matplotlib")
+
 from statiskit import linalg
 
+import unittest
+from nose.plugins.attrib import attr
+
+@attr(linux=True, 
+      osx=True,
+      win=True,
+      level=1)
 class TestMatrix(unittest.TestCase):
 
     @classmethod
