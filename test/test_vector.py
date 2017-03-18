@@ -1,11 +1,3 @@
-try:
-    import matplotlib
-    matplotlib.use('Agg')
-    from matplotlib import pyplot
-except:
-    import warnings
-    warnings.warn("No module named matplotlib")
-
 from statiskit import linalg
 
 import unittest

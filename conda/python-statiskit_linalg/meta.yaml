@@ -28,7 +28,7 @@ requirements:
 test:                                               
   requires:
     - python-dev
-    - matplotlib [unix]
+    - matplotlib
   imports:
     - statiskit.linalg
   source_files:                                
