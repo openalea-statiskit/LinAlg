@@ -1,5 +1,8 @@
 from functools import wraps
+
 from _linalg import __linalg
+
+from optionals import numpy
 
 __all__ = ["Vector", "RowVector"]
 
@@ -17,8 +20,16 @@ def wrapper__init__(f):
             if isinstance(arg, int):
                 f(self)
                 self.set_zero(arg)
-            else:
+            elif isinstance(arg, self.__class__):
                 f(self, arg)
+            else:
+                arg = numpy.asarray(arg)
+                if not len(arg.shape) == 1:
+                    raise ValueError('\'arg\' parameter is vector compatible')
+                f(self)
+                self.set_zero(arg.shape[0])
+                for i, v in enumerate(arg):
+                    self[i] = v
         else:
             raise TypeError('__init__() takes at most 1 argument')
     return __init__

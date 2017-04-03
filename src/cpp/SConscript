@@ -94,13 +94,13 @@ with open('Eigen.h', 'w') as filehandler:
 
 with open('Eigen.cpp', 'w') as filehandler:
     filehandler.write('#include "Eigen.h"\n\n')
-    filehandler.write('namespace statiskit \n{')
-    filehandler.write('\tnamespace linalg \n{\n')
+    filehandler.write('namespace statiskit \n{\n')
+    filehandler.write('\tnamespace linalg \n\t{\n')
     for obj in ['Matrix', 'Vector']:
         filehandler.write('\n\t\t' + obj + ' solve(const Matrix& A, const ' + obj + '& b, const solver_type& solver)\n')
         filehandler.write('\t\t{\n')
         filehandler.write('\t\t\t' + obj + ' x;\n')
-        filehandler.write('\t\t\tswitch(solver)\n\t\t{\n')
+        filehandler.write('\t\t\tswitch(solver)\n\t\t\t{\n')
         for solver in SOLVER:
             filehandler.write('\t\t\t\tcase ' + solver + ':\n')
             filehandler.write('\t\t\t\t\tx = A.' + solver + '().solve(b);\n')

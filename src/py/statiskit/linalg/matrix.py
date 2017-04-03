@@ -1,5 +1,8 @@
 from functools import wraps
+
 from _linalg import __linalg
+
+from optionals import numpy
 
 __all__ = ["Matrix"]
 
@@ -16,8 +19,22 @@ def wrapper__init__(f):
             if isinstance(arg, int):
                 f(self)
                 self.set_zero(arg, arg)
-            else:
+            elif isinstance(arg, self.__class__):
                 f(self, arg)
+            else:
+                arg = numpy.asarray(arg)
+                if not len(arg.shape) <= 2:
+                    raise ValueError('\'arg\' parameter is matrix compatible')
+                f(self)
+                if len(arg.shape) == 1:
+                    self.set_zero(arg.shape[0], arg.shape[0])
+                    for i, v in enumerate(arg):
+                        self[i, i] = v
+                else:
+                    self.set_zero(arg.shape[0], arg.shape[1])
+                    for i, v in enumerate(arg):
+                        for j, m in enumerate(v):
+                            self[i, j] = m
         elif len(args) == 2:
             if any(not isinstance(arg, int) for arg in args) or any(arg <= 0 for arg in args):
                 raise TypeError('Arguments should be strictly positive integers')
