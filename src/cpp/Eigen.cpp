@@ -1,14 +1,15 @@
 #include "Eigen.h"
 
 namespace statiskit 
-{	namespace linalg 
 {
+	namespace linalg 
+	{
 
 		Matrix solve(const Matrix& A, const Matrix& b, const solver_type& solver)
 		{
 			Matrix x;
 			switch(solver)
-		{
+			{
 				case partialPivLu:
 					x = A.partialPivLu().solve(b);
 					break;
@@ -41,7 +42,7 @@ namespace statiskit
 		{
 			Vector x;
 			switch(solver)
-		{
+			{
 				case partialPivLu:
 					x = A.partialPivLu().solve(b);
 					break;

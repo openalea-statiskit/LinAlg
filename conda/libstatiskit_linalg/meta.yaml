@@ -14,8 +14,8 @@ about:
 
 requirements:
   build:
-    - eigen 3.3.1
+    - eigen
     - libdev
   run:
-    - eigen 3.3.1
+    - eigen
     - librun
