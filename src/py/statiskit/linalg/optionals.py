@@ -14,3 +14,8 @@ try:
     import numpy
 except ImportError:
     numpy = NotImportedModule('numpy')
+
+try:
+    from matplotlib import pyplot
+except ImportError:
+    pyplot = NotImportedModule('matplotlib.pyplot')
