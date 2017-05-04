@@ -1,6 +1,7 @@
 from functools import wraps
-
+from statiskit.stl.vector import decorator
 from _linalg import __linalg
+from _linalg import __stl
 
 from optionals import numpy, pyplot
 
@@ -133,3 +134,6 @@ def plot(self, axes=None, *args, **kwargs):
 
 Matrix.plot = plot
 del plot
+
+for cls in __eigen.std._Vector:
+    decorator(cls)

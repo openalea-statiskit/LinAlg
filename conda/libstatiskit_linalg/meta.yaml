@@ -16,6 +16,8 @@ requirements:
   build:
     - eigen
     - libdev
+    - libstatiskit_stl
   run:
     - eigen
     - librun
+    - libstatiskit_stl

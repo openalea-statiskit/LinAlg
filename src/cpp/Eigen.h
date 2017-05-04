@@ -2,9 +2,7 @@
 #define STATISKIT_LINALG_EIGEN_H
 
 #include <stdexcept>
-#undef eigen_assert
-#define eigen_assert(x)   if (!(x)) { throw (std::runtime_error("Eigen")); }
-
+#include <vector>
 #include <eigen3/Eigen/Dense>
 
 #if defined WIN32 || defined _WIN32 || defined __CYGWIN__
@@ -67,6 +65,9 @@ namespace statiskit
 
 		typedef Eigen::Matrix< double, 1, Eigen::Dynamic > RowVector;
 
+		typedef std::vector< Vector > VectorVector;
+		typedef std::vector< RowVector > VectorRowVector;
+		typedef std::vector< Matrix > VectorMatrix;
 		STATISKIT_LINALG_API Vector solve(const Matrix& A, const Vector& b, const solver_type& solver);
 		STATISKIT_LINALG_API Matrix solve(const Matrix& A, const Matrix& b, const solver_type& solver);
 	}

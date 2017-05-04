@@ -16,10 +16,7 @@ header = """\
 #define STATISKIT_LINALG_EIGEN_H
 
 #include <stdexcept>
-#undef eigen_assert
-#define eigen_assert(x) \
-  if (!(x)) { throw (std::runtime_error("Eigen")); }
-
+#include <vector>
 #include <eigen3/Eigen/Dense>
 
 #if defined WIN32 || defined _WIN32 || defined __CYGWIN__
@@ -86,6 +83,9 @@ with open('Eigen.h', 'w') as filehandler:
                         solver = solver[:-1] + solver[-1].upper()
                 filehandler.write('\t\ttypedef Eigen::' + solver + '< Eigen::Matrix< ' + ', '.join(typedef) + ' > > ' + solver + obj + ';\n')
         filehandler.write('\n')
+    filehandler.write('\t\ttypedef std::vector< Vector > VectorVector;\n')
+    filehandler.write('\t\ttypedef std::vector< RowVector > VectorRowVector;\n')
+    filehandler.write('\t\ttypedef std::vector< Matrix > VectorMatrix;\n')
     filehandler.write('\t\tSTATISKIT_LINALG_API Vector solve(const Matrix& A, const Vector& b, const solver_type& solver);\n')
     filehandler.write('\t\tSTATISKIT_LINALG_API Matrix solve(const Matrix& A, const Matrix& b, const solver_type& solver);\n')
     filehandler.write('\t}\n}\n\n#ifdef EIGEN_NO_STATIC_ASSERT\n\n')
