@@ -1,14 +1,17 @@
 from functools import wraps
 from statiskit.stl.vector import decorator
+
 from _linalg import __linalg
-from _linalg import __stl
 
 from optionals import numpy, pyplot
 
-__all__ = ["Matrix"]
+__all__ = ["Matrix",
+           "Matrices"]
 
 
 Matrix = __linalg.statiskit.linalg.Matrix
+Matrices = __linalg.statiskit.linalg.Matrices
+decorator(Matrices)
 
 def wrapper__init__(f):
     @wraps(f)
@@ -134,6 +137,3 @@ def plot(self, axes=None, *args, **kwargs):
 
 Matrix.plot = plot
 del plot
-
-for cls in __eigen.std._Vector:
-    decorator(cls)

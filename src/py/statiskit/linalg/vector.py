@@ -1,14 +1,20 @@
 from functools import wraps
+from statiskit.stl.vector import decorator
 
 from _linalg import __linalg
 
 from optionals import numpy
 
-__all__ = ["Vector", "RowVector"]
+__all__ = ["Vector", "RowVector",
+           "Vectors", "RowVectors"]
 
 
 Vector = __linalg.statiskit.linalg.Vector
 RowVector = __linalg.statiskit.linalg.RowVector
+Vectors = __linalg.statiskit.linalg.Vectors
+decorator(Vectors)
+RowVectors = __linalg.statiskit.linalg.RowVectors
+decorator(RowVectors)
 
 def wrapper__init__(f):
     @wraps(f)
