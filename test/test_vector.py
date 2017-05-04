@@ -17,8 +17,8 @@ class TestMatrix(unittest.TestCase):
 
     def test__column_construction(self):
         """Test column vector construction"""
-        self.assertEqual(self._C.rows, 3)
-        self.assertEqual(self._C.cols, 1)
+        self.assertEqual(self._C.nb_rows, 3)
+        self.assertEqual(self._C.nb_cols, 1)
 
         for element in self._C:
             self.assertEqual(element, 0.)
@@ -28,8 +28,8 @@ class TestMatrix(unittest.TestCase):
 
     def test__row_construction(self):
         """Test row vector construction"""
-        self.assertEqual(self._R.rows, 1)
-        self.assertEqual(self._R.cols, 3)
+        self.assertEqual(self._R.nb_rows, 1)
+        self.assertEqual(self._R.nb_cols, 3)
 
         for element in self._R:
             self.assertEqual(element, 0.)

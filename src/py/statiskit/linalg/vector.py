@@ -1,14 +1,20 @@
 from functools import wraps
+from statiskit.stl.vector import decorator
 
 from _linalg import __linalg
 
 from optionals import numpy
 
-__all__ = ["Vector", "RowVector"]
+__all__ = ["Vector", "RowVector",
+           "Vectors", "RowVectors"]
 
 
 Vector = __linalg.statiskit.linalg.Vector
 RowVector = __linalg.statiskit.linalg.RowVector
+Vectors = __linalg.statiskit.linalg.Vectors
+decorator(Vectors)
+RowVectors = __linalg.statiskit.linalg.RowVectors
+decorator(RowVectors)
 
 def wrapper__init__(f):
     @wraps(f)
@@ -49,12 +55,14 @@ RowVector.__eq__ = __eq__
 del __eq__
 
 Vector.__len__ = Vector.rows
-Vector.rows = property(Vector.rows)
-Vector.cols = property(Vector.cols)
+Vector.nb_rows = property(Vector.rows)
+Vector.nb_cols = property(Vector.cols)
+# del Vector.rows, Vector.cols
 
 RowVector.__len__ = RowVector.cols
-RowVector.cols = property(RowVector.cols)
-RowVector.rows = property(RowVector.rows)
+RowVector.nb_cols = property(RowVector.cols)
+RowVector.nb_rows = property(RowVector.rows)
+# del RowVector.rows, RowVector.cols
 
 def wrapper__getitem__(f):
     @wraps(f)
@@ -88,7 +96,7 @@ def __repr__(self):
     length = 0
     for element in self:
         length = max(length, len(str(element)))
-    return "\n".join("[" + str(self[row]).rjust(length) + "]" for row in range(self.rows))
+    return "\n".join("[" + str(self[row]).rjust(length) + "]" for row in range(self.nb_rows))
     
 Vector.__repr__ = __repr__
 del __repr__
@@ -105,3 +113,22 @@ def _repr_latex_(self):
 Vector._repr_latex_ = _repr_latex_
 RowVector._repr_latex_ = _repr_latex_
 del _repr_latex_
+
+def to_list(self):
+    return [[self[i] for i in range(self.nb_rows)]]
+
+RowVector.to_list = to_list
+del to_list
+
+def to_list(self):
+    return [self[i] for i in range(self.nb_cols)]
+
+RowVector.to_list = to_list
+del to_list
+
+def to_numpy(self):
+    return numpy.array(self.to_list())
+
+Vector.to_numpy = to_numpy
+RowVector.to_numpy = to_numpy
+del to_numpy

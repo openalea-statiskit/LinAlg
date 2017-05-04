@@ -2,27 +2,21 @@
 #define STATISKIT_LINALG_EIGEN_H
 
 #include <stdexcept>
-#undef eigen_assert
-#define eigen_assert(x)   if (!(x)) { throw (std::runtime_error("Eigen")); }
-
+#include <vector>
 #include <eigen3/Eigen/Dense>
 
 #if defined WIN32 || defined _WIN32 || defined __CYGWIN__
     #ifdef LIBSTATISKIT_LINALG
         #ifdef __GNUC__
             #define STATISKIT_LINALG_API __attribute__ ((dllexport))
-            #define STATISKIT_LINALG_IMP
         #else
             #define STATISKIT_LINALG_API __declspec(dllexport)
-            #define STATISKIT_LINALG_IMP
         #endif
     #else
         #ifdef __GNUC__
             #define STATISKIT_LINALG_API __attribute__ ((dllimport))
-            #define STATISKIT_LINALG_IMP extern
         #else
             #define STATISKIT_LINALG_API __declspec(dllimport)
-            #define STATISKIT_LINALG_IMP extern
         #endif
     #endif
 #else
@@ -30,11 +24,6 @@
         #define STATISKIT_LINALG_API __attribute__ ((visibility ("default")))
     #else
         #define STATISKIT_LINALG_API
-    #endif
-    #ifdef LIBSTATISKIT_LINALG
-        #define STATISKIT_LINALG_IMP
-    #else
-        #define STATISKIT_LINALG_IMP extern
     #endif
 #endif
 
@@ -66,6 +55,10 @@ namespace statiskit
 		typedef Eigen::Matrix< double, Eigen::Dynamic, 1 > Vector;
 
 		typedef Eigen::Matrix< double, 1, Eigen::Dynamic > RowVector;
+
+		typedef std::vector< Vector > Vectors;
+		typedef std::vector< RowVector > RowVectors;
+		typedef std::vector< Matrix > Matrices;
 
 		STATISKIT_LINALG_API Vector solve(const Matrix& A, const Vector& b, const solver_type& solver);
 		STATISKIT_LINALG_API Matrix solve(const Matrix& A, const Matrix& b, const solver_type& solver);

@@ -16,10 +16,10 @@ class TestMatrix(unittest.TestCase):
 
     def test__matrix_construction(self):
         """Test matrix construction"""
-        self.assertEqual(self._M.rows, 3)
-        self.assertEqual(self._M.cols, 3)
-        for row in range(self._M.rows):
-            for col in range(self._M.cols):
+        self.assertEqual(self._M.nb_rows, 3)
+        self.assertEqual(self._M.nb_cols, 3)
+        for row in range(self._M.nb_rows):
+            for col in range(self._M.nb_cols):
                 self.assertEqual(self._M[row, col], 0.)
         self.assertEqual(self._M, linalg.Matrix(3))
         self.assertEqual(self._M, linalg.Matrix(self._M))

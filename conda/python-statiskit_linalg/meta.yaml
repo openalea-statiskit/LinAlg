@@ -18,12 +18,14 @@ requirements:
     - python-dev
     - libboost
     - libstatiskit_linalg
+    - python-statiskit_stl
     - python
   run:
     - librun
     - libstatiskit_linalg
     - libboost
     - python
+    - python-statiskit_stl
 
 test:                                               
   requires:
