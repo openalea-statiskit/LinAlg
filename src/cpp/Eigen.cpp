@@ -32,7 +32,7 @@ namespace statiskit
 					x = A.ldlt().solve(b);
 					break;
 				case jacobiSvd:
-					x = A.jacobiSvd().solve(b);
+					x = A.jacobiSvd(Eigen::ComputeThinU | Eigen::ComputeThinV).solve(b);
 					break;
 			}
 			return x;
@@ -65,7 +65,7 @@ namespace statiskit
 					x = A.ldlt().solve(b);
 					break;
 				case jacobiSvd:
-					x = A.jacobiSvd().solve(b);
+					x = A.jacobiSvd(Eigen::ComputeThinU | Eigen::ComputeThinV).solve(b);
 					break;
 			}
 			return x;
