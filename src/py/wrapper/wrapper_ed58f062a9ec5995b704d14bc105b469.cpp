@@ -5,9 +5,9 @@
 namespace autowig
 {
 
-    void method_decorator_3697020c45e55f06a417cc36514f353e(class ::Eigen::SVDBase< class ::Eigen::JacobiSVD< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 >, 2 > > & instance, class ::Eigen::JacobiSVD< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 >, 2 > & param_out)     { instance.derived() = param_out; }
-    void method_decorator_d1d5ea25c65b5b95ae1a0bc48ccb5e12(class ::Eigen::SVDBase< class ::Eigen::JacobiSVD< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 >, 2 > > & instance, ::Eigen::SVDBase< class ::Eigen::JacobiSVD< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 >, 2 > >::RealScalar const & param_in_0, class ::Eigen::JacobiSVD< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 >, 2 > & param_out)     { instance.setThreshold(param_in_0) = param_out; }
-    void method_decorator_38cb1c24f6205f3b9c9ec1ef7e13f047(class ::Eigen::SVDBase< class ::Eigen::JacobiSVD< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 >, 2 > > & instance, enum ::Eigen::Default_t  param_in_0, class ::Eigen::JacobiSVD< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 >, 2 > & param_out)     { instance.setThreshold(param_in_0) = param_out; }
+    void method_decorator_3697020c45e55f06a417cc36514f353e(class ::Eigen::SVDBase< class ::Eigen::JacobiSVD< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 >, 2 > > & instance, const class ::Eigen::JacobiSVD< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 >, 2 > & param_out) { instance.derived() = param_out; }
+    void method_decorator_d1d5ea25c65b5b95ae1a0bc48ccb5e12(class ::Eigen::SVDBase< class ::Eigen::JacobiSVD< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 >, 2 > > & instance, ::Eigen::SVDBase< class ::Eigen::JacobiSVD< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 >, 2 > >::RealScalar const & param_in_0, const class ::Eigen::JacobiSVD< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 >, 2 > & param_out) { instance.setThreshold(param_in_0) = param_out; }
+    void method_decorator_38cb1c24f6205f3b9c9ec1ef7e13f047(class ::Eigen::SVDBase< class ::Eigen::JacobiSVD< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 >, 2 > > & instance, enum ::Eigen::Default_t  param_in_0, const class ::Eigen::JacobiSVD< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 >, 2 > & param_out) { instance.setThreshold(param_in_0) = param_out; }
 }
 
 #if defined(_MSC_VER)

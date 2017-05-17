@@ -51,15 +51,14 @@ out, curr = s.communicate()
 while changed and not prev == curr:
     prev = curr
     changed = False
-    for asg in asgs:
-        code = autowig.feedback(curr, '.', asg, variant_dir=variant_dir,
-                                                src_dir=src_dir)
-        if code.strip():
-            changed = True
-            exec(code, locals())
-            for bpm in asg.boost_python_modules():
-                if bpm.globalname.startswith(os.path.abspath('.')):
-                    bpm.write()
+    code = autowig.feedback(curr, '.', asg, variant_dir=variant_dir,
+                                            src_dir=src_dir)
+    if code.strip():
+        changed = True
+        exec(code, locals())
+        for bpm in asg.boost_python_modules():
+            if bpm.globalname.startswith(os.path.abspath('.')):
+                bpm.write()
     s = subprocess.Popen(['scons', '-j' + jobs, '-k', '--diagnostics-color=never'], stderr=subprocess.PIPE)
     out, curr = s.communicate()
 
@@ -67,9 +66,8 @@ autowig.feedback.plugin = 'comment'
 prev = ''
 while not prev == curr:
     prev = curr
-    for asg in asgs:
-        autowig.feedback(curr, '.', asg, variant_dir=variant_dir,
-                                         src_dir=src_dir)
+    autowig.feedback(curr, '.', asg, variant_dir=variant_dir,
+                                     src_dir=src_dir)
     s = subprocess.Popen(['scons', '-j' + jobs, '-k', '--diagnostics-color=never'], stderr=subprocess.PIPE)
     out, curr = s.communicate()
 

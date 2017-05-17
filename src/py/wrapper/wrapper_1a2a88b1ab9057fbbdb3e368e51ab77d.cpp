@@ -5,8 +5,8 @@
 namespace autowig
 {
 
-    void method_decorator_62353c8512025c09a0d54a926ce8a092(class ::Eigen::FullPivHouseholderQR< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 > > & instance, ::Eigen::FullPivHouseholderQR< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 > >::RealScalar const & param_in_0, class ::Eigen::FullPivHouseholderQR< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 > > & param_out)     { instance.setThreshold(param_in_0) = param_out; }
-    void method_decorator_3e536eb4aaff529db962b38d21098547(class ::Eigen::FullPivHouseholderQR< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 > > & instance, enum ::Eigen::Default_t  param_in_0, class ::Eigen::FullPivHouseholderQR< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 > > & param_out)     { instance.setThreshold(param_in_0) = param_out; }
+    void method_decorator_62353c8512025c09a0d54a926ce8a092(class ::Eigen::FullPivHouseholderQR< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 > > & instance, ::Eigen::FullPivHouseholderQR< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 > >::RealScalar const & param_in_0, const class ::Eigen::FullPivHouseholderQR< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 > > & param_out) { instance.setThreshold(param_in_0) = param_out; }
+    void method_decorator_3e536eb4aaff529db962b38d21098547(class ::Eigen::FullPivHouseholderQR< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 > > & instance, enum ::Eigen::Default_t  param_in_0, const class ::Eigen::FullPivHouseholderQR< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 > > & param_out) { instance.setThreshold(param_in_0) = param_out; }
 }
 
 #if defined(_MSC_VER)
