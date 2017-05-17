@@ -94,7 +94,10 @@ with open('Eigen.cpp', 'w') as filehandler:
         filehandler.write('\t\t\tswitch(solver)\n\t\t\t{\n')
         for solver in SOLVER:
             filehandler.write('\t\t\t\tcase ' + solver + ':\n')
-            filehandler.write('\t\t\t\t\tx = A.' + solver + '().solve(b);\n')
+            if solver == 'jacobiSvd':
+                filehandler.write('\t\t\t\t\tx = A.' + solver + '(Eigen::ComputeThinU | Eigen::ComputeThinV).solve(b);\n')
+            else:
+                filehandler.write('\t\t\t\t\tx = A.' + solver + '().solve(b);\n')
             filehandler.write('\t\t\t\t\tbreak;\n')
         filehandler.write('\t\t\t}\n\t\t\treturn x;\n')
         filehandler.write('\t\t}\n')
