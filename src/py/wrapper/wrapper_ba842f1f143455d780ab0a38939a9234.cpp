@@ -5,8 +5,8 @@
 namespace autowig
 {
 
-    void method_decorator_75e385c9409f5665be3cc295752cbe9c(struct ::Eigen::EigenBase< class ::Eigen::PartialPivLU< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 > > > & instance, class ::Eigen::PartialPivLU< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 > > & param_out)     { instance.derived() = param_out; }
-    void method_decorator_3bf257cd57fa53c1b4b86fb3b32bbd51(struct ::Eigen::EigenBase< class ::Eigen::PartialPivLU< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 > > > const & instance, class ::Eigen::PartialPivLU< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 > > & param_out)     { instance.const_cast_derived() = param_out; }
+    void method_decorator_75e385c9409f5665be3cc295752cbe9c(struct ::Eigen::EigenBase< class ::Eigen::PartialPivLU< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 > > > & instance, const class ::Eigen::PartialPivLU< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 > > & param_out) { instance.derived() = param_out; }
+    void method_decorator_3bf257cd57fa53c1b4b86fb3b32bbd51(struct ::Eigen::EigenBase< class ::Eigen::PartialPivLU< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 > > > const & instance, const class ::Eigen::PartialPivLU< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 > > & param_out) { instance.const_cast_derived() = param_out; }
 }
 
 #if defined(_MSC_VER)

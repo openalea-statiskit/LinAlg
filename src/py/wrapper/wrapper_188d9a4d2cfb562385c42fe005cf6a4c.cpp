@@ -5,11 +5,11 @@
 namespace autowig
 {
 
-    void method_decorator_9f3116f2a8c05d22a71eda0fd8fdb5f5(class ::Eigen::MatrixBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > > & instance, ::Eigen::MatrixBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::NonConstRealReturnType  param_out)     { instance.real() = param_out; }
-    void method_decorator_98ad7e6dda285fe29a37cd0d97687f76(class ::Eigen::MatrixBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > > & instance, class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > & param_out)     { instance.setIdentity() = param_out; }
-    void method_decorator_22d32bfd6c635510a02afd967240a041(class ::Eigen::MatrixBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > > & instance, ::Eigen::Index  param_in_0, ::Eigen::Index  param_in_1, class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > & param_out)     { instance.setIdentity(param_in_0, param_in_1) = param_out; }
-    void method_decorator_06840a3e23a7526d8ba22a531bc93d38(class ::Eigen::MatrixBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > > & instance, class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > & param_out)     { instance.forceAlignedAccess() = param_out; }
-    void method_decorator_0e2e904fbba256629a3383e363838541(class ::Eigen::MatrixBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > > & instance, class ::Eigen::MatrixBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > > & param_out)     { instance.matrix() = param_out; }
+    void method_decorator_9f3116f2a8c05d22a71eda0fd8fdb5f5(class ::Eigen::MatrixBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > > & instance, const ::Eigen::MatrixBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::NonConstRealReturnType  param_out) { instance.real() = param_out; }
+    void method_decorator_98ad7e6dda285fe29a37cd0d97687f76(class ::Eigen::MatrixBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > > & instance, const class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > & param_out) { instance.setIdentity() = param_out; }
+    void method_decorator_22d32bfd6c635510a02afd967240a041(class ::Eigen::MatrixBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > > & instance, ::Eigen::Index  param_in_0, ::Eigen::Index  param_in_1, const class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > & param_out) { instance.setIdentity(param_in_0, param_in_1) = param_out; }
+    void method_decorator_06840a3e23a7526d8ba22a531bc93d38(class ::Eigen::MatrixBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > > & instance, const class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > & param_out) { instance.forceAlignedAccess() = param_out; }
+    void method_decorator_0e2e904fbba256629a3383e363838541(class ::Eigen::MatrixBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > > & instance, const class ::Eigen::MatrixBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > > & param_out) { instance.matrix() = param_out; }
 }
 
 #if defined(_MSC_VER)
