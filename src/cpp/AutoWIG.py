@@ -39,6 +39,4 @@ def generator(asg, module, decorator):
                                              decorator=decorator,
                                              closure=False,
                                              helder='std::shared_ptr')
-    import ipdb
-    ipdb.set_trace()
     return wrappers

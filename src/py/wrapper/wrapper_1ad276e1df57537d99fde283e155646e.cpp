@@ -38,7 +38,6 @@ void wrapper_1ad276e1df57537d99fde283e155646e()
     if(autowig::Held< class ::Eigen::JacobiSVD< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 >, 2 > >::is_class)
     {
         boost::python::implicitly_convertible< autowig::Held< class ::Eigen::JacobiSVD< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 >, 2 > >::Type, autowig::Held< class ::Eigen::SVDBase< class ::Eigen::JacobiSVD< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 >, 2 > > >::Type >();
-        //boost::python::objects::class_value_wrapper< autowig::Held< class ::Eigen::JacobiSVD< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 >, 2 > >::Type, boost::python::objects::make_ptr_instance< class ::Eigen::JacobiSVD< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 >, 2 >, boost::python::objects::pointer_holder< autowig::Held< class ::Eigen::JacobiSVD< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 >, 2 > >::Type, class ::Eigen::JacobiSVD< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 >, 2 > > > >();
     }
 
 }

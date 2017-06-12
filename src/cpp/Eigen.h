@@ -4,6 +4,7 @@
 #include <stdexcept>
 #include <vector>
 #include <eigen3/Eigen/Dense>
+#include <eigen3/Eigen/Sparse>
 
 #if defined WIN32 || defined _WIN32 || defined __CYGWIN__
     #ifdef LIBSTATISKIT_LINALG
@@ -42,6 +43,17 @@ namespace statiskit
 			jacobiSvd,
 		};
 
+		enum sparse_solver_type {
+			simplicialLLT,
+			simplicialLDLT ,
+			sparseLU,
+			sparseQR,
+			conjugateGradient,
+			leastSquaresConjugateGradient,
+			biCGSTAB,
+		};
+
+		typedef Eigen::SparseMatrix< double > SparseMatrix;
 		typedef Eigen::Matrix< double, Eigen::Dynamic, Eigen::Dynamic > Matrix;
 		typedef Eigen::PartialPivLU< Eigen::Matrix< double, Eigen::Dynamic, Eigen::Dynamic > > PartialPivLUMatrix;
 		typedef Eigen::FullPivLU< Eigen::Matrix< double, Eigen::Dynamic, Eigen::Dynamic > > FullPivLUMatrix;
@@ -52,16 +64,21 @@ namespace statiskit
 		typedef Eigen::LDLT< Eigen::Matrix< double, Eigen::Dynamic, Eigen::Dynamic > > LDLTMatrix;
 		typedef Eigen::JacobiSVD< Eigen::Matrix< double, Eigen::Dynamic, Eigen::Dynamic > > JacobiSVDMatrix;
 
+		typedef Eigen::SparseVector< double > SparseVector;
 		typedef Eigen::Matrix< double, Eigen::Dynamic, 1 > Vector;
 
 		typedef Eigen::Matrix< double, 1, Eigen::Dynamic > RowVector;
 
 		typedef std::vector< Vector > Vectors;
 		typedef std::vector< RowVector > RowVectors;
+		typedef std::vector< SparseVector > SparseVectors;
 		typedef std::vector< Matrix > Matrices;
+
+		typedef std::vector< SparseMatrix > SparseMatrices;
 
 		STATISKIT_LINALG_API Vector solve(const Matrix& A, const Vector& b, const solver_type& solver);
 		STATISKIT_LINALG_API Matrix solve(const Matrix& A, const Matrix& b, const solver_type& solver);
+		STATISKIT_LINALG_API Matrix inverse(const Matrix& A, const solver_type& solver);
 	}
 }
 
