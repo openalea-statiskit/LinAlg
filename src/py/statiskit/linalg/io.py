@@ -7,7 +7,6 @@ from matrix import Matrix
 __all__ = ['read_csv', 'from_numpy']
 
 def read_csv(filepath, sep=None, **kwargs):
-    print numpy.genfromtxt(filepath, delimiter=sep, **kwargs)
     return from_numpy(numpy.genfromtxt(filepath, delimiter=sep, **kwargs))
 
 def from_numpy(array):
