@@ -6,11 +6,15 @@ from _linalg import __linalg
 from optionals import numpy, pyplot
 
 __all__ = ["Matrix",
-           "Matrices"]
+           "SparseMatrix",
+           "Matrices",
+           "SparseMatrices"]
 
 
 Matrix = __linalg.statiskit.linalg.Matrix
+SparseMatrix = __linalg.statiskit.linalg.SparseMatrix
 Matrices = __linalg.statiskit.linalg.Matrices
+SparseMatrices = __linalg.statiskit.linalg.SparseMatrices
 decorator(Matrices)
 
 def wrapper__init__(f):
@@ -122,6 +126,7 @@ def to_list(self):
 
 Matrix.to_list = to_list
 del to_list
+
 
 def to_numpy(self):
     return numpy.array(self.to_list())
