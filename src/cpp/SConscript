@@ -9,6 +9,14 @@ SOLVER = ['partialPivLu',
           'ldlt',
           'jacobiSvd']
 
+SPARSE_SOLVER = ['simplicialLLT',
+          'simplicialLDLT ',
+          'sparseLU',
+          'sparseQR',
+          'conjugateGradient',
+          'leastSquaresConjugateGradient',
+          'biCGSTAB']
+
 OBJ = ['Matrix', 'Vector', 'RowVector']
 
 header = """\
@@ -18,6 +26,7 @@ header = """\
 #include <stdexcept>
 #include <vector>
 #include <eigen3/Eigen/Dense>
+#include <eigen3/Eigen/Sparse>
 
 #if defined WIN32 || defined _WIN32 || defined __CYGWIN__
     #ifdef LIBSTATISKIT_LINALG
@@ -53,8 +62,19 @@ with open('Eigen.h', 'w') as filehandler:
     for solver in SOLVER:
         filehandler.write('\t\t\t' + solver + ',\n')
     filehandler.write('\t\t};\n\n')
+    filehandler.write('\t\tenum sparse_solver_type {\n')
+    for solver in SPARSE_SOLVER:
+        filehandler.write('\t\t\t' + solver + ',\n')
+    filehandler.write('\t\t};\n\n')
     for obj in OBJ:
         typedef = ['double']
+        if not obj == 'RowVector':
+            filehandler.write('\t\ttypedef Eigen::Sparse' + obj + '< ' + ', '.join(typedef) + ' > Sparse' + obj + ';\n')
+        # if obj == 'Matrix':
+        #     for solver in SPARSE_SOLVER:
+        #         solver = solver[0].upper() + solver[1:]
+        #         solver = solver[:-1] + solver[-1].upper()
+        #         filehandler.write('\t\ttypedef Eigen::' + solver + '< Eigen::SparseMatrix< ' + ', '.join(typedef) + ' > > ' + solver + 'Sparse' + obj + ';\n')
         coef = 2 if obj == 'Matrix' else 1
         if obj == 'RowVector':
             typedef.extend(['1'])
@@ -76,9 +96,15 @@ with open('Eigen.h', 'w') as filehandler:
         filehandler.write('\n')
     filehandler.write('\t\ttypedef std::vector< Vector > Vectors;\n')
     filehandler.write('\t\ttypedef std::vector< RowVector > RowVectors;\n')
+    filehandler.write('\t\ttypedef std::vector< SparseVector > SparseVectors;\n')
     filehandler.write('\t\ttypedef std::vector< Matrix > Matrices;\n\n')
+    filehandler.write('\t\ttypedef std::vector< SparseMatrix > SparseMatrices;\n\n')
+
     filehandler.write('\t\tSTATISKIT_LINALG_API Vector solve(const Matrix& A, const Vector& b, const solver_type& solver);\n')
+    # filehandler.write('\t\tSTATISKIT_LINALG_API Vector solve(const SparseMatrix& A, const Vector& b, const sparse_solver_type& solver);\n')
     filehandler.write('\t\tSTATISKIT_LINALG_API Matrix solve(const Matrix& A, const Matrix& b, const solver_type& solver);\n')
+    filehandler.write('\t\tSTATISKIT_LINALG_API Matrix inverse(const Matrix& A, const solver_type& solver);\n')
+    # filehandler.write('\t\tSTATISKIT_LINALG_API Matrix inverse(const SparseMatrix& A, const sparse_solver_type& solver);\n')
     filehandler.write('\t}\n}\n\n#ifdef EIGEN_NO_STATIC_ASSERT\n\n')
     filehandler.write('\n\n#endif')
     filehandler.write('\n#endif')
@@ -101,6 +127,40 @@ with open('Eigen.cpp', 'w') as filehandler:
             filehandler.write('\t\t\t\t\tbreak;\n')
         filehandler.write('\t\t\t}\n\t\t\treturn x;\n')
         filehandler.write('\t\t}\n')
+        if obj == 'Matrix':
+            # filehandler.write('\n\t\t' + obj + ' solve(const SparseMatrix& A, const ' + obj + '& b, const sparse_solver_type& solver)\n')
+            # filehandler.write('\t\t{\n')
+            # filehandler.write('\t\t\t' + obj + ' x;\n')
+            # filehandler.write('\t\t\tswitch(solver)\n\t\t\t{\n')
+            # for solver in SPARSE_SOLVER:
+            #     filehandler.write('\t\t\t\tcase ' + solver + ':\n')
+            #     filehandler.write('\t\t\t\t\tx = A.' + solver + '().solve(b);\n')
+            #     filehandler.write('\t\t\t\t\tbreak;\n')
+            # filehandler.write('\t\t\t}\n\t\t\treturn x;\n')
+            # filehandler.write('\t\t}\n')
+            filehandler.write('\n\t\t' + obj + ' inverse(const Matrix& A, const solver_type& solver)\n')
+            filehandler.write('\t\t{\n')
+            filehandler.write('\t\t\t' + obj + ' B, I = Eigen::VectorXd::Ones(A.rows()).asDiagonal();\n')
+            filehandler.write('\t\t\tswitch(solver)\n\t\t\t{\n')
+            for solver in SOLVER:
+                filehandler.write('\t\t\t\tcase ' + solver + ':\n')
+                if solver == 'jacobiSvd':
+                    filehandler.write('\t\t\t\t\tB = A.' + solver + '(Eigen::ComputeThinU | Eigen::ComputeThinV).solve(I);\n')
+                else:
+                    filehandler.write('\t\t\t\t\tB = A.' + solver + '().solve(I);\n')
+                filehandler.write('\t\t\t\t\tbreak;\n')
+            filehandler.write('\t\t\t}\n\t\t\treturn B;\n')
+            filehandler.write('\t\t}\n')
+            # filehandler.write('\n\t\t' + obj + ' inverse(const SparseMatrix& A, const sparse_solver_type& solver)\n')
+            # filehandler.write('\t\t{\n')
+            # filehandler.write('\t\t\t' + obj + ' B, I = Eigen::VectorXd::Ones(A.rows()).asDiagonal();\n')
+            # filehandler.write('\t\t\tswitch(solver)\n\t\t\t{\n')
+            # for solver in SPARSE_SOLVER:
+            #     filehandler.write('\t\t\t\tcase ' + solver + ':\n')
+            #     filehandler.write('\t\t\t\t\tB = A.' + solver + '().solve(I);\n')
+            #     filehandler.write('\t\t\t\t\tbreak;\n')
+            # filehandler.write('\t\t\t}\n\t\t\treturn B;\n')
+            # filehandler.write('\t\t}\n')
     filehandler.write('\t}\n}')
 
 from SCons.Errors import EnvironmentError

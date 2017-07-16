@@ -39,7 +39,6 @@ void wrapper_582003aac6505a6d9ea4c4fa99329e5e()
     if(autowig::Held< class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > >::is_class)
     {
         boost::python::implicitly_convertible< autowig::Held< class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > >::Type, autowig::Held< class ::Eigen::PlainObjectBase< class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > > >::Type >();
-        //boost::python::objects::class_value_wrapper< autowig::Held< class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > >::Type, boost::python::objects::make_ptr_instance< class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 >, boost::python::objects::pointer_holder< autowig::Held< class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > >::Type, class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > > > >();
     }
 
 }

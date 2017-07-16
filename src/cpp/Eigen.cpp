@@ -38,6 +38,39 @@ namespace statiskit
 			return x;
 		}
 
+		Matrix inverse(const Matrix& A, const solver_type& solver)
+		{
+			Matrix B, I = Eigen::VectorXd::Ones(A.rows()).asDiagonal();
+			switch(solver)
+			{
+				case partialPivLu:
+					B = A.partialPivLu().solve(I);
+					break;
+				case fullPivLu:
+					B = A.fullPivLu().solve(I);
+					break;
+				case householderQr:
+					B = A.householderQr().solve(I);
+					break;
+				case colPivHouseholderQr:
+					B = A.colPivHouseholderQr().solve(I);
+					break;
+				case fullPivHouseholderQr:
+					B = A.fullPivHouseholderQr().solve(I);
+					break;
+				case llt:
+					B = A.llt().solve(I);
+					break;
+				case ldlt:
+					B = A.ldlt().solve(I);
+					break;
+				case jacobiSvd:
+					B = A.jacobiSvd(Eigen::ComputeThinU | Eigen::ComputeThinV).solve(I);
+					break;
+			}
+			return B;
+		}
+
 		Vector solve(const Matrix& A, const Vector& b, const solver_type& solver)
 		{
 			Vector x;
