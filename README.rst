@@ -1,5 +1,5 @@
-**StatisKit-LinAlg**: **Eigen** interfaces
-##########################################
+**StatisKit-LinAlg**: Minimal Interpreted Interfaces for the **Eigen** *C++* Template Library 
+#############################################################################################
 
 **Eigen** is a *C++* template library for linear algebra.
 It contains matrices, vectors, numerical solvers and related algorithms.
