@@ -1,8 +1,8 @@
-import _linalg
+from . import _linalg
 
-from optionals import numpy
-from vector import RowVector
-from matrix import Matrix
+from .optionals import numpy
+from .vector import RowVector
+from .matrix import Matrix
 
 __all__ = ['read_csv', 'from_numpy']
 
