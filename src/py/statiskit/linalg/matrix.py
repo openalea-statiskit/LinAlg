@@ -1,7 +1,7 @@
 from functools import wraps
 from statiskit.stl.vector import decorator
 
-from _linalg import __linalg
+from ._linalg import __linalg
 
 from optionals import numpy, pyplot
 

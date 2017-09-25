@@ -1,3 +1,3 @@
-from matrix import *
-from vector import *
-from io import *
+from .matrix import *
+from .vector import *
+from .io import *
