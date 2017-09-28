@@ -105,8 +105,29 @@ with open('Eigen.h', 'w') as filehandler:
     filehandler.write('\t\tSTATISKIT_LINALG_API Matrix solve(const Matrix& A, const Matrix& b, const solver_type& solver);\n')
     filehandler.write('\t\tSTATISKIT_LINALG_API Matrix inverse(const Matrix& A, const solver_type& solver);\n')
     # filehandler.write('\t\tSTATISKIT_LINALG_API Matrix inverse(const SparseMatrix& A, const sparse_solver_type& solver);\n')
-    filehandler.write('\t}\n}\n\n#ifdef EIGEN_NO_STATIC_ASSERT\n\n')
-    filehandler.write('\n\n#endif')
+    filehandler.write('\t}\n}\n\n')
+    filehandler.write("""
+STATISKIT_LINALG_API statiskit::linalg::Vector operator- (const statiskit::linalg::Vector& a, const statiskit::linalg::Vector& b);
+STATISKIT_LINALG_API statiskit::linalg::Vector operator+ (const statiskit::linalg::Vector& a, const statiskit::linalg::Vector& b);
+STATISKIT_LINALG_API statiskit::linalg::Vector operator* (const statiskit::linalg::Vector& a, const double& b);
+STATISKIT_LINALG_API statiskit::linalg::Matrix operator* (const statiskit::linalg::Vector& a, const statiskit::linalg::RowVector& b);
+STATISKIT_LINALG_API statiskit::linalg::Vector operator/ (const statiskit::linalg::Vector& a, const double& b);
+STATISKIT_LINALG_API statiskit::linalg::RowVector operator- (const statiskit::linalg::RowVector& a, const statiskit::linalg::RowVector& b);
+STATISKIT_LINALG_API statiskit::linalg::RowVector operator+ (const statiskit::linalg::RowVector& a, const statiskit::linalg::RowVector& b);
+STATISKIT_LINALG_API statiskit::linalg::RowVector operator* (const statiskit::linalg::RowVector& a, const double& b);
+STATISKIT_LINALG_API double operator* (const statiskit::linalg::RowVector& a, const statiskit::linalg::Vector& b);
+STATISKIT_LINALG_API statiskit::linalg::RowVector operator* (const statiskit::linalg::RowVector& a, const statiskit::linalg::Matrix& B);
+STATISKIT_LINALG_API statiskit::linalg::RowVector operator/ (const statiskit::linalg::RowVector& a, const double& b);
+STATISKIT_LINALG_API statiskit::linalg::Matrix operator- (const statiskit::linalg::Matrix& A, const statiskit::linalg::Matrix& B);
+STATISKIT_LINALG_API statiskit::linalg::Matrix operator+ (const statiskit::linalg::Matrix& A, const statiskit::linalg::Matrix& B);
+STATISKIT_LINALG_API statiskit::linalg::Matrix operator* (const statiskit::linalg::Matrix& A, const double& b);
+STATISKIT_LINALG_API statiskit::linalg::Vector operator* (const statiskit::linalg::Matrix& A, const statiskit::linalg::Vector& b);
+STATISKIT_LINALG_API statiskit::linalg::Matrix operator* (const statiskit::linalg::Matrix& A, const statiskit::linalg::Matrix& B);
+STATISKIT_LINALG_API statiskit::linalg::Matrix operator/ (const statiskit::linalg::Matrix& A, const double& b);
+
+#ifdef EIGEN_NO_STATIC_ASSERT\n
+""")
+    filehandler.write('#endif')
     filehandler.write('\n#endif')
 
 with open('Eigen.cpp', 'w') as filehandler:
@@ -161,7 +182,59 @@ with open('Eigen.cpp', 'w') as filehandler:
             #     filehandler.write('\t\t\t\t\tbreak;\n')
             # filehandler.write('\t\t\t}\n\t\t\treturn B;\n')
             # filehandler.write('\t\t}\n')
-    filehandler.write('\t}\n}')
+    filehandler.write('\t}\n}\n')
+    filehandler.write("""
+statiskit::linalg::Vector operator- (const statiskit::linalg::Vector& a, const statiskit::linalg::Vector& b)
+{ return a.operator-(b) ; }
+
+statiskit::linalg::Vector operator+ (const statiskit::linalg::Vector& a, const statiskit::linalg::Vector& b)
+{ return a.operator+(b) ; }
+
+statiskit::linalg::Vector operator* (const statiskit::linalg::Vector& a, const double& b)
+{ return a.operator*(b) ; }
+
+statiskit::linalg::Matrix operator* (const statiskit::linalg::Vector& a, const statiskit::linalg::RowVector& b)
+{ return a.operator*(b) ; }
+
+statiskit::linalg::Vector operator/ (const statiskit::linalg::Vector& a, const double& b)
+{ return a.operator/(b) ; }
+
+statiskit::linalg::RowVector operator- (const statiskit::linalg::RowVector& a, const statiskit::linalg::RowVector& b)
+{ return a.operator-(b) ; }
+
+statiskit::linalg::RowVector operator+ (const statiskit::linalg::RowVector& a, const statiskit::linalg::RowVector& b)
+{ return a.operator+(b) ; }
+
+statiskit::linalg::RowVector operator* (const statiskit::linalg::RowVector& a, const double& b)
+{ return a.operator*(b) ; }
+
+double operator* (const statiskit::linalg::RowVector& a, const statiskit::linalg::Vector& b)
+{ return a.operator*(b) ; }
+
+statiskit::linalg::RowVector operator* (const statiskit::linalg::RowVector& a, const statiskit::linalg::Matrix& B)
+{ return a.operator*(B) ; }
+
+statiskit::linalg::RowVector operator/ (const statiskit::linalg::RowVector& a, const double& b)
+{ return a.operator/(b) ; }
+
+statiskit::linalg::Matrix operator- (const statiskit::linalg::Matrix& A, const statiskit::linalg::Matrix& B)
+{ return A.operator-(B) ; }
+
+statiskit::linalg::Matrix operator+ (const statiskit::linalg::Matrix& A, const statiskit::linalg::Matrix& B)
+{ return A.operator+(B) ; }
+
+statiskit::linalg::Matrix operator* (const statiskit::linalg::Matrix& A, const double& b)
+{ return A.operator*(b) ; }
+
+statiskit::linalg::Vector operator* (const statiskit::linalg::Matrix& A, const statiskit::linalg::Vector& b)
+{ return A.operator*(b) ; }
+
+statiskit::linalg::Matrix operator* (const statiskit::linalg::Matrix& A, const statiskit::linalg::Matrix& B)
+{ return A.operator*(B) ; }
+
+statiskit::linalg::Matrix operator/ (const statiskit::linalg::Matrix& A, const double& b)
+{ return A.operator/(b) ; }
+""")
 
 from SCons.Errors import EnvironmentError
 

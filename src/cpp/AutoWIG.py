@@ -29,7 +29,7 @@ def controller(asg):
         for ctr in cls.constructors():
             if ctr.nb_parameters > 0:
                 ctr.boost_python_export = False
-    for cls in asg['class ::std::vector'].specializations():
+    for cls in asg['class ::std::vector'].specializations(partial=False):
         for ctr in cls.constructors():
             if ctr.nb_parameters > 0:
                 ctr.boost_python_export = False

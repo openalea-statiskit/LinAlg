@@ -2,7 +2,7 @@ __all__ = []
 
 
 # Import Boost.Python module
-import __linalg
+from . import __linalg
 
 
 # Group template specializations
