@@ -10,18 +10,18 @@ build:
         
 about:
   home: http://statiskit-linalg.readthedocs.org
-  license: CeCILL
+  license: Apache License 2.0
 
 requirements:
   build:
-    - libdev
-    - python-dev
+    - libtoolchain
+    - python-toolchain
     - libboost
     - libstatiskit_linalg
     - python-statiskit_stl
     - python
   run:
-    - librun
+    - libruntime
     - libstatiskit_linalg
     - libboost
     - python
@@ -29,7 +29,7 @@ requirements:
 
 test:                                               
   requires:
-    - python-dev
+    - python-toolchain
     - matplotlib
   imports:
     - statiskit.linalg
