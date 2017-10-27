@@ -1,9 +1,10 @@
 package:
-  name: libstatiskit_linalg
+  name: libeigen-dev
   version: "3.3.1"
 
 source:
-  path: ../../..
+  fn: eigen-3.3.1.tar.gz
+  url: http://bitbucket.org/eigen/eigen/get/3.3.1.tar.gz
 
 build:
   number: 0
@@ -14,10 +15,6 @@ about:
 
 requirements:
   build:
-    - libeigen-dev
     - libtoolchain
-    - libstatiskit_stl
   run:
-    - libeigen-dev
     - libruntime
-    - libstatiskit_stl

@@ -10,9 +10,13 @@ services:
   - docker
   
 env:
+  - CONDA_RECIPE=libeigen-dev
   - CONDA_RECIPE=libstatiskit_linalg
   - CONDA_RECIPE=python-statiskit_linalg
-
+    CONDA_VERSION=2
+  - CONDA_RECIPE=python-statiskit_linalg
+    CONDA_VERSION=3
+    
 install:
   - git clone https://github.com/StatisKit/travis-ci.git travis-ci
   - cd travis-ci
