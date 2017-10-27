@@ -10,14 +10,14 @@ build:
   
 about:
   home: http://statiskit-linalg.readthedocs.org
-  license: CeCILL
+  license: Apache License 2.0
 
 requirements:
   build:
     - eigen
-    - libdev
+    - libtoolchain
     - libstatiskit_stl
   run:
     - eigen
-    - librun
+    - libruntime
     - libstatiskit_stl
