@@ -82,9 +82,26 @@ namespace statiskit
 	}
 }
 
+
+STATISKIT_LINALG_API statiskit::linalg::Vector operator- (const statiskit::linalg::Vector& a, const statiskit::linalg::Vector& b);
+STATISKIT_LINALG_API statiskit::linalg::Vector operator+ (const statiskit::linalg::Vector& a, const statiskit::linalg::Vector& b);
+STATISKIT_LINALG_API statiskit::linalg::Vector operator* (const statiskit::linalg::Vector& a, const double& b);
+STATISKIT_LINALG_API statiskit::linalg::Matrix operator* (const statiskit::linalg::Vector& a, const statiskit::linalg::RowVector& b);
+STATISKIT_LINALG_API statiskit::linalg::Vector operator/ (const statiskit::linalg::Vector& a, const double& b);
+STATISKIT_LINALG_API statiskit::linalg::RowVector operator- (const statiskit::linalg::RowVector& a, const statiskit::linalg::RowVector& b);
+STATISKIT_LINALG_API statiskit::linalg::RowVector operator+ (const statiskit::linalg::RowVector& a, const statiskit::linalg::RowVector& b);
+STATISKIT_LINALG_API statiskit::linalg::RowVector operator* (const statiskit::linalg::RowVector& a, const double& b);
+STATISKIT_LINALG_API double operator* (const statiskit::linalg::RowVector& a, const statiskit::linalg::Vector& b);
+STATISKIT_LINALG_API statiskit::linalg::RowVector operator* (const statiskit::linalg::RowVector& a, const statiskit::linalg::Matrix& B);
+STATISKIT_LINALG_API statiskit::linalg::RowVector operator/ (const statiskit::linalg::RowVector& a, const double& b);
+STATISKIT_LINALG_API statiskit::linalg::Matrix operator- (const statiskit::linalg::Matrix& A, const statiskit::linalg::Matrix& B);
+STATISKIT_LINALG_API statiskit::linalg::Matrix operator+ (const statiskit::linalg::Matrix& A, const statiskit::linalg::Matrix& B);
+STATISKIT_LINALG_API statiskit::linalg::Matrix operator* (const statiskit::linalg::Matrix& A, const double& b);
+STATISKIT_LINALG_API statiskit::linalg::Vector operator* (const statiskit::linalg::Matrix& A, const statiskit::linalg::Vector& b);
+STATISKIT_LINALG_API statiskit::linalg::Matrix operator* (const statiskit::linalg::Matrix& A, const statiskit::linalg::Matrix& B);
+STATISKIT_LINALG_API statiskit::linalg::Matrix operator/ (const statiskit::linalg::Matrix& A, const double& b);
+
 #ifdef EIGEN_NO_STATIC_ASSERT
-
-
 
 #endif
 #endif
