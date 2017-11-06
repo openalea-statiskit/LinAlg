@@ -4,7 +4,7 @@ platform:
 
 environment:
   matrix:
-    - CONDA_RECIPE: libeigen-dev
+    - CONDA_RECIPE: libeigen
     - CONDA_RECIPE: libstatiskit_linalg
     - CONDA_RECIPE: python-statiskit_linalg
       CONDA_VERSION: 2

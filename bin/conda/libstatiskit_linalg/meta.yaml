@@ -14,10 +14,10 @@ about:
 
 requirements:
   build:
-    - libeigen-dev
+    - libeigen
     - libtoolchain
     - libstatiskit_stl
   run:
-    - libeigen-dev
+    - libeigen
     - libruntime
     - libstatiskit_stl

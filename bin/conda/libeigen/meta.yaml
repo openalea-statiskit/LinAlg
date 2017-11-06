@@ -1,5 +1,5 @@
 package:
-  name: libeigen-dev
+  name: libeigen
   version: "3.3.1"
 
 source:
