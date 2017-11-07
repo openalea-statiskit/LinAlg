@@ -46,6 +46,8 @@ os.environ['AutoWIG'] = 'true'
 autowig.feedback.plugin = 'edit'
 changed = True
 s = subprocess.Popen(['scons', '-j' + jobs, '-k', '--diagnostics-color=never'], stderr=subprocess.PIPE)
+out, curr = s.communicate()
+s = subprocess.Popen(['scons', '-j1', '-k', '--diagnostics-color=never'], stderr=subprocess.PIPE)
 prev = ''
 out, curr = s.communicate()
 while changed and not prev == curr:
@@ -59,7 +61,7 @@ while changed and not prev == curr:
         for bpm in asg.boost_python_modules():
             if bpm.globalname.startswith(os.path.abspath('.')):
                 bpm.write()
-    s = subprocess.Popen(['scons', '-j' + jobs, '-k', '--diagnostics-color=never'], stderr=subprocess.PIPE)
+    s = subprocess.Popen(['scons', '-j1', '-k', '--diagnostics-color=never'], stderr=subprocess.PIPE)
     out, curr = s.communicate()
 
 autowig.feedback.plugin = 'comment'
@@ -68,7 +70,7 @@ while not prev == curr:
     prev = curr
     autowig.feedback(curr, '.', asg, variant_dir=variant_dir,
                                      src_dir=src_dir)
-    s = subprocess.Popen(['scons', '-j' + jobs, '-k', '--diagnostics-color=never'], stderr=subprocess.PIPE)
+    s = subprocess.Popen(['scons', '-j1', '-k', '--diagnostics-color=never'], stderr=subprocess.PIPE)
     out, curr = s.communicate()
 
 os.environ['AutoWIG'] = 'false'

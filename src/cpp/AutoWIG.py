@@ -15,6 +15,8 @@ def controller(asg):
     #             'class ::Eigen::DenseBase< class ::Eigen::Array< long int, 1, -1, 1, 1, -1 > >',
     #             'class ::Eigen::DenseBase< class ::Eigen::Map< class ::Eigen::Array< long int, 1, -1, 1, 1, -1 >, 0, class ::Eigen::Stride< 0, 0 > > >']:
     #     asg[cls].boost_python_export = False
+    for dcl in asg['::Eigen::internal'].declarations(nested=True):
+        dcl.boost_python_export = False
     for cls in ['class ::Eigen::DenseBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >',
                 'class ::Eigen::DenseBase< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 > >',
                 'class ::Eigen::DenseBase< class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > >']:
