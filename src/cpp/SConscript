@@ -238,60 +238,45 @@ statiskit::linalg::Matrix operator/ (const statiskit::linalg::Matrix& A, const d
 
 from SCons.Errors import EnvironmentError
 
+Import("env")
+
+cppenv = env.Clone(tools = ['cpp'])
+
+cppenv.AppendUnique(CPPDEFINES = ['LIBSTATISKIT_LINALG'])
+
+
+exclude = """
+""".split()
+
+sources = [source for source in cppenv.Glob('*.h*') if not source.name in exclude]
+targets = cppenv.CppDev(["statiskit", "linalg"], sources)
+Alias("cpp-dev", targets)
+Alias("cpp", targets)
+Alias("autowig", targets)
+Alias("install", targets)
 try:
-    Import("env")
+    wigenv = cppenv.Clone(tools = ['wig'])
 
-    cppenv = env.Clone(tools = ['cpp'])
-
-    cppenv.AppendUnique(CPPDEFINES = ['LIBSTATISKIT_LINALG'])
-
-
-    exclude = """
-    """.split()
-
-    sources = [source for source in cppenv.Glob('*.h*') if not source.name in exclude]
-    targets = cppenv.CppDev(["statiskit", "linalg"], sources)
-    Alias("cpp-dev", targets)
-    Alias("cpp", targets)
+    targets = wigenv.BoostPythonWIG('statiskit_linalg', [target for target in targets if target.name.endswith('.h')],
+                                    module='../py/wrapper/_linalg.cpp',
+                                    decorator='../py/statiskit/linalg/_linalg.py',
+                                    parser_bootstrap=1,
+                                    controller='AutoWIG.py',
+                                    generator='AutoWIG.py',
+                                    depends=[])
     Alias("autowig", targets)
-    Alias("install", targets)
-    try:
-        wigenv = cppenv.Clone(tools = ['wig'])
-
-        targets = wigenv.BoostPythonWIG('statiskit_linalg', [target for target in targets if target.name.endswith('.h')],
-                                        module='../py/wrapper/_linalg.cpp',
-                                        decorator='../py/statiskit/linalg/_linalg.py',
-                                        parser_bootstrap=1,
-                                        controller='AutoWIG.py',
-                                        generator='AutoWIG.py',
-                                        depends=[])
-        Alias("autowig", targets)
-        wigenv.Depends(targets, "cpp-dev")
-    except EnvironmentError:
-        Alias("autowig", [])
-        pass
-    except Exception:
-        raise
-
-    exclude = """
-    """.split()
-
-    sources = [source for source in cppenv.Glob('*.cpp') if not source.name in exclude]
-    targets = cppenv.CppLib("statiskit_linalg", sources)
-    Alias("cpp-lib", targets)
-    Alias("cpp", targets)
-    Alias("install", targets)
+    wigenv.Depends(targets, "cpp-dev")
 except EnvironmentError:
-    Alias("cpp-dev", [])
-    Alias("cpp-lib", [])
-    Alias("cpp", [])
     Alias("autowig", [])
-    Alias("install", [])
-    pass
-except EnvironmentError:
-    Alias("cpp", [])
-    Alias("autowig", [])
-    Alias("install", [])
     pass
 except Exception:
     raise
+
+exclude = """
+""".split()
+
+sources = [source for source in cppenv.Glob('*.cpp') if not source.name in exclude]
+targets = cppenv.CppLib("statiskit_linalg", sources)
+Alias("cpp-lib", targets)
+Alias("cpp", targets)
+Alias("install", targets)
