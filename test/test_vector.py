@@ -81,7 +81,6 @@ class TestMatrix(unittest.TestCase):
     #     self.assertEqual(self._C, self._C / 2)
     #     self.assertEqual(self._R, self._R / 2)
 
-
     @classmethod
     def tearDownClass(cls):
         """Test vector deletion"""
