@@ -6,28 +6,6 @@
 #include <Eigen/Dense>
 #include <Eigen/Sparse>
 
-#if defined WIN32 || defined _WIN32 || defined __CYGWIN__
-    #ifdef LIBSTATISKIT_LINALG
-        #ifdef __GNUC__
-            #define STATISKIT_LINALG_API __attribute__ ((dllexport))
-        #else
-            #define STATISKIT_LINALG_API __declspec(dllexport)
-        #endif
-    #else
-        #ifdef __GNUC__
-            #define STATISKIT_LINALG_API __attribute__ ((dllimport))
-        #else
-            #define STATISKIT_LINALG_API __declspec(dllimport)
-        #endif
-    #endif
-#else
-    #if __GNUC__ >= 4
-        #define STATISKIT_LINALG_API __attribute__ ((visibility ("default")))
-    #else
-        #define STATISKIT_LINALG_API
-    #endif
-#endif
-
 namespace statiskit
 {
     namespace linalg
@@ -81,25 +59,6 @@ namespace statiskit
 		STATISKIT_LINALG_API Matrix inverse(const Matrix& A, const solver_type& solver);
 	}
 }
-
-
-STATISKIT_LINALG_API statiskit::linalg::Vector operator- (const statiskit::linalg::Vector& a, const statiskit::linalg::Vector& b);
-STATISKIT_LINALG_API statiskit::linalg::Vector operator+ (const statiskit::linalg::Vector& a, const statiskit::linalg::Vector& b);
-STATISKIT_LINALG_API statiskit::linalg::Vector operator* (const statiskit::linalg::Vector& a, const double& b);
-STATISKIT_LINALG_API statiskit::linalg::Matrix operator* (const statiskit::linalg::Vector& a, const statiskit::linalg::RowVector& b);
-STATISKIT_LINALG_API statiskit::linalg::Vector operator/ (const statiskit::linalg::Vector& a, const double& b);
-STATISKIT_LINALG_API statiskit::linalg::RowVector operator- (const statiskit::linalg::RowVector& a, const statiskit::linalg::RowVector& b);
-STATISKIT_LINALG_API statiskit::linalg::RowVector operator+ (const statiskit::linalg::RowVector& a, const statiskit::linalg::RowVector& b);
-STATISKIT_LINALG_API statiskit::linalg::RowVector operator* (const statiskit::linalg::RowVector& a, const double& b);
-STATISKIT_LINALG_API double operator* (const statiskit::linalg::RowVector& a, const statiskit::linalg::Vector& b);
-STATISKIT_LINALG_API statiskit::linalg::RowVector operator* (const statiskit::linalg::RowVector& a, const statiskit::linalg::Matrix& B);
-STATISKIT_LINALG_API statiskit::linalg::RowVector operator/ (const statiskit::linalg::RowVector& a, const double& b);
-STATISKIT_LINALG_API statiskit::linalg::Matrix operator- (const statiskit::linalg::Matrix& A, const statiskit::linalg::Matrix& B);
-STATISKIT_LINALG_API statiskit::linalg::Matrix operator+ (const statiskit::linalg::Matrix& A, const statiskit::linalg::Matrix& B);
-STATISKIT_LINALG_API statiskit::linalg::Matrix operator* (const statiskit::linalg::Matrix& A, const double& b);
-STATISKIT_LINALG_API statiskit::linalg::Vector operator* (const statiskit::linalg::Matrix& A, const statiskit::linalg::Vector& b);
-STATISKIT_LINALG_API statiskit::linalg::Matrix operator* (const statiskit::linalg::Matrix& A, const statiskit::linalg::Matrix& B);
-STATISKIT_LINALG_API statiskit::linalg::Matrix operator/ (const statiskit::linalg::Matrix& A, const double& b);
 
 #ifdef EIGEN_NO_STATIC_ASSERT
 
