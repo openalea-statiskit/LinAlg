@@ -40,22 +40,22 @@ class TestMatrix(unittest.TestCase):
         """Test matrix latex representation"""
         self.assertEqual(self._M._repr_latex_(), "$\\begin{pmatrix}\n\t0.0 & 0.0 & 0.0\\\\\n\t0.0 & 0.0 & 0.0\\\\\n\t0.0 & 0.0 & 0.0\\\\\n\\end{pmatrix}$")
 
-    def test_addition(self):
-        """Test matrix addition"""
-        self.assertEqual(self._M, self._M + self._M)
+    # def test_addition(self):
+    #     """Test matrix addition"""
+    #     self.assertEqual(self._M, self._M + self._M)
 
-    def test_subtraction(self):
-        """Test matrix subtraction"""
-        self.assertEqual(self._M, self._M - self._M)
+    # def test_subtraction(self):
+    #     """Test matrix subtraction"""
+    #     self.assertEqual(self._M, self._M - self._M)
 
-    def test_multiplication(self):
-        """Test matrix multiplication"""
-        self.assertEqual(self._M, self._M * self._M)
-        self.assertEqual(self._M, self._M * 2)
+    # def test_multiplication(self):
+    #     """Test matrix multiplication"""
+    #     self.assertEqual(self._M, self._M * self._M)
+    #     self.assertEqual(self._M, self._M * 2)
 
-    def test_division(self):
-        """Test matrix division"""
-        self.assertEqual(self._M, self._M / 2)
+    # def test_division(self):
+    #     """Test matrix division"""
+    #     self.assertEqual(self._M, self._M / 2)
 
     @classmethod
     def tearDownClass(cls):
