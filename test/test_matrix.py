@@ -51,11 +51,11 @@ class TestMatrix(unittest.TestCase):
     def test_multiplication(self):
         """Test matrix multiplication"""
         self.assertEqual(self._M, self._M * self._M)
-        self.assertEqual(self._M, self._M * 2)
+        self.assertEqual(self._M, self._M * 2.)
 
     def test_division(self):
         """Test matrix division"""
-        self.assertEqual(self._M, self._M / 2)
+        self.assertEqual(self._M, self._M / 2.)
 
     @classmethod
     def tearDownClass(cls):
