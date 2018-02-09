@@ -35,6 +35,8 @@ void wrapper_ea663b46fa65508cbc52fc4554bcd0c7()
     ::Eigen::EigenBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::Index  (::Eigen::EigenBase< ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::*method_pointer_a4525150adde5464b4f661246d92516e)() const = &::Eigen::EigenBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::cols;
     ::Eigen::EigenBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::Index  (::Eigen::EigenBase< ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::*method_pointer_674a2eca67ee51c09cc459a0aae72690)() const = &::Eigen::EigenBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::size;
     boost::python::class_< struct ::Eigen::EigenBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >, autowig::Held< struct ::Eigen::EigenBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > > >::Type > class_ea663b46fa65508cbc52fc4554bcd0c7("_EigenBase_ea663b46fa65508cbc52fc4554bcd0c7", "", boost::python::no_init);
+    class_ea663b46fa65508cbc52fc4554bcd0c7.def(boost::python::init< struct ::Eigen::EigenBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > > const & >(""));
+    class_ea663b46fa65508cbc52fc4554bcd0c7.def(boost::python::init<  >(""));
     class_ea663b46fa65508cbc52fc4554bcd0c7.def("derived", method_pointer_bfc6f38e7fb85ae7ab7436b90d1fd518, boost::python::return_internal_reference<>(), "");
     class_ea663b46fa65508cbc52fc4554bcd0c7.def("derived", autowig::method_decorator_bfc6f38e7fb85ae7ab7436b90d1fd518);
     class_ea663b46fa65508cbc52fc4554bcd0c7.def("derived", method_pointer_2b6d835dd02955409a835442a9d4bad2, boost::python::return_value_policy< boost::python::return_by_value >(), "");

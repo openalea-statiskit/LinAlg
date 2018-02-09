@@ -62,6 +62,7 @@ void wrapper_f895004a7da65a24a43fec6025d85c8f()
     class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > & (::Eigen::PlainObjectBase< ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::*method_pointer_abc41f38b5fb511ea1beeaab6e15a5c1)(::Eigen::Index , ::Eigen::Index ) = &::Eigen::PlainObjectBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::setOnes;
     class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > & (::Eigen::PlainObjectBase< ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::*method_pointer_2d8250accb03502396b56afb894c03ff)(::Eigen::Index ) = &::Eigen::PlainObjectBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::setRandom;
     class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > & (::Eigen::PlainObjectBase< ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::*method_pointer_061744c8d97b5bafb9e9fe8c438c1067)(::Eigen::Index , ::Eigen::Index ) = &::Eigen::PlainObjectBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::setRandom;
+    void  (::Eigen::PlainObjectBase< ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::*method_pointer_b29371b176eb54b79ea4a0f38cc18617)(class ::Eigen::DenseBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > > &) = &::Eigen::PlainObjectBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::swap;
     boost::python::class_< class ::Eigen::PlainObjectBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >, autowig::Held< class ::Eigen::PlainObjectBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > > >::Type, boost::python::bases< class ::Eigen::MatrixBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > > >, boost::noncopyable > class_f895004a7da65a24a43fec6025d85c8f("_PlainObjectBase_f895004a7da65a24a43fec6025d85c8f", "", boost::python::no_init);
     class_f895004a7da65a24a43fec6025d85c8f.def("base", method_pointer_d2ca45f40af8598fa561d85359b9d63d, boost::python::return_internal_reference<>(), "");
     class_f895004a7da65a24a43fec6025d85c8f.def("base", autowig::method_decorator_d2ca45f40af8598fa561d85359b9d63d);
@@ -100,6 +101,7 @@ void wrapper_f895004a7da65a24a43fec6025d85c8f()
     class_f895004a7da65a24a43fec6025d85c8f.def("set_random", autowig::method_decorator_2d8250accb03502396b56afb894c03ff);
     class_f895004a7da65a24a43fec6025d85c8f.def("set_random", method_pointer_061744c8d97b5bafb9e9fe8c438c1067, boost::python::return_internal_reference<>(), "");
     class_f895004a7da65a24a43fec6025d85c8f.def("set_random", autowig::method_decorator_061744c8d97b5bafb9e9fe8c438c1067);
+    class_f895004a7da65a24a43fec6025d85c8f.def("swap", method_pointer_b29371b176eb54b79ea4a0f38cc18617, "");
 
     if(autowig::Held< class ::Eigen::PlainObjectBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > > >::is_class)
     {

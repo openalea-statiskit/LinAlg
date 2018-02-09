@@ -72,7 +72,6 @@ void wrapper_89a1f4bc90b95adda2461ec1574670e0()
     ::Eigen::SparseVector< double, 0, int >::Scalar & (::Eigen::SparseVector< double, 0, int >::*method_pointer_4285131989da54199af6c3fc09ac0fc6)(::Eigen::Index ) = &::Eigen::SparseVector< double, 0, int >::fill;
     ::Eigen::SparseVector< double, 0, int >::Scalar & (::Eigen::SparseVector< double, 0, int >::*method_pointer_4d69194514d95b0c9d0202ee94817de1)(::Eigen::Index , ::Eigen::Index ) = &::Eigen::SparseVector< double, 0, int >::fillrand;
     ::Eigen::SparseVector< double, 0, int >::Scalar & (::Eigen::SparseVector< double, 0, int >::*method_pointer_335a9e8069335079b382f4824f21810f)(::Eigen::Index ) = &::Eigen::SparseVector< double, 0, int >::fillrand;
-    void  (::Eigen::SparseVector< double, 0, int >::*method_pointer_06ca0cbc11cb5714b41d67eff0e2cd24)() = &::Eigen::SparseVector< double, 0, int >::endFill;
     struct function_group
     {
         static class ::std::basic_ostream< char, struct ::std::char_traits< char > > & function_2a7689b0292f582998a943e008dc9fc9(class ::std::basic_ostream< char, struct ::std::char_traits< char > > & parameter_0, class ::Eigen::SparseVector< double, 0, int > const & parameter_1)
@@ -95,10 +94,10 @@ void wrapper_89a1f4bc90b95adda2461ec1574670e0()
     class_89a1f4bc90b95adda2461ec1574670e0.def("coeff", method_pointer_2d18d5cc46ab559f9f9bd1e6630bebee, "");
     class_89a1f4bc90b95adda2461ec1574670e0.def("coeff_ref", method_pointer_c64546b9e5b15440b367c56869425d86, boost::python::return_value_policy< boost::python::return_by_value >(), "");
     class_89a1f4bc90b95adda2461ec1574670e0.def("coeff_ref", autowig::method_decorator_c64546b9e5b15440b367c56869425d86);
-    class_89a1f4bc90b95adda2461ec1574670e0.def("coeff_ref", method_pointer_a60cf720fcf8534686f73b918038069e, boost::python::return_value_policy< boost::python::return_by_value >(), "");
+    class_89a1f4bc90b95adda2461ec1574670e0.def("coeff_ref", method_pointer_a60cf720fcf8534686f73b918038069e, boost::python::return_value_policy< boost::python::return_by_value >(), ":Parameter:\n    `i` (:cpp:any:`long` int) - Undocumented\n\n:Returns:\n    a reference to the coefficient value at given index :raw-latex:`\\a `i\n    This operation involes a log(rho\\*size) binary search. If the\n    coefficient does not exist yet, then a sorted insertion into a\n    sequential buffer is performed.\n    \n    This insertion might be very costly if the number of nonzeros above\n    :raw-latex:`\\a `i is large.\n\n:Return Type:\n    :cpp:any:`double`\n\n");
     class_89a1f4bc90b95adda2461ec1574670e0.def("coeff_ref", autowig::method_decorator_a60cf720fcf8534686f73b918038069e);
     class_89a1f4bc90b95adda2461ec1574670e0.def("set_zero", method_pointer_5d3fd9edf5ae53a3a5e57e2e01e869f6, "");
-    class_89a1f4bc90b95adda2461ec1574670e0.def("non_zeros", method_pointer_2e51707cff0f54329d83872d1a37e7a0, "");
+    class_89a1f4bc90b95adda2461ec1574670e0.def("non_zeros", method_pointer_2e51707cff0f54329d83872d1a37e7a0, ":Returns:\n    the number of non zero coefficients\n\n:Return Type:\n    :cpp:any:`long` int\n\n");
     class_89a1f4bc90b95adda2461ec1574670e0.def("start_vec", method_pointer_d19a689a26be5251bcc1d9ed9f0b1138, "");
     class_89a1f4bc90b95adda2461ec1574670e0.def("insert_back_by_outer_inner", method_pointer_6459be0640885540bf06a9fe1ea35e24, boost::python::return_value_policy< boost::python::return_by_value >(), "");
     class_89a1f4bc90b95adda2461ec1574670e0.def("insert_back_by_outer_inner", autowig::method_decorator_6459be0640885540bf06a9fe1ea35e24);
@@ -112,25 +111,24 @@ void wrapper_89a1f4bc90b95adda2461ec1574670e0()
     class_89a1f4bc90b95adda2461ec1574670e0.def("insert", autowig::method_decorator_696eaf5f69265b2997ff9f087c0b622b);
     class_89a1f4bc90b95adda2461ec1574670e0.def("insert", method_pointer_4a667508cd495edab0aa013828b0dbd3, boost::python::return_value_policy< boost::python::return_by_value >(), "");
     class_89a1f4bc90b95adda2461ec1574670e0.def("insert", autowig::method_decorator_4a667508cd495edab0aa013828b0dbd3);
-    class_89a1f4bc90b95adda2461ec1574670e0.def("reserve", method_pointer_47350c624f895ed5a3f6be04d68aaff1, "");
+    class_89a1f4bc90b95adda2461ec1574670e0.def("reserve", method_pointer_47350c624f895ed5a3f6be04d68aaff1, ":Parameter:\n    `reserveSize` (:cpp:any:`long` int) - Undocumented\n\n:Return Type:\n    :cpp:any:`void`\n\n");
     class_89a1f4bc90b95adda2461ec1574670e0.def("finalize", method_pointer_bd409f6d17aa50379f58055bf34a3b3e, "");
-    class_89a1f4bc90b95adda2461ec1574670e0.def("prune", method_pointer_db4ba8cdc8ed55309d09bc897eba03d7, "");
-    class_89a1f4bc90b95adda2461ec1574670e0.def("resize", method_pointer_af0640d0e476533a86e5b555bb9c43b6, "");
-    class_89a1f4bc90b95adda2461ec1574670e0.def("resize", method_pointer_cdf55aa84a2e509589b4be2dbfb3b225, "");
-    class_89a1f4bc90b95adda2461ec1574670e0.def("conservative_resize", method_pointer_e8680072a99d5ee89d137898d94ce06d, "");
+    class_89a1f4bc90b95adda2461ec1574670e0.def("prune", method_pointer_db4ba8cdc8ed55309d09bc897eba03d7, ":Parameters:\n  - `reference` (:cpp:any:`double`) - Undocumented\n  - `epsilon` (:cpp:any:`double`) - Undocumented\n\n:Return Type:\n    :cpp:any:`void`\n\n");
+    class_89a1f4bc90b95adda2461ec1574670e0.def("resize", method_pointer_af0640d0e476533a86e5b555bb9c43b6, ":Parameters:\n  - `rows` (:cpp:any:`long` int) - Undocumented\n  - `cols` (:cpp:any:`long` int) - Undocumented\n\n:Return Type:\n    :cpp:any:`void`\n\n");
+    class_89a1f4bc90b95adda2461ec1574670e0.def("resize", method_pointer_cdf55aa84a2e509589b4be2dbfb3b225, ":Parameter:\n    `newSize` (:cpp:any:`long` int) - Undocumented\n\n:Return Type:\n    :cpp:any:`void`\n\n");
+    class_89a1f4bc90b95adda2461ec1574670e0.def("conservative_resize", method_pointer_e8680072a99d5ee89d137898d94ce06d, ":Parameter:\n    `newSize` (:cpp:any:`long` int) - Undocumented\n\n:Return Type:\n    :cpp:any:`void`\n\n");
     class_89a1f4bc90b95adda2461ec1574670e0.def("resize_non_zeros", method_pointer_7d993137d8025a6cbe65de0b6420d476, "");
-    class_89a1f4bc90b95adda2461ec1574670e0.def("swap", method_pointer_7cd996fb684a53d79305f5027b50df29, "");
-    class_89a1f4bc90b95adda2461ec1574670e0.def("sum", method_pointer_a4ab84ceca3255e9b93466d36a21c3ef, "");
-    class_89a1f4bc90b95adda2461ec1574670e0.def("start_fill", method_pointer_4fa7b50583f25e919c85490578a11121, "");
-    class_89a1f4bc90b95adda2461ec1574670e0.def("fill", method_pointer_9b585adbb9b954c1a170526694f9d3c1, boost::python::return_value_policy< boost::python::return_by_value >(), "");
+    class_89a1f4bc90b95adda2461ec1574670e0.def("swap", method_pointer_7cd996fb684a53d79305f5027b50df29, ":Parameter:\n    `other` (:cpp:any:`::Eigen::SparseVector<` double, 0, int >) - Undocumented\n\n:Return Type:\n    :cpp:any:`void`\n\n");
+    class_89a1f4bc90b95adda2461ec1574670e0.def("sum", method_pointer_a4ab84ceca3255e9b93466d36a21c3ef, ":Return Type:\n    :cpp:any:`double`\n\n");
+    class_89a1f4bc90b95adda2461ec1574670e0.def("start_fill", method_pointer_4fa7b50583f25e919c85490578a11121, ":Parameter:\n    `reserve` (:cpp:any:`long` int) - Undocumented\n\n:Return Type:\n    :cpp:any:`void`\n\n");
+    class_89a1f4bc90b95adda2461ec1574670e0.def("fill", method_pointer_9b585adbb9b954c1a170526694f9d3c1, boost::python::return_value_policy< boost::python::return_by_value >(), ":Parameters:\n  - `r` (:cpp:any:`long` int) - Undocumented\n  - `c` (:cpp:any:`long` int) - Undocumented\n\n:Return Type:\n    :cpp:any:`double`\n\n");
     class_89a1f4bc90b95adda2461ec1574670e0.def("fill", autowig::method_decorator_9b585adbb9b954c1a170526694f9d3c1);
-    class_89a1f4bc90b95adda2461ec1574670e0.def("fill", method_pointer_4285131989da54199af6c3fc09ac0fc6, boost::python::return_value_policy< boost::python::return_by_value >(), "");
+    class_89a1f4bc90b95adda2461ec1574670e0.def("fill", method_pointer_4285131989da54199af6c3fc09ac0fc6, boost::python::return_value_policy< boost::python::return_by_value >(), ":Parameter:\n    `i` (:cpp:any:`long` int) - Undocumented\n\n:Return Type:\n    :cpp:any:`double`\n\n");
     class_89a1f4bc90b95adda2461ec1574670e0.def("fill", autowig::method_decorator_4285131989da54199af6c3fc09ac0fc6);
-    class_89a1f4bc90b95adda2461ec1574670e0.def("fillrand", method_pointer_4d69194514d95b0c9d0202ee94817de1, boost::python::return_value_policy< boost::python::return_by_value >(), "");
+    class_89a1f4bc90b95adda2461ec1574670e0.def("fillrand", method_pointer_4d69194514d95b0c9d0202ee94817de1, boost::python::return_value_policy< boost::python::return_by_value >(), ":Parameters:\n  - `r` (:cpp:any:`long` int) - Undocumented\n  - `c` (:cpp:any:`long` int) - Undocumented\n\n:Return Type:\n    :cpp:any:`double`\n\n");
     class_89a1f4bc90b95adda2461ec1574670e0.def("fillrand", autowig::method_decorator_4d69194514d95b0c9d0202ee94817de1);
-    class_89a1f4bc90b95adda2461ec1574670e0.def("fillrand", method_pointer_335a9e8069335079b382f4824f21810f, boost::python::return_value_policy< boost::python::return_by_value >(), "");
+    class_89a1f4bc90b95adda2461ec1574670e0.def("fillrand", method_pointer_335a9e8069335079b382f4824f21810f, boost::python::return_value_policy< boost::python::return_by_value >(), ":Parameter:\n    `i` (:cpp:any:`long` int) - Undocumented\n\n:Return Type:\n    :cpp:any:`double`\n\n");
     class_89a1f4bc90b95adda2461ec1574670e0.def("fillrand", autowig::method_decorator_335a9e8069335079b382f4824f21810f);
-    class_89a1f4bc90b95adda2461ec1574670e0.def("end_fill", method_pointer_06ca0cbc11cb5714b41d67eff0e2cd24, "");
     class_89a1f4bc90b95adda2461ec1574670e0.def("__lshift__", function_group::function_2a7689b0292f582998a943e008dc9fc9, boost::python::return_value_policy< boost::python::reference_existing_object >(), "");
 
     if(autowig::Held< class ::Eigen::SparseVector< double, 0, int > >::is_class)

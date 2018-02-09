@@ -37,6 +37,17 @@ void wrapper_074b86e43f3b55af9d0d2389d7501b2e()
     ::Eigen::Index  (::Eigen::DenseBase< ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::*method_pointer_7e39eb629a7a5eb29e16bff9226c766f)() const = &::Eigen::DenseBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::innerSize;
     void  (::Eigen::DenseBase< ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::*method_pointer_61d0686467fa576484d81978631b6bc7)(::Eigen::Index ) = &::Eigen::DenseBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::resize;
     void  (::Eigen::DenseBase< ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::*method_pointer_5cfd1824c154559f807b7d884fb4eaae)(::Eigen::Index , ::Eigen::Index ) = &::Eigen::DenseBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::resize;
+    ::Eigen::DenseBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::TransposeReturnType  (::Eigen::DenseBase< ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::*method_pointer_4fdee05c7c4b5441bb38b25f137009f8)() = &::Eigen::DenseBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::transpose;
+    ::Eigen::DenseBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::ConstTransposeReturnType  (::Eigen::DenseBase< ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::*method_pointer_3a131ba483a05ad9841aa6c279ee7ad6)() const = &::Eigen::DenseBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::transpose;
+    ::Eigen::DenseBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::ConstantReturnType const (*method_pointer_63341a7ad495555b938e254b2a3c0318)(::Eigen::Index , ::Eigen::Index , ::Eigen::DenseBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::Scalar const &) = ::Eigen::DenseBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::Constant;
+    ::Eigen::DenseBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::ConstantReturnType const (*method_pointer_cf290e04c558534ebe40be2a9bdcaa18)(::Eigen::Index , ::Eigen::DenseBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::Scalar const &) = ::Eigen::DenseBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::Constant;
+    ::Eigen::DenseBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::ConstantReturnType const (*method_pointer_efa4fcc15ad15990935fe5b376d06dfc)(::Eigen::DenseBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::Scalar const &) = ::Eigen::DenseBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::Constant;
+    ::Eigen::DenseBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::ConstantReturnType const (*method_pointer_a1cd1ebfc3ae5e40a8e708f1bfd583ae)(::Eigen::Index , ::Eigen::Index ) = ::Eigen::DenseBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::Zero;
+    ::Eigen::DenseBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::ConstantReturnType const (*method_pointer_43f80564facf568b99e82713465a583f)(::Eigen::Index ) = ::Eigen::DenseBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::Zero;
+    ::Eigen::DenseBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::ConstantReturnType const (*method_pointer_69eebb8d9b54529abce22fb805e46716)() = ::Eigen::DenseBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::Zero;
+    ::Eigen::DenseBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::ConstantReturnType const (*method_pointer_acbbeff32d7152e0b4804dc435cef146)(::Eigen::Index , ::Eigen::Index ) = ::Eigen::DenseBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::Ones;
+    ::Eigen::DenseBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::ConstantReturnType const (*method_pointer_4ecf75d5e700535b9e229c531928a86e)(::Eigen::Index ) = ::Eigen::DenseBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::Ones;
+    ::Eigen::DenseBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::ConstantReturnType const (*method_pointer_53c265e91e0a5ac49df08f0344c9db2f)() = ::Eigen::DenseBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::Ones;
     void  (::Eigen::DenseBase< ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::*method_pointer_1b6aa159101e51ffaffb45eb0d659902)(::Eigen::DenseBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::Scalar const &) = &::Eigen::DenseBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::fill;
     class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > & (::Eigen::DenseBase< ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::*method_pointer_b73c0647a05c57868956b08ed38c68df)(::Eigen::DenseBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::Scalar const &) = &::Eigen::DenseBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::setConstant;
     class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > & (::Eigen::DenseBase< ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::*method_pointer_6a48280d783556eaaf3f3e74ea153d48)(::Eigen::Index , ::Eigen::DenseBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::Scalar const &, ::Eigen::DenseBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::Scalar const &) = &::Eigen::DenseBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::setLinSpaced;
@@ -63,12 +74,30 @@ void wrapper_074b86e43f3b55af9d0d2389d7501b2e()
     bool  (::Eigen::DenseBase< ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::*method_pointer_6bf1c1acc06d59f6babe46ce4683791f)() const = &::Eigen::DenseBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::any;
     ::Eigen::Index  (::Eigen::DenseBase< ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::*method_pointer_90128e4bea075c4f9bfafbe0e641b8c7)() const = &::Eigen::DenseBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::count;
     void  (::Eigen::DenseBase< ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::*method_pointer_e05f29c826f05af0a876f00b47c63a32)() = &::Eigen::DenseBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::reverseInPlace;
+    ::Eigen::DenseBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::ColsBlockXpr  (::Eigen::DenseBase< ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::*method_pointer_4813d90701e553bc8174d9f5158370dd)(::Eigen::Index ) = &::Eigen::DenseBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::leftCols;
+    ::Eigen::DenseBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::ColsBlockXpr  (::Eigen::DenseBase< ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::*method_pointer_077d93b934e25c8d989fdabc6424a913)(::Eigen::Index ) = &::Eigen::DenseBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::rightCols;
+    ::Eigen::DenseBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::ColsBlockXpr  (::Eigen::DenseBase< ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::*method_pointer_d2c19db8bb605714bf96cafda92fb1cf)(::Eigen::Index , ::Eigen::Index ) = &::Eigen::DenseBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::middleCols;
+    ::Eigen::DenseBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::SegmentReturnType  (::Eigen::DenseBase< ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::*method_pointer_dae82f20c7175d039c6e8b144df0ed01)(::Eigen::Index , ::Eigen::Index ) = &::Eigen::DenseBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::segment;
+    ::Eigen::DenseBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::SegmentReturnType  (::Eigen::DenseBase< ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::*method_pointer_407180b46aea5df095111bcaa8340ed6)(::Eigen::Index ) = &::Eigen::DenseBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::head;
+    ::Eigen::DenseBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::SegmentReturnType  (::Eigen::DenseBase< ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::*method_pointer_673c12ec72e55e2893525ce34dd3bc77)(::Eigen::Index ) = &::Eigen::DenseBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::tail;
     boost::python::class_< class ::Eigen::DenseBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >, autowig::Held< class ::Eigen::DenseBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > > >::Type, boost::python::bases< class ::Eigen::DenseCoeffsBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 >, 3 > > > class_074b86e43f3b55af9d0d2389d7501b2e("_DenseBase_074b86e43f3b55af9d0d2389d7501b2e", "", boost::python::no_init);
+    class_074b86e43f3b55af9d0d2389d7501b2e.def(boost::python::init< class ::Eigen::DenseBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > > const & >(""));
     class_074b86e43f3b55af9d0d2389d7501b2e.def("non_zeros", method_pointer_2c13cb573c06566e9db7ff04e908ce49, "");
     class_074b86e43f3b55af9d0d2389d7501b2e.def("outer_size", method_pointer_7a86a549a92b5dc7bdbe201717ad505b, "");
     class_074b86e43f3b55af9d0d2389d7501b2e.def("inner_size", method_pointer_7e39eb629a7a5eb29e16bff9226c766f, "");
     class_074b86e43f3b55af9d0d2389d7501b2e.def("resize", method_pointer_61d0686467fa576484d81978631b6bc7, "");
     class_074b86e43f3b55af9d0d2389d7501b2e.def("resize", method_pointer_5cfd1824c154559f807b7d884fb4eaae, "");
+    class_074b86e43f3b55af9d0d2389d7501b2e.def("transpose", method_pointer_4fdee05c7c4b5441bb38b25f137009f8, "");
+    class_074b86e43f3b55af9d0d2389d7501b2e.def("transpose", method_pointer_3a131ba483a05ad9841aa6c279ee7ad6, "");
+    class_074b86e43f3b55af9d0d2389d7501b2e.def("constant", method_pointer_63341a7ad495555b938e254b2a3c0318, "");
+    class_074b86e43f3b55af9d0d2389d7501b2e.def("constant", method_pointer_cf290e04c558534ebe40be2a9bdcaa18, "");
+    class_074b86e43f3b55af9d0d2389d7501b2e.def("constant", method_pointer_efa4fcc15ad15990935fe5b376d06dfc, "");
+    class_074b86e43f3b55af9d0d2389d7501b2e.def("zero", method_pointer_a1cd1ebfc3ae5e40a8e708f1bfd583ae, "");
+    class_074b86e43f3b55af9d0d2389d7501b2e.def("zero", method_pointer_43f80564facf568b99e82713465a583f, "");
+    class_074b86e43f3b55af9d0d2389d7501b2e.def("zero", method_pointer_69eebb8d9b54529abce22fb805e46716, "");
+    class_074b86e43f3b55af9d0d2389d7501b2e.def("ones", method_pointer_acbbeff32d7152e0b4804dc435cef146, "");
+    class_074b86e43f3b55af9d0d2389d7501b2e.def("ones", method_pointer_4ecf75d5e700535b9e229c531928a86e, "");
+    class_074b86e43f3b55af9d0d2389d7501b2e.def("ones", method_pointer_53c265e91e0a5ac49df08f0344c9db2f, "");
     class_074b86e43f3b55af9d0d2389d7501b2e.def("fill", method_pointer_1b6aa159101e51ffaffb45eb0d659902, "");
     class_074b86e43f3b55af9d0d2389d7501b2e.def("set_constant", method_pointer_b73c0647a05c57868956b08ed38c68df, boost::python::return_internal_reference<>(), "");
     class_074b86e43f3b55af9d0d2389d7501b2e.def("set_constant", autowig::method_decorator_b73c0647a05c57868956b08ed38c68df);
@@ -102,6 +131,15 @@ void wrapper_074b86e43f3b55af9d0d2389d7501b2e()
     class_074b86e43f3b55af9d0d2389d7501b2e.def("any", method_pointer_6bf1c1acc06d59f6babe46ce4683791f, "");
     class_074b86e43f3b55af9d0d2389d7501b2e.def("count", method_pointer_90128e4bea075c4f9bfafbe0e641b8c7, "");
     class_074b86e43f3b55af9d0d2389d7501b2e.def("reverse_in_place", method_pointer_e05f29c826f05af0a876f00b47c63a32, "");
+    class_074b86e43f3b55af9d0d2389d7501b2e.def("left_cols", method_pointer_4813d90701e553bc8174d9f5158370dd, "");
+    class_074b86e43f3b55af9d0d2389d7501b2e.def("right_cols", method_pointer_077d93b934e25c8d989fdabc6424a913, "");
+    class_074b86e43f3b55af9d0d2389d7501b2e.def("middle_cols", method_pointer_d2c19db8bb605714bf96cafda92fb1cf, "");
+    class_074b86e43f3b55af9d0d2389d7501b2e.def("segment", method_pointer_dae82f20c7175d039c6e8b144df0ed01, "");
+    class_074b86e43f3b55af9d0d2389d7501b2e.def("head", method_pointer_407180b46aea5df095111bcaa8340ed6, "");
+    class_074b86e43f3b55af9d0d2389d7501b2e.def("tail", method_pointer_673c12ec72e55e2893525ce34dd3bc77, "");
+    class_074b86e43f3b55af9d0d2389d7501b2e.staticmethod("zero");
+    class_074b86e43f3b55af9d0d2389d7501b2e.staticmethod("ones");
+    class_074b86e43f3b55af9d0d2389d7501b2e.staticmethod("constant");
 
     if(autowig::Held< class ::Eigen::DenseBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > > >::is_class)
     {

@@ -161,7 +161,7 @@ Alias("autowig", targets)
 Alias("install", targets)
 try:
     wigenv = cppenv.Clone(tools = ['wig'])
-
+    wigenv.AppendUnique(CCFLAGS = ['-ferror-limit=0'])
     targets = wigenv.BoostPythonWIG('statiskit_linalg', [target for target in targets if target.name.endswith('.h')],
                                     module='../py/wrapper/_linalg.cpp',
                                     decorator='../py/statiskit/linalg/_linalg.py',

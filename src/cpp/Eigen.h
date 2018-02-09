@@ -1,6 +1,8 @@
 #ifndef STATISKIT_LINALG_EIGEN_H
 #define STATISKIT_LINALG_EIGEN_H
 
+#include "config.h"
+
 #include <stdexcept>
 #include <vector>
 #include <Eigen/Dense>
@@ -60,7 +62,4 @@ namespace statiskit
 	}
 }
 
-#ifdef EIGEN_NO_STATIC_ASSERT
-
-#endif
 #endif
