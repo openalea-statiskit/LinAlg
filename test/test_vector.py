@@ -73,13 +73,13 @@ class TestMatrix(unittest.TestCase):
         """Test vector multiplication"""
         self.assertEqual(0., self._R * self._C)
         self.assertEqual(linalg.Matrix(3), self._C * self._R)
-        self.assertEqual(self._C, self._C * 2)
-        self.assertEqual(self._R, self._R * 2)
+        self.assertEqual(self._C, self._C * 2.)
+        self.assertEqual(self._R, self._R * 2.)
 
     def test_division(self):
         """Test vector division"""
-        self.assertEqual(self._C, self._C / 2)
-        self.assertEqual(self._R, self._R / 2)
+        self.assertEqual(self._C, self._C / 2.)
+        self.assertEqual(self._R, self._R / 2.)
 
 
     @classmethod
