@@ -3,7 +3,7 @@ from statiskit.stl.vector import decorator
 
 from ._linalg import __linalg
 
-from optionals import numpy, pyplot
+from .optionals import numpy, pyplot
 
 __all__ = ["Matrix",
            "SparseMatrix",

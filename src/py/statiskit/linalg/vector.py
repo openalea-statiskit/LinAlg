@@ -1,9 +1,9 @@
 from functools import wraps
 from statiskit.stl.vector import decorator
 
-from _linalg import __linalg
+from ._linalg import __linalg
 
-from optionals import numpy
+from .optionals import numpy
 
 __all__ = ["Vector", "RowVector",
            "Vectors", "RowVectors"]
