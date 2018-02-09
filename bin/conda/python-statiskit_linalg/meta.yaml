@@ -17,14 +17,12 @@ requirements:
   build:
     - libtoolchain
     - python-toolchain
-    - libboost
+    - libboost_python-dev
     - libstatiskit_linalg
     - python-statiskit_stl
     - python
   run:
-    - libruntime
     - libstatiskit_linalg
-    - libboost
     - python
     - python-statiskit_stl
 
