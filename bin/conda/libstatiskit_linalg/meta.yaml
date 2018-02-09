@@ -20,5 +20,4 @@ requirements:
     - libstatiskit_stl
   run:
     - libeigen
-    - libruntime
     - libstatiskit_stl
