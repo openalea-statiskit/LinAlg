@@ -32,9 +32,35 @@ def controller(asg):
             if ctr.nb_parameters > 0:
                 ctr.boost_python_export = False
     for cls in asg['class ::std::vector'].specializations(partial=False):
-        for ctr in cls.constructors():
-            if ctr.nb_parameters > 0:
-                ctr.boost_python_export = False
+        for constructor in cls.constructors():
+            if not(constructor.nb_parameters == 0 or constructor.nb_parameters == 1 and constructor.parameters[0].qualified_type.unqualified_type == cls):
+                if isinstance(constructor.boost_python_export, bool):
+                    constructor.boost_python_export = False
+    for cls in asg['class ::std::vector'].specializations(partial = False):
+        for method in cls.methods():
+            if method.localname in ['resize', 'shrink_to_fit', 'operator[]']:
+                if isinstance(method.boost_python_export, bool):
+                    method.boost_python_export = False
+    for cls in asg['class ::std::move_iterator'].specializations(partial=False):
+        cls.boost_python_export = False
+    for cls in asg['class ::std::less'].specializations(partial = False):
+        cls.boost_python_export = False
+    for cls in asg['class ::std::hash'].specializations(partial = False):
+        cls.boost_python_export = False
+    for cls in asg['class ::std::char_traits'].specializations(partial = False):
+        for mtd in cls.methods(access='public'):
+            cls.boost_python_export = False
+    for cls in asg['class ::std::allocator'].specializations(partial = False):
+        cls.boost_python_export = False
+    if 'class ::std::reverse_iterator' in asg:
+        for cls in asg['class ::std::reverse_iterator'].specializations(partial = False):
+            cls.boost_python_export = False
+    if 'class ::std::initializer_list' in asg:
+        for cls in asg['class ::std::initializer_list'].specializations(partial = False):
+            cls.boost_python_export = False
+    if 'class ::std::default_delete' in asg:
+        for cls in asg['class ::std::default_delete'].specializations(partial = False):
+            cls.boost_python_export = False
     return asg
 
 def generator(asg, module, decorator):
