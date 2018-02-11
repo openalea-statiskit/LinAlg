@@ -43,15 +43,19 @@ def controller(asg):
                     method.boost_python_export = False
     for cls in asg['class ::std::move_iterator'].specializations(partial=False):
         cls.boost_python_export = False
-    for cls in asg['class ::std::less'].specializations(partial = False):
-        cls.boost_python_export = False
-    for cls in asg['class ::std::hash'].specializations(partial = False):
-        cls.boost_python_export = False
-    for cls in asg['class ::std::char_traits'].specializations(partial = False):
-        for mtd in cls.methods(access='public'):
+    if 'class ::std::less' in asg:
+        for cls in asg['class ::std::less'].specializations(partial = False):
             cls.boost_python_export = False
-    for cls in asg['class ::std::allocator'].specializations(partial = False):
-        cls.boost_python_export = False
+    if 'class ::std::hash' in asg:
+        for cls in asg['class ::std::hash'].specializations(partial = False):
+            cls.boost_python_export = False
+    if 'class ::std::char_traits' in asg:
+        for cls in asg['class ::std::char_traits'].specializations(partial = False):
+            for mtd in cls.methods(access='public'):
+                cls.boost_python_export = False
+    if 'class ::std::allocator' in asg:
+        for cls in asg['class ::std::allocator'].specializations(partial = False):
+            cls.boost_python_export = False
     if 'class ::std::reverse_iterator' in asg:
         for cls in asg['class ::std::reverse_iterator'].specializations(partial = False):
             cls.boost_python_export = False
