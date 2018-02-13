@@ -59,27 +59,27 @@ class TestMatrix(unittest.TestCase):
         self.assertEqual(self._C._repr_latex_(), "$\\begin{pmatrix}\n\t0.0\\\\\n\t0.0\\\\\n\t0.0\\\\\n\\end{pmatrix}$")
         self.assertEqual(self._R._repr_latex_(), "$\\begin{pmatrix}\n\t0.0 & 0.0 & 0.0\\\\\n\\end{pmatrix}$")
 
-    def test_addition(self):
-        """Test vector addition"""
-        self.assertEqual(self._C, self._C + self._C)
-        self.assertEqual(self._R, self._R + self._R)
+    # def test_addition(self):
+    #     """Test vector addition"""
+    #     self.assertEqual(self._C, self._C + self._C)
+    #     self.assertEqual(self._R, self._R + self._R)
 
-    def test_subtraction(self):
-        """Test vector subtraction"""
-        self.assertEqual(self._C, self._C - self._C)
-        self.assertEqual(self._R, self._R - self._R)
+    # def test_subtraction(self):
+    #     """Test vector subtraction"""
+    #     self.assertEqual(self._C, self._C - self._C)
+    #     self.assertEqual(self._R, self._R - self._R)
 
-    def test_multiplication(self):
-        """Test vector multiplication"""
-        self.assertEqual(0., self._R * self._C)
-        self.assertEqual(linalg.Matrix(3), self._C * self._R)
-        self.assertEqual(self._C, self._C * 2.)
-        self.assertEqual(self._R, self._R * 2.)
+    # def test_multiplication(self):
+    #     """Test vector multiplication"""
+    #     self.assertEqual(0., self._R * self._C)
+    #     self.assertEqual(linalg.Matrix(3), self._C * self._R)
+    #     self.assertEqual(self._C, self._C * 2.)
+    #     self.assertEqual(self._R, self._R * 2.)
 
-    def test_division(self):
-        """Test vector division"""
-        self.assertEqual(self._C, self._C / 2.)
-        self.assertEqual(self._R, self._R / 2.)
+    # def test_division(self):
+    #     """Test vector division"""
+    #     self.assertEqual(self._C, self._C / 2.)
+    #     self.assertEqual(self._R, self._R / 2.)
 
     @classmethod
     def tearDownClass(cls):
