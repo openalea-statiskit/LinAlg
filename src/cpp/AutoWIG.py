@@ -1,20 +1,10 @@
 import autowig
 import itertools
 
+from scons_tools.site_autowig.controller.statiskit_stl import controller as stl_controller
+
 def controller(asg):
-    autowig.controller.plugin = 'default'
-    asg = autowig.controller(asg)
-    # import ipdb
-    # ipdb.set_trace()
-    # for cls in ['class ::Eigen::DenseBase< class ::Eigen::Matrix< int, -1, 1, 0, -1, 1 > >',
-    #             'class ::Eigen::DenseBase< class ::Eigen::Matrix< int, 1, -1, 1, 1, -1 > >',
-    #             'class ::Eigen::DenseBase< class ::Eigen::Array< int, 1, -1, 1, 1, -1 > >',
-    #             'class ::Eigen::DenseBase< class ::Eigen::Map< class ::Eigen::Array< int, 1, -1, 1, 1, -1 >, 0, class ::Eigen::Stride< 0, 0 > > >',
-    #             'class ::Eigen::DenseBase< class ::Eigen::Matrix< long int, -1, 1, 0, -1, 1 > >',
-    #             'class ::Eigen::DenseBase< class ::Eigen::Matrix< long int, 1, -1, 1, 1, -1 > >',
-    #             'class ::Eigen::DenseBase< class ::Eigen::Array< long int, 1, -1, 1, 1, -1 > >',
-    #             'class ::Eigen::DenseBase< class ::Eigen::Map< class ::Eigen::Array< long int, 1, -1, 1, 1, -1 >, 0, class ::Eigen::Stride< 0, 0 > > >']:
-    #     asg[cls].boost_python_export = False
+    asg = stl_controller(asg, library=False)
     for dcl in asg['::Eigen::internal'].declarations(nested=True):
         dcl.boost_python_export = False
     for cls in ['class ::Eigen::DenseBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >',
@@ -31,43 +21,6 @@ def controller(asg):
         for ctr in cls.constructors():
             if ctr.nb_parameters > 0:
                 ctr.boost_python_export = False
-    for cls in asg['class ::std::vector'].specializations(partial=False):
-        for constructor in cls.constructors():
-            if not(constructor.nb_parameters == 0 or constructor.nb_parameters == 1 and constructor.parameters[0].qualified_type.unqualified_type == cls):
-                if isinstance(constructor.boost_python_export, bool):
-                    constructor.boost_python_export = False
-    for cls in asg['class ::std::vector'].specializations(partial = False):
-        for method in cls.methods():
-            if method.localname in ['resize', 'shrink_to_fit', 'operator[]']:
-                if isinstance(method.boost_python_export, bool):
-                    method.boost_python_export = False
-    # for cls in ['class ::Eigen::MatrixBase< class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > >',
-    #             'class ::Eigen::PlainObjectBase< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 > >']:
-    #     asg[cls].boost_python_export = False
-    for cls in asg['class ::std::move_iterator'].specializations(partial=False):
-        cls.boost_python_export = False
-    if 'class ::std::less' in asg:
-        for cls in asg['class ::std::less'].specializations(partial = False):
-            cls.boost_python_export = False
-    if 'class ::std::hash' in asg:
-        for cls in asg['class ::std::hash'].specializations(partial = False):
-            cls.boost_python_export = False
-    if 'class ::std::char_traits' in asg:
-        for cls in asg['class ::std::char_traits'].specializations(partial = False):
-            for mtd in cls.methods(access='public'):
-                cls.boost_python_export = False
-    if 'class ::std::allocator' in asg:
-        for cls in asg['class ::std::allocator'].specializations(partial = False):
-            cls.boost_python_export = False
-    if 'class ::std::reverse_iterator' in asg:
-        for cls in asg['class ::std::reverse_iterator'].specializations(partial = False):
-            cls.boost_python_export = False
-    if 'class ::std::initializer_list' in asg:
-        for cls in asg['class ::std::initializer_list'].specializations(partial = False):
-            cls.boost_python_export = False
-    if 'class ::std::default_delete' in asg:
-        for cls in asg['class ::std::default_delete'].specializations(partial = False):
-            cls.boost_python_export = False
     return asg
 
 def generator(asg, module, decorator):
