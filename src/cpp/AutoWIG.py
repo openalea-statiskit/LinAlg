@@ -41,6 +41,9 @@ def controller(asg):
             if method.localname in ['resize', 'shrink_to_fit', 'operator[]']:
                 if isinstance(method.boost_python_export, bool):
                     method.boost_python_export = False
+    # for cls in ['class ::Eigen::MatrixBase< class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > >',
+    #             'class ::Eigen::PlainObjectBase< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 > >']:
+    #     asg[cls].boost_python_export = False
     for cls in asg['class ::std::move_iterator'].specializations(partial=False):
         cls.boost_python_export = False
     if 'class ::std::less' in asg:

@@ -61,18 +61,22 @@ while changed and not prev == curr:
         for bpm in asg.boost_python_modules():
             if bpm.globalname.startswith(os.path.abspath('.')):
                 bpm.write()
+    s = subprocess.Popen(['scons', '-j' + jobs, '-k', '--diagnostics-color=never'], stderr=subprocess.PIPE)
+    out, curr = s.communicate()
     s = subprocess.Popen(['scons', '-j1', '-k', '--diagnostics-color=never'], stderr=subprocess.PIPE)
     out, curr = s.communicate()
+    
+# autowig.feedback.plugin = 'comment'
+# prev = ''
+# while not prev == curr:
+# if not prev == curr:
+#     prev = curr
+#     autowig.feedback(curr, '.', asg, variant_dir=variant_dir,
+#                                      src_dir=src_dir)
+#     s = subprocess.Popen(['scons', '-j1', '-k', '--diagnostics-color=never'], stderr=subprocess.PIPE)
+#     out, curr = s.communicate()
+# else:
+#     print("done")
+# os.environ['AutoWIG'] = 'false'
 
-autowig.feedback.plugin = 'comment'
-prev = ''
-while not prev == curr:
-    prev = curr
-    autowig.feedback(curr, '.', asg, variant_dir=variant_dir,
-                                     src_dir=src_dir)
-    s = subprocess.Popen(['scons', '-j1', '-k', '--diagnostics-color=never'], stderr=subprocess.PIPE)
-    out, curr = s.communicate()
-
-os.environ['AutoWIG'] = 'false'
-
-subprocess.call(['scons', '-j' + jobs])
+# subprocess.call(['scons', '-j' + jobs])

@@ -72,6 +72,7 @@ void wrapper_89a1f4bc90b95adda2461ec1574670e0()
     ::Eigen::SparseVector< double, 0, int >::Scalar & (::Eigen::SparseVector< double, 0, int >::*method_pointer_4285131989da54199af6c3fc09ac0fc6)(::Eigen::Index ) = &::Eigen::SparseVector< double, 0, int >::fill;
     ::Eigen::SparseVector< double, 0, int >::Scalar & (::Eigen::SparseVector< double, 0, int >::*method_pointer_4d69194514d95b0c9d0202ee94817de1)(::Eigen::Index , ::Eigen::Index ) = &::Eigen::SparseVector< double, 0, int >::fillrand;
     ::Eigen::SparseVector< double, 0, int >::Scalar & (::Eigen::SparseVector< double, 0, int >::*method_pointer_335a9e8069335079b382f4824f21810f)(::Eigen::Index ) = &::Eigen::SparseVector< double, 0, int >::fillrand;
+    void  (::Eigen::SparseVector< double, 0, int >::*method_pointer_06ca0cbc11cb5714b41d67eff0e2cd24)() = &::Eigen::SparseVector< double, 0, int >::endFill;
     struct function_group
     {
         static class ::std::basic_ostream< char, struct ::std::char_traits< char > > & function_2a7689b0292f582998a943e008dc9fc9(class ::std::basic_ostream< char, struct ::std::char_traits< char > > & parameter_0, class ::Eigen::SparseVector< double, 0, int > const & parameter_1)
@@ -129,6 +130,7 @@ void wrapper_89a1f4bc90b95adda2461ec1574670e0()
     class_89a1f4bc90b95adda2461ec1574670e0.def("fillrand", autowig::method_decorator_4d69194514d95b0c9d0202ee94817de1);
     class_89a1f4bc90b95adda2461ec1574670e0.def("fillrand", method_pointer_335a9e8069335079b382f4824f21810f, boost::python::return_value_policy< boost::python::return_by_value >(), ":Parameter:\n    `i` (:cpp:any:`long` int) - Undocumented\n\n:Return Type:\n    :cpp:any:`double`\n\n");
     class_89a1f4bc90b95adda2461ec1574670e0.def("fillrand", autowig::method_decorator_335a9e8069335079b382f4824f21810f);
+    class_89a1f4bc90b95adda2461ec1574670e0.def("end_fill", method_pointer_06ca0cbc11cb5714b41d67eff0e2cd24, ":Return Type:\n    :cpp:any:`void`\n\n");
     class_89a1f4bc90b95adda2461ec1574670e0.def("__lshift__", function_group::function_2a7689b0292f582998a943e008dc9fc9, boost::python::return_value_policy< boost::python::reference_existing_object >(), "");
 
     if(autowig::Held< class ::Eigen::SparseVector< double, 0, int > >::is_class)

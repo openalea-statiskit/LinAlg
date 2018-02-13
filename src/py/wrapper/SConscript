@@ -7,6 +7,8 @@ try:
     pyenv = env.Clone(tools = ['boost_python'])
 
     pyenv.AppendUnique(LIBS  = ['statiskit_linalg'])
+    pyenv.AppendUnique(CCFLAGS = ['-Winvalid-pch'])
+    # pyenv.Prepend(CPPPATH=['.'])
 
     exclude = """
     """.split()
