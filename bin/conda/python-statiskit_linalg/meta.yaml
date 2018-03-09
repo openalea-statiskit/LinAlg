@@ -23,6 +23,7 @@ requirements:
     - python-toolchain
     - python-statiskit_stl
   run:
+    - libboost_python
     - libstatiskit_linalg
     - python
     - python-statiskit_stl
