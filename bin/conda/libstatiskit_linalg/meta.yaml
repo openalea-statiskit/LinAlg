@@ -11,13 +11,12 @@ build:
 about:
   home: http://statiskit-linalg.readthedocs.org
   license: Apache License 2.0
-  summary: Minimal Interpreted Interfaces for the Eigen C++ Template Library
+  summary: C++ Library for Minimal Interpreted Interfaces of the Eigen C++ Template Library
   
 requirements:
   build:
-    - libeigen
     - libtoolchain
-    - libstatiskit_stl
+    - libstatiskit_stl-dev
+    - libstatiskit_linalg-dev
   run:
-    - libeigen
     - libstatiskit_stl

@@ -1,5 +1,5 @@
 package:
-  name: libeigen
+  name: libeigen-dev
   version: "3.3.1"
 
 source:
@@ -15,4 +15,4 @@ about:
 
 requirements:
   build:
-    - libtoolchain
+    - libtoolchain-dev

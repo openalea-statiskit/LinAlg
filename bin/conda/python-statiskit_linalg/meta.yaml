@@ -11,16 +11,17 @@ build:
 about:
   home: http://statiskit-linalg.readthedocs.org
   license: Apache License 2.0
-  summary: Minimal Interpreted Interfaces for the Eigen C++ Template Library
+  summary: Python Minimal Interpreted Interface of the Eigen C++ Template Library
 
 requirements:
   build:
-    - libtoolchain
-    - python-toolchain
     - libboost_python-dev
+    - libstatiskit_linalg-dev
+    - libtoolchain
     - libstatiskit_linalg
-    - python-statiskit_stl
     - python
+    - python-toolchain
+    - python-statiskit_stl
   run:
     - libstatiskit_linalg
     - python
