@@ -1,5 +1,5 @@
 set -ve
 
-scons cpp --prefix=$PREFIX -j$CPU_COUNT
+scons cpp-lib --prefix=$PREFIX -j$CPU_COUNT
 
 set +ve
