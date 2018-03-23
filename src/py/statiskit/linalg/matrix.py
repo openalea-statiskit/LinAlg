@@ -37,12 +37,12 @@ def wrapper__init__(f):
                 if len(arg.shape) == 1:
                     self.set_zero(arg.shape[0], arg.shape[0])
                     for i, v in enumerate(arg):
-                        self[i, i] = v
+                        self[i, i] = float(v)
                 else:
                     self.set_zero(arg.shape[0], arg.shape[1])
                     for i, v in enumerate(arg):
                         for j, m in enumerate(v):
-                            self[i, j] = m
+                            self[i, j] = float(m)
         elif len(args) == 2:
             if any(not isinstance(arg, int) for arg in args) or any(arg <= 0 for arg in args):
                 raise TypeError('Arguments should be strictly positive integers')
