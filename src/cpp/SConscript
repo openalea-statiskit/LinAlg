@@ -141,7 +141,6 @@ with open('Eigen.cpp', 'w') as filehandler:
             # filehandler.write('\t\t}\n')
     filehandler.write('\t}\n}')
 
-from SCons.Errors import EnvironmentError
 
 Import("env")
 
