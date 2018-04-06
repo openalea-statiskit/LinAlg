@@ -55,6 +55,12 @@ def wrapper__init__(f):
 Matrix.__init__ = wrapper__init__(Matrix.__init__)
 del wrapper__init__
 
+def round(self, places):
+    return Matrix([[round(self[i, j], places) for j in range(self.nb_cols)] for i in range(self.nb_rows)])
+
+Matrix.round = round
+del round
+
 def __eq__(self, other):
     if isinstance(other, Matrix) and self.nb_rows == other.nb_rows and self.nb_cols == other.nb_cols:
         return all(all(self[row, col] == other[row, col] for col in range(self.nb_cols)) for row in range(self.nb_rows))

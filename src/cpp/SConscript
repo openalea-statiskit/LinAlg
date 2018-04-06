@@ -166,7 +166,7 @@ targets = wigenv.BoostPythonWIG('statiskit_linalg', [target for target in target
                                 parser_bootstrap=1,
                                 controller='AutoWIG.py',
                                 generator='AutoWIG.py',
-                                depends=[])
+                                depends=['statiskit_stl'])
 Alias("autowig", targets)
 wigenv.Depends(targets, "cpp-dev")
 

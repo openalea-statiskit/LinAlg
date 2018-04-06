@@ -3,8 +3,8 @@
 
 #include <boost/python.hpp>
 #include <type_traits>
-#include <statiskit/linalg/config.h>
 #include <statiskit/linalg/Eigen.h>
+#include <statiskit/linalg/config.h>
 #include <statiskit/linalg/operator.h>
 #include <memory>
 

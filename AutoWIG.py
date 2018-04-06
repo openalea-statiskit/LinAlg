@@ -10,7 +10,7 @@ jobs = str(max(multiprocessing.cpu_count()-1, 1))
 asgs = dict()
 try:
     for filepath in os.listdir(os.path.join(autowig.__path__[0], '..', 'scons_tools', 'site_autowig', 'ASG')):
-        with open(os.path.join(autowig.__path__[0], '..', 'scons_tools', 'site_autowig', 'ASG', filepath), 'r') as filehandler:
+        with open(os.path.join(autowig.__path__[0], '..', 'scons_tools', 'site_autowig', 'ASG', filepath), 'rb') as filehandler:
             asgs[filepath] = pickle.load(filehandler)
 except:
     pass
@@ -38,7 +38,7 @@ subprocess.call(['scons', '-j' + jobs, '-k', '--diagnostics-color=never'])
 s = subprocess.Popen(['scons', 'autowig', '-j' + jobs, '-k', '--diagnostics-color=never'], stderr=subprocess.PIPE)
 out, err = s.communicate()
 
-with open(os.path.join(autowig.__path__[0], '..', 'scons_tools', 'site_autowig', 'ASG', 'statiskit_linalg.pkl'), 'r') as filehandler:
+with open(os.path.join(autowig.__path__[0], '..', 'scons_tools', 'site_autowig', 'ASG', 'statiskit_linalg.pkl'), 'rb') as filehandler:
     asg = pickle.load(filehandler)
 
 os.environ['AutoWIG'] = 'true'
@@ -50,6 +50,7 @@ out, curr = s.communicate()
 s = subprocess.Popen(['scons', '-j1', '-k', '--diagnostics-color=never'], stderr=subprocess.PIPE)
 prev = ''
 out, curr = s.communicate()
+curr = curr.decode()
 while changed and not prev == curr:
     prev = curr
     changed = False
@@ -65,6 +66,7 @@ while changed and not prev == curr:
     out, curr = s.communicate()
     s = subprocess.Popen(['scons', '-j1', '-k', '--diagnostics-color=never'], stderr=subprocess.PIPE)
     out, curr = s.communicate()
+    curr = curr.decode()
     
 # autowig.feedback.plugin = 'comment'
 # prev = ''

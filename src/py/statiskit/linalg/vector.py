@@ -44,6 +44,13 @@ Vector.__init__ = wrapper__init__(Vector.__init__)
 RowVector.__init__ = wrapper__init__(RowVector.__init__)
 del wrapper__init__
 
+def round(self, places):
+    return Vector([round(self[i], places) for i in range(len(self))])
+
+Vector.round = round
+RowVector.round = round
+del round
+
 def __eq__(self, other):
     if isinstance(other, self.__class__):
         return all(self[index] == other[index] for index in range(len(self)))

@@ -120,10 +120,10 @@ void wrapper_94b3e4cf36a654a98d46f7431a732180()
     class_94b3e4cf36a654a98d46f7431a732180.def("__iadd__", method_pointer_1c1ed1bf9c2e598ba055c5d172322297, boost::python::return_internal_reference<>(), "");
     class_94b3e4cf36a654a98d46f7431a732180.def("__iadd__", autowig::method_decorator_1c1ed1bf9c2e598ba055c5d172322297);
     class_94b3e4cf36a654a98d46f7431a732180.staticmethod("unit_w");
-    class_94b3e4cf36a654a98d46f7431a732180.staticmethod("unit_y");
     class_94b3e4cf36a654a98d46f7431a732180.staticmethod("unit_x");
     class_94b3e4cf36a654a98d46f7431a732180.staticmethod("unit");
     class_94b3e4cf36a654a98d46f7431a732180.staticmethod("unit_z");
+    class_94b3e4cf36a654a98d46f7431a732180.staticmethod("unit_y");
 
     if(autowig::Held< class ::Eigen::MatrixBase< class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > > >::is_class)
     {
