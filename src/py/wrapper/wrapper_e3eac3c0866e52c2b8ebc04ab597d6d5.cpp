@@ -87,6 +87,8 @@ void wrapper_e3eac3c0866e52c2b8ebc04ab597d6d5()
     ::Eigen::DenseBase< class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > >::ConstSegmentReturnType  (::Eigen::DenseBase< ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > >::*method_pointer_bff056159c8a50749e71b5e47bc3d2f3)(::Eigen::Index ) const = &::Eigen::DenseBase< class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > >::head;
     ::Eigen::DenseBase< class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > >::SegmentReturnType  (::Eigen::DenseBase< ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > >::*method_pointer_7be029b278f25a77b1c9c295bd7f27cb)(::Eigen::Index ) = &::Eigen::DenseBase< class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > >::tail;
     ::Eigen::DenseBase< class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > >::ConstSegmentReturnType  (::Eigen::DenseBase< ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > >::*method_pointer_46f77d56da05543cad1db1d4a5ea8d34)(::Eigen::Index ) const = &::Eigen::DenseBase< class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > >::tail;
+    class ::Eigen::CwiseNullaryOp< struct ::Eigen::internal::scalar_constant_op< double >, class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > > const (*method_pointer_d01dce2fa93f5400a637fbc31144f4ad)(::Eigen::Index , struct ::Eigen::internal::scalar_constant_op< double > const &) = ::Eigen::DenseBase< class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > >::NullaryExpr;
+    class ::Eigen::CwiseNullaryOp< struct ::Eigen::internal::scalar_constant_op< double >, class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > > const (*method_pointer_46cfffc2036f5b3cbed69b45841832b5)(::Eigen::Index , ::Eigen::Index , struct ::Eigen::internal::scalar_constant_op< double > const &) = ::Eigen::DenseBase< class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > >::NullaryExpr;
     boost::python::class_< class ::Eigen::DenseBase< class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > >, autowig::Held< class ::Eigen::DenseBase< class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > > >::Type, boost::python::bases< class ::Eigen::DenseCoeffsBase< class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 >, 3 > > > class_e3eac3c0866e52c2b8ebc04ab597d6d5("_DenseBase_e3eac3c0866e52c2b8ebc04ab597d6d5", "", boost::python::no_init);
     class_e3eac3c0866e52c2b8ebc04ab597d6d5.def(boost::python::init< class ::Eigen::DenseBase< class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > > const & >(""));
     class_e3eac3c0866e52c2b8ebc04ab597d6d5.def("non_zeros", method_pointer_3d4d05ffecad58a8a7f8637099940e9d, "");
@@ -151,9 +153,12 @@ void wrapper_e3eac3c0866e52c2b8ebc04ab597d6d5()
     class_e3eac3c0866e52c2b8ebc04ab597d6d5.def("head", method_pointer_bff056159c8a50749e71b5e47bc3d2f3, "");
     class_e3eac3c0866e52c2b8ebc04ab597d6d5.def("tail", method_pointer_7be029b278f25a77b1c9c295bd7f27cb, "");
     class_e3eac3c0866e52c2b8ebc04ab597d6d5.def("tail", method_pointer_46f77d56da05543cad1db1d4a5ea8d34, "");
-    class_e3eac3c0866e52c2b8ebc04ab597d6d5.staticmethod("ones");
-    class_e3eac3c0866e52c2b8ebc04ab597d6d5.staticmethod("constant");
+    class_e3eac3c0866e52c2b8ebc04ab597d6d5.def("nullary_expr", method_pointer_d01dce2fa93f5400a637fbc31144f4ad, "");
+    class_e3eac3c0866e52c2b8ebc04ab597d6d5.def("nullary_expr", method_pointer_46cfffc2036f5b3cbed69b45841832b5, "");
     class_e3eac3c0866e52c2b8ebc04ab597d6d5.staticmethod("zero");
+    class_e3eac3c0866e52c2b8ebc04ab597d6d5.staticmethod("nullary_expr");
+    class_e3eac3c0866e52c2b8ebc04ab597d6d5.staticmethod("constant");
+    class_e3eac3c0866e52c2b8ebc04ab597d6d5.staticmethod("ones");
 
     if(autowig::Held< class ::Eigen::DenseBase< class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > > >::is_class)
     {

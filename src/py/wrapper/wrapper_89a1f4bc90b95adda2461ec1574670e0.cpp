@@ -7,6 +7,7 @@ namespace autowig
 
     void method_decorator_fae50732d08a599d9b36bd1abd51ba7b(class ::Eigen::SparseVector< double, 0, int > & instance, class ::Eigen::SparseVector< double, 0, int > const & param_in_0, const class ::Eigen::SparseVector< double, 0, int > & param_out) { instance.operator+=(param_in_0) = param_out; }
     void method_decorator_5a611c4cf5555163af48a3e2f2387c06(class ::Eigen::SparseVector< double, 0, int > & instance, class ::Eigen::SparseVector< double, 0, int > const & param_in_0, const class ::Eigen::SparseVector< double, 0, int > & param_out) { instance.operator-=(param_in_0) = param_out; }
+    void method_decorator_ce43605ab9c95afcad1484e764affc93(class ::Eigen::SparseVector< double, 0, int > & instance, const ::Eigen::SparseVector< double, 0, int >::Storage & param_out) { instance.data() = param_out; }
     void method_decorator_c64546b9e5b15440b367c56869425d86(class ::Eigen::SparseVector< double, 0, int > & instance, ::Eigen::Index  param_in_0, ::Eigen::Index  param_in_1, double param_out) { instance.coeffRef(param_in_0, param_in_1) = param_out; }
     void method_decorator_a60cf720fcf8534686f73b918038069e(class ::Eigen::SparseVector< double, 0, int > & instance, ::Eigen::Index  param_in_0, double param_out) { instance.coeffRef(param_in_0) = param_out; }
     void method_decorator_6459be0640885540bf06a9fe1ea35e24(class ::Eigen::SparseVector< double, 0, int > & instance, ::Eigen::Index  param_in_0, ::Eigen::Index  param_in_1, double param_out) { instance.insertBackByOuterInner(param_in_0, param_in_1) = param_out; }
@@ -19,6 +20,7 @@ namespace autowig
     void method_decorator_4285131989da54199af6c3fc09ac0fc6(class ::Eigen::SparseVector< double, 0, int > & instance, ::Eigen::Index  param_in_0, double param_out) { instance.fill(param_in_0) = param_out; }
     void method_decorator_4d69194514d95b0c9d0202ee94817de1(class ::Eigen::SparseVector< double, 0, int > & instance, ::Eigen::Index  param_in_0, ::Eigen::Index  param_in_1, double param_out) { instance.fillrand(param_in_0, param_in_1) = param_out; }
     void method_decorator_335a9e8069335079b382f4824f21810f(class ::Eigen::SparseVector< double, 0, int > & instance, ::Eigen::Index  param_in_0, double param_out) { instance.fillrand(param_in_0) = param_out; }
+    void method_decorator_1b5fe23c88f95a74add9817ee5fca906(class ::Eigen::SparseVector< double, 0, int > & instance, const ::Eigen::SparseVector< double, 0, int >::Storage & param_out) { instance._data() = param_out; }
 }
 
 #if defined(_MSC_VER)
@@ -45,6 +47,8 @@ void wrapper_89a1f4bc90b95adda2461ec1574670e0()
     ::Eigen::Index  (::Eigen::SparseVector< double, 0, int >::*method_pointer_59271100d0475327be7442ed8502a9b1)() const = &::Eigen::SparseVector< double, 0, int >::cols;
     ::Eigen::Index  (::Eigen::SparseVector< double, 0, int >::*method_pointer_66637cf3961d5edbaf4e2a42235261bf)() const = &::Eigen::SparseVector< double, 0, int >::innerSize;
     ::Eigen::Index  (::Eigen::SparseVector< double, 0, int >::*method_pointer_b0a18fa732715ab1b4dd40ae3160b4cf)() const = &::Eigen::SparseVector< double, 0, int >::outerSize;
+    ::Eigen::SparseVector< double, 0, int >::Storage & (::Eigen::SparseVector< double, 0, int >::*method_pointer_ce43605ab9c95afcad1484e764affc93)() = &::Eigen::SparseVector< double, 0, int >::data;
+    ::Eigen::SparseVector< double, 0, int >::Storage const & (::Eigen::SparseVector< double, 0, int >::*method_pointer_648d35aa6c6251528c765d788a681e6d)() const = &::Eigen::SparseVector< double, 0, int >::data;
     ::Eigen::SparseVector< double, 0, int >::Scalar  (::Eigen::SparseVector< double, 0, int >::*method_pointer_d4b675b27691564cb9d37daad17df418)(::Eigen::Index , ::Eigen::Index ) const = &::Eigen::SparseVector< double, 0, int >::coeff;
     ::Eigen::SparseVector< double, 0, int >::Scalar  (::Eigen::SparseVector< double, 0, int >::*method_pointer_2d18d5cc46ab559f9f9bd1e6630bebee)(::Eigen::Index ) const = &::Eigen::SparseVector< double, 0, int >::coeff;
     ::Eigen::SparseVector< double, 0, int >::Scalar & (::Eigen::SparseVector< double, 0, int >::*method_pointer_c64546b9e5b15440b367c56869425d86)(::Eigen::Index , ::Eigen::Index ) = &::Eigen::SparseVector< double, 0, int >::coeffRef;
@@ -73,6 +77,8 @@ void wrapper_89a1f4bc90b95adda2461ec1574670e0()
     ::Eigen::SparseVector< double, 0, int >::Scalar & (::Eigen::SparseVector< double, 0, int >::*method_pointer_4d69194514d95b0c9d0202ee94817de1)(::Eigen::Index , ::Eigen::Index ) = &::Eigen::SparseVector< double, 0, int >::fillrand;
     ::Eigen::SparseVector< double, 0, int >::Scalar & (::Eigen::SparseVector< double, 0, int >::*method_pointer_335a9e8069335079b382f4824f21810f)(::Eigen::Index ) = &::Eigen::SparseVector< double, 0, int >::fillrand;
     void  (::Eigen::SparseVector< double, 0, int >::*method_pointer_06ca0cbc11cb5714b41d67eff0e2cd24)() = &::Eigen::SparseVector< double, 0, int >::endFill;
+    ::Eigen::SparseVector< double, 0, int >::Storage & (::Eigen::SparseVector< double, 0, int >::*method_pointer_1b5fe23c88f95a74add9817ee5fca906)() = &::Eigen::SparseVector< double, 0, int >::_data;
+    ::Eigen::SparseVector< double, 0, int >::Storage const & (::Eigen::SparseVector< double, 0, int >::*method_pointer_46b8c75369cb535597006f5326e8bc9e)() const = &::Eigen::SparseVector< double, 0, int >::_data;
     struct function_group
     {
         static class ::std::basic_ostream< char, struct ::std::char_traits< char > > & function_2a7689b0292f582998a943e008dc9fc9(class ::std::basic_ostream< char, struct ::std::char_traits< char > > & parameter_0, class ::Eigen::SparseVector< double, 0, int > const & parameter_1)
@@ -91,6 +97,9 @@ void wrapper_89a1f4bc90b95adda2461ec1574670e0()
     class_89a1f4bc90b95adda2461ec1574670e0.def("cols", method_pointer_59271100d0475327be7442ed8502a9b1, "");
     class_89a1f4bc90b95adda2461ec1574670e0.def("inner_size", method_pointer_66637cf3961d5edbaf4e2a42235261bf, "");
     class_89a1f4bc90b95adda2461ec1574670e0.def("outer_size", method_pointer_b0a18fa732715ab1b4dd40ae3160b4cf, "");
+    class_89a1f4bc90b95adda2461ec1574670e0.def("data", method_pointer_ce43605ab9c95afcad1484e764affc93, boost::python::return_internal_reference<>(), ":Return Type:\n    :cpp:any:`::Eigen::internal::CompressedStorage<` double,\n    int >\n\n");
+    class_89a1f4bc90b95adda2461ec1574670e0.def("data", autowig::method_decorator_ce43605ab9c95afcad1484e764affc93);
+    class_89a1f4bc90b95adda2461ec1574670e0.def("data", method_pointer_648d35aa6c6251528c765d788a681e6d, boost::python::return_value_policy< boost::python::return_by_value >(), ":Return Type:\n    :cpp:any:`::Eigen::internal::CompressedStorage<` double,\n    int >\n\n");
     class_89a1f4bc90b95adda2461ec1574670e0.def("coeff", method_pointer_d4b675b27691564cb9d37daad17df418, "");
     class_89a1f4bc90b95adda2461ec1574670e0.def("coeff", method_pointer_2d18d5cc46ab559f9f9bd1e6630bebee, "");
     class_89a1f4bc90b95adda2461ec1574670e0.def("coeff_ref", method_pointer_c64546b9e5b15440b367c56869425d86, boost::python::return_value_policy< boost::python::return_by_value >(), "");
@@ -131,6 +140,9 @@ void wrapper_89a1f4bc90b95adda2461ec1574670e0()
     class_89a1f4bc90b95adda2461ec1574670e0.def("fillrand", method_pointer_335a9e8069335079b382f4824f21810f, boost::python::return_value_policy< boost::python::return_by_value >(), ":Parameter:\n    `i` (:cpp:any:`long` int) - Undocumented\n\n:Return Type:\n    :cpp:any:`double`\n\n");
     class_89a1f4bc90b95adda2461ec1574670e0.def("fillrand", autowig::method_decorator_335a9e8069335079b382f4824f21810f);
     class_89a1f4bc90b95adda2461ec1574670e0.def("end_fill", method_pointer_06ca0cbc11cb5714b41d67eff0e2cd24, ":Return Type:\n    :cpp:any:`void`\n\n");
+    class_89a1f4bc90b95adda2461ec1574670e0.def("data", method_pointer_1b5fe23c88f95a74add9817ee5fca906, boost::python::return_internal_reference<>(), ":Return Type:\n    :cpp:any:`::Eigen::internal::CompressedStorage<` double,\n    int >\n\n");
+    class_89a1f4bc90b95adda2461ec1574670e0.def("data", autowig::method_decorator_1b5fe23c88f95a74add9817ee5fca906);
+    class_89a1f4bc90b95adda2461ec1574670e0.def("data", method_pointer_46b8c75369cb535597006f5326e8bc9e, boost::python::return_value_policy< boost::python::return_by_value >(), ":Return Type:\n    :cpp:any:`::Eigen::internal::CompressedStorage<` double,\n    int >\n\n");
     class_89a1f4bc90b95adda2461ec1574670e0.def("__lshift__", function_group::function_2a7689b0292f582998a943e008dc9fc9, boost::python::return_value_policy< boost::python::reference_existing_object >(), "");
 
     if(autowig::Held< class ::Eigen::SparseVector< double, 0, int > >::is_class)

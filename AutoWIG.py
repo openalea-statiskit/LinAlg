@@ -51,23 +51,29 @@ s = subprocess.Popen(['scons', '-j1', '-k', '--diagnostics-color=never'], stderr
 prev = ''
 out, curr = s.communicate()
 curr = curr.decode()
-while changed and not prev == curr:
-    prev = curr
-    changed = False
-    code = autowig.feedback(curr, '.', asg, variant_dir=variant_dir,
-                                            src_dir=src_dir)
-    if code.strip():
-        changed = True
-        exec(code, locals())
-        for bpm in asg.boost_python_modules():
-            if bpm.globalname.startswith(os.path.abspath('.')):
-                bpm.write()
-    s = subprocess.Popen(['scons', '-j' + jobs, '-k', '--diagnostics-color=never'], stderr=subprocess.PIPE)
-    out, curr = s.communicate()
-    s = subprocess.Popen(['scons', '-j1', '-k', '--diagnostics-color=never'], stderr=subprocess.PIPE)
-    out, curr = s.communicate()
-    curr = curr.decode()
+with open('controller.py', 'w') as filehandler:
+    while changed and not prev == curr:
+        prev = curr
+        changed = False
+        code = autowig.feedback(curr, '.', asg, variant_dir=variant_dir,
+                                                src_dir=src_dir)
+        if code.strip():
+            changed = True
+            filehandler.write(code)
+            print(code)
+            input("Press Enter to continue...")
+            exec(code, locals())
+            for bpm in asg.boost_python_modules():
+                if bpm.globalname.startswith(os.path.abspath('.')):
+                    bpm.write()
+        s = subprocess.Popen(['scons', '-j' + jobs, '-k', '--diagnostics-color=never'], stderr=subprocess.PIPE)
+        out, curr = s.communicate()
+        s = subprocess.Popen(['scons', '-j1', '-k', '--diagnostics-color=never'], stderr=subprocess.PIPE)
+        out, curr = s.communicate()
+        curr = curr.decode()
     
+
+
 # autowig.feedback.plugin = 'comment'
 # prev = ''
 # while not prev == curr:

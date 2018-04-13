@@ -44,6 +44,7 @@ void wrapper_33412a4d59dc5ac2b599724f2069be84()
     };
     boost::python::class_< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 >, autowig::Held< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >::Type, boost::python::bases< class ::Eigen::PlainObjectBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > > > > class_33412a4d59dc5ac2b599724f2069be84("_Matrix_33412a4d59dc5ac2b599724f2069be84", "", boost::python::no_init);
     class_33412a4d59dc5ac2b599724f2069be84.def(boost::python::init<  >(""));
+    class_33412a4d59dc5ac2b599724f2069be84.def(boost::python::init< struct ::Eigen::internal::constructor_without_unaligned_array_assert  >(""));
     class_33412a4d59dc5ac2b599724f2069be84.def(boost::python::init< ::Eigen::Matrix< double, 1, -1, 1, 1, -1 >::Scalar const &, ::Eigen::Matrix< double, 1, -1, 1, 1, -1 >::Scalar const &, ::Eigen::Matrix< double, 1, -1, 1, 1, -1 >::Scalar const & >(""));
     class_33412a4d59dc5ac2b599724f2069be84.def(boost::python::init< ::Eigen::Matrix< double, 1, -1, 1, 1, -1 >::Scalar const &, ::Eigen::Matrix< double, 1, -1, 1, 1, -1 >::Scalar const &, ::Eigen::Matrix< double, 1, -1, 1, 1, -1 >::Scalar const &, ::Eigen::Matrix< double, 1, -1, 1, 1, -1 >::Scalar const & >(""));
     class_33412a4d59dc5ac2b599724f2069be84.def(boost::python::init< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > const & >(""));
