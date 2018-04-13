@@ -68,9 +68,9 @@ void wrapper_94b3e4cf36a654a98d46f7431a732180()
     ::Eigen::MatrixBase< class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > >::Scalar  (::Eigen::MatrixBase< ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > >::*method_pointer_9bacdc2d3d355582be235e61fdde8682)() const = &::Eigen::MatrixBase< class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > >::determinant;
     ::Eigen::MatrixBase< class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > >::PlainObject  (::Eigen::MatrixBase< ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > >::*method_pointer_e43680b3d85259cab64232bb4f2d0f14)() const = &::Eigen::MatrixBase< class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > >::unitOrthogonal;
     void  (::Eigen::MatrixBase< ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > >::*method_pointer_6ceac7d0b13858c4a65016c403074a6d)(::Eigen::MatrixBase< class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > >::Scalar &, ::Eigen::MatrixBase< class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > >::RealScalar &) = &::Eigen::MatrixBase< class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > >::makeHouseholderInPlace;
+    class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > & (::Eigen::MatrixBase< ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > >::*method_pointer_1c1ed1bf9c2e598ba055c5d172322297)(class ::Eigen::MatrixBase< class ::Eigen::CwiseBinaryOp< struct ::Eigen::internal::scalar_product_op< double, double >, class ::Eigen::CwiseNullaryOp< struct ::Eigen::internal::scalar_constant_op< double >, class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > const > const, class ::Eigen::Map< class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 >, 2, class ::Eigen::Stride< 0, 0 > > const > > const &) = &::Eigen::MatrixBase< class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > >::operator+=;
     bool  (::Eigen::MatrixBase< ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > >::*method_pointer_1fb1dd2f35e3504188b73a6754a7c943)(class ::Eigen::MatrixBase< class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > > const &) const = &::Eigen::MatrixBase< class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > >::operator==;
     class ::Eigen::CwiseBinaryOp< struct ::std::equal_to< double >, class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > const, class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > const > const (::Eigen::MatrixBase< ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > >::*method_pointer_4994af8fa9ef542480dc25b3d54f8d58)(class ::Eigen::MatrixBase< class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > > const &) const = &::Eigen::MatrixBase< class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > >::cwiseEqual;
-    class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > & (::Eigen::MatrixBase< ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > >::*method_pointer_1c1ed1bf9c2e598ba055c5d172322297)(class ::Eigen::MatrixBase< class ::Eigen::CwiseBinaryOp< struct ::Eigen::internal::scalar_product_op< double, double >, class ::Eigen::CwiseNullaryOp< struct ::Eigen::internal::scalar_constant_op< double >, class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > const > const, class ::Eigen::Map< class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 >, 2, class ::Eigen::Stride< 0, 0 > > const > > const &) = &::Eigen::MatrixBase< class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > >::operator+=;
     boost::python::class_< class ::Eigen::MatrixBase< class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > >, autowig::Held< class ::Eigen::MatrixBase< class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > > >::Type, boost::python::bases< class ::Eigen::DenseBase< class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > > > > class_94b3e4cf36a654a98d46f7431a732180("_MatrixBase_94b3e4cf36a654a98d46f7431a732180", "", boost::python::no_init);
     class_94b3e4cf36a654a98d46f7431a732180.def(boost::python::init< class ::Eigen::MatrixBase< class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > > const & >(""));
     class_94b3e4cf36a654a98d46f7431a732180.def("diagonal_size", method_pointer_b2dc1374f71b5670bdeb5d3e3a1af0b9, "");
@@ -115,15 +115,15 @@ void wrapper_94b3e4cf36a654a98d46f7431a732180()
     class_94b3e4cf36a654a98d46f7431a732180.def("determinant", method_pointer_9bacdc2d3d355582be235e61fdde8682, "");
     class_94b3e4cf36a654a98d46f7431a732180.def("unit_orthogonal", method_pointer_e43680b3d85259cab64232bb4f2d0f14, "");
     class_94b3e4cf36a654a98d46f7431a732180.def("make_householder_in_place", method_pointer_6ceac7d0b13858c4a65016c403074a6d, "");
-    class_94b3e4cf36a654a98d46f7431a732180.def("__eq__", method_pointer_1fb1dd2f35e3504188b73a6754a7c943, "");
-    class_94b3e4cf36a654a98d46f7431a732180.def("cwise_equal", method_pointer_4994af8fa9ef542480dc25b3d54f8d58, "");
     class_94b3e4cf36a654a98d46f7431a732180.def("__iadd__", method_pointer_1c1ed1bf9c2e598ba055c5d172322297, boost::python::return_internal_reference<>(), "");
     class_94b3e4cf36a654a98d46f7431a732180.def("__iadd__", autowig::method_decorator_1c1ed1bf9c2e598ba055c5d172322297);
+    class_94b3e4cf36a654a98d46f7431a732180.def("__eq__", method_pointer_1fb1dd2f35e3504188b73a6754a7c943, "");
+    class_94b3e4cf36a654a98d46f7431a732180.def("cwise_equal", method_pointer_4994af8fa9ef542480dc25b3d54f8d58, "");
     class_94b3e4cf36a654a98d46f7431a732180.staticmethod("unit_w");
     class_94b3e4cf36a654a98d46f7431a732180.staticmethod("unit_x");
-    class_94b3e4cf36a654a98d46f7431a732180.staticmethod("unit");
     class_94b3e4cf36a654a98d46f7431a732180.staticmethod("unit_z");
     class_94b3e4cf36a654a98d46f7431a732180.staticmethod("unit_y");
+    class_94b3e4cf36a654a98d46f7431a732180.staticmethod("unit");
 
     if(autowig::Held< class ::Eigen::MatrixBase< class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > > >::is_class)
     {

@@ -5,6 +5,7 @@
 namespace autowig
 {
 
+    void method_decorator_b38cff7328135a2ebd9fe16b941a6267(class ::Eigen::SparseMatrix< double, 0, int > & instance, const ::Eigen::SparseMatrix< double, 0, int >::Storage & param_out) { instance.data() = param_out; }
     void method_decorator_72363d91e80d52aa84bcdfddba0deb60(class ::Eigen::SparseMatrix< double, 0, int > & instance, ::Eigen::Index  param_in_0, ::Eigen::Index  param_in_1, double param_out) { instance.coeffRef(param_in_0, param_in_1) = param_out; }
     void method_decorator_bd64be3f6ddb51e9987d93207588eb54(class ::Eigen::SparseMatrix< double, 0, int > & instance, ::Eigen::Index  param_in_0, ::Eigen::Index  param_in_1, double param_out) { instance.insert(param_in_0, param_in_1) = param_out; }
     void method_decorator_7ebd7c78ab8f53928c412a0e98985b3f(class ::Eigen::SparseMatrix< double, 0, int > & instance, ::Eigen::Index  param_in_0, ::Eigen::Index  param_in_1, double param_out) { instance.insertBack(param_in_0, param_in_1) = param_out; }
@@ -36,6 +37,8 @@ void wrapper_2ba8a639d9075e2b8e8f258f76dc78ca()
     ::Eigen::Index  (::Eigen::SparseMatrix< double, 0, int >::*method_pointer_7d08fd1ee17e55479431549aeb7b1ac6)() const = &::Eigen::SparseMatrix< double, 0, int >::cols;
     ::Eigen::Index  (::Eigen::SparseMatrix< double, 0, int >::*method_pointer_0f633c226a745293b7d7dd0764a85edb)() const = &::Eigen::SparseMatrix< double, 0, int >::innerSize;
     ::Eigen::Index  (::Eigen::SparseMatrix< double, 0, int >::*method_pointer_a48c3adee66b5295a81203174cb8604e)() const = &::Eigen::SparseMatrix< double, 0, int >::outerSize;
+    ::Eigen::SparseMatrix< double, 0, int >::Storage & (::Eigen::SparseMatrix< double, 0, int >::*method_pointer_b38cff7328135a2ebd9fe16b941a6267)() = &::Eigen::SparseMatrix< double, 0, int >::data;
+    ::Eigen::SparseMatrix< double, 0, int >::Storage const & (::Eigen::SparseMatrix< double, 0, int >::*method_pointer_7d978edd25595e619e54242cd0ed2680)() const = &::Eigen::SparseMatrix< double, 0, int >::data;
     ::Eigen::SparseMatrix< double, 0, int >::Scalar  (::Eigen::SparseMatrix< double, 0, int >::*method_pointer_6c6c5212ecd558ffae1ea64aa36a5de3)(::Eigen::Index , ::Eigen::Index ) const = &::Eigen::SparseMatrix< double, 0, int >::coeff;
     ::Eigen::SparseMatrix< double, 0, int >::Scalar & (::Eigen::SparseMatrix< double, 0, int >::*method_pointer_72363d91e80d52aa84bcdfddba0deb60)(::Eigen::Index , ::Eigen::Index ) = &::Eigen::SparseMatrix< double, 0, int >::coeffRef;
     ::Eigen::SparseMatrix< double, 0, int >::Scalar & (::Eigen::SparseMatrix< double, 0, int >::*method_pointer_bd64be3f6ddb51e9987d93207588eb54)(::Eigen::Index , ::Eigen::Index ) = &::Eigen::SparseMatrix< double, 0, int >::insert;
@@ -60,6 +63,7 @@ void wrapper_2ba8a639d9075e2b8e8f258f76dc78ca()
     void  (::Eigen::SparseMatrix< double, 0, int >::*method_pointer_aa4e818c4b2e5598b011fbb536748310)() = &::Eigen::SparseMatrix< double, 0, int >::setIdentity;
     ::Eigen::SparseMatrix< double, 0, int >::Scalar  (::Eigen::SparseMatrix< double, 0, int >::*method_pointer_8b56b16cbd8d534f9e1630c76f0049f3)() const = &::Eigen::SparseMatrix< double, 0, int >::sum;
     ::Eigen::SparseMatrix< double, 0, int >::Scalar & (::Eigen::SparseMatrix< double, 0, int >::*method_pointer_89d1b22c99075c29926f4d7015a01103)(::Eigen::Index , ::Eigen::Index ) = &::Eigen::SparseMatrix< double, 0, int >::insertBackUncompressed;
+    void  (::Eigen::SparseMatrix< double, 0, int >::*method_pointer_e9ed0806f15d5a2e98973b27181f296e)(struct ::Eigen::internal::scalar_sum_op< double, double > ) = &::Eigen::SparseMatrix< double, 0, int >::collapseDuplicates;
     struct function_group
     {
         static class ::std::basic_ostream< char, struct ::std::char_traits< char > > & function_0ca9b67bcdf1575ca5ff01708a2d9359(class ::std::basic_ostream< char, struct ::std::char_traits< char > > & parameter_0, class ::Eigen::SparseMatrix< double, 0, int > const & parameter_1)
@@ -73,6 +77,9 @@ void wrapper_2ba8a639d9075e2b8e8f258f76dc78ca()
     class_2ba8a639d9075e2b8e8f258f76dc78ca.def("cols", method_pointer_7d08fd1ee17e55479431549aeb7b1ac6, ":Returns:\n    the number of columns of the matrix\n\n:Return Type:\n    :cpp:any:`long` int\n\n");
     class_2ba8a639d9075e2b8e8f258f76dc78ca.def("inner_size", method_pointer_0f633c226a745293b7d7dd0764a85edb, ":Returns:\n    the number of rows (resp. columns) of the matrix if the storage order\n    column major (resp. row major)\n\n:Return Type:\n    :cpp:any:`long` int\n\n");
     class_2ba8a639d9075e2b8e8f258f76dc78ca.def("outer_size", method_pointer_a48c3adee66b5295a81203174cb8604e, ":Returns:\n    the number of columns (resp. rows) of the matrix if the storage order\n    column major (resp. row major)\n\n:Return Type:\n    :cpp:any:`long` int\n\n");
+    class_2ba8a639d9075e2b8e8f258f76dc78ca.def("data", method_pointer_b38cff7328135a2ebd9fe16b941a6267, boost::python::return_internal_reference<>(), ":Return Type:\n    :cpp:any:`::Eigen::internal::CompressedStorage<` double,\n    int >\n\n");
+    class_2ba8a639d9075e2b8e8f258f76dc78ca.def("data", autowig::method_decorator_b38cff7328135a2ebd9fe16b941a6267);
+    class_2ba8a639d9075e2b8e8f258f76dc78ca.def("data", method_pointer_7d978edd25595e619e54242cd0ed2680, boost::python::return_value_policy< boost::python::return_by_value >(), ":Return Type:\n    :cpp:any:`::Eigen::internal::CompressedStorage<` double,\n    int >\n\n");
     class_2ba8a639d9075e2b8e8f258f76dc78ca.def("coeff", method_pointer_6c6c5212ecd558ffae1ea64aa36a5de3, ":Parameters:\n  - `row` (:cpp:any:`long` int) - Undocumented\n  - `col` (:cpp:any:`long` int) - Undocumented\n\n:Returns:\n    the value of the matrix at position :raw-latex:`\\a `i, :raw-latex:`\\a `j\n    This function returns Scalar(0) if the element is an explicit\n    :raw-latex:`\\em zero`\n\n:Return Type:\n    :cpp:any:`double`\n\n");
     class_2ba8a639d9075e2b8e8f258f76dc78ca.def("coeff_ref", method_pointer_72363d91e80d52aa84bcdfddba0deb60, boost::python::return_value_policy< boost::python::return_by_value >(), ":Parameters:\n  - `row` (:cpp:any:`long` int) - Undocumented\n  - `col` (:cpp:any:`long` int) - Undocumented\n\n:Returns:\n    a non-const reference to the value of the matrix at position\n    :raw-latex:`\\a `i, :raw-latex:`\\a `j\n    \n    If the element does not exist then it is inserted via the\n    insert(Index,Index) function which itself turns the matrix into a non\n    compressed form if that was not the case.\n    \n    This is a O(log(nnz\\_j)) operation (binary search) plus the cost of\n    insert(Index,Index) function if the element does not already exist.\n\n:Return Type:\n    :cpp:any:`double`\n\n");
     class_2ba8a639d9075e2b8e8f258f76dc78ca.def("coeff_ref", autowig::method_decorator_72363d91e80d52aa84bcdfddba0deb60);
@@ -104,6 +111,7 @@ void wrapper_2ba8a639d9075e2b8e8f258f76dc78ca()
     class_2ba8a639d9075e2b8e8f258f76dc78ca.def("sum", method_pointer_8b56b16cbd8d534f9e1630c76f0049f3, ":Return Type:\n    :cpp:any:`double`\n\n");
     class_2ba8a639d9075e2b8e8f258f76dc78ca.def("insert_back_uncompressed", method_pointer_89d1b22c99075c29926f4d7015a01103, boost::python::return_value_policy< boost::python::return_by_value >(), ":Parameters:\n  - `row` (:cpp:any:`long` int) - Undocumented\n  - `col` (:cpp:any:`long` int) - Undocumented\n\n:Return Type:\n    :cpp:any:`double`\n\n");
     class_2ba8a639d9075e2b8e8f258f76dc78ca.def("insert_back_uncompressed", autowig::method_decorator_89d1b22c99075c29926f4d7015a01103);
+    class_2ba8a639d9075e2b8e8f258f76dc78ca.def("collapse_duplicates", method_pointer_e9ed0806f15d5a2e98973b27181f296e, "");
     class_2ba8a639d9075e2b8e8f258f76dc78ca.def("__lshift__", function_group::function_0ca9b67bcdf1575ca5ff01708a2d9359, boost::python::return_value_policy< boost::python::reference_existing_object >(), "");
 
     if(autowig::Held< class ::Eigen::SparseMatrix< double, 0, int > >::is_class)
