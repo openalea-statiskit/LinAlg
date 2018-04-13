@@ -5,7 +5,8 @@ package:
 source:
   fn: eigen-3.3.1.tar.gz
   url: http://bitbucket.org/eigen/eigen/get/3.3.1.tar.gz
-
+  sha256: 3c9d2c1f86eee404de99f4238b24c3a737e6ec963a325d443878fa59f6eb2a90
+  
 build:
   number: 0
   
