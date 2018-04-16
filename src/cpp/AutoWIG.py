@@ -25,7 +25,7 @@ def controller(asg):
     # class ::Eigen::PlainObjectBase< class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > >
     # struct ::Eigen::EigenBase< class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > >
     # class ::Eigen::MatrixBase< class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > >
-    asg = stl_controller(asg, library=False, clean=True)
+    asg = stl_controller(asg, library=False, clean=False)
     # for dcl in asg['::Eigen::internal'].declarations(nested=True):
     #     dcl.boost_python_export = False
     for cls in ['class ::Eigen::DenseBase< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > >',
