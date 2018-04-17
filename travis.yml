@@ -12,9 +12,6 @@ services:
 env:
   - CONDA_RECIPE=bin/conda/libeigen-dev
   - CONDA_RECIPE=bin/conda/libstatiskit_linalg-dev
-    CONDA_VERSION=2
-    TRAVIS_WAIT=20
-  - CONDA_RECIPE=bin/conda/libstatiskit_linalg-dev
     CONDA_VERSION=3
     TRAVIS_WAIT=20
   - CONDA_RECIPE=bin/conda/libstatiskit_linalg

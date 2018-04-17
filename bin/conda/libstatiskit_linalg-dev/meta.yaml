@@ -16,12 +16,11 @@ about:
 
 requirements:
   build:
-    - python
     - libtoolchain
     - libtoolchain-dev
     - libstatiskit_stl-dev
     - libeigen-dev
-  run:
     - python
+  run:
     - libstatiskit_stl-dev
     - libeigen-dev
