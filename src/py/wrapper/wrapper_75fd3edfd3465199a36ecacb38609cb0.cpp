@@ -175,10 +175,10 @@ void wrapper_75fd3edfd3465199a36ecacb38609cb0()
     class_75fd3edfd3465199a36ecacb38609cb0.def("row", method_pointer_bb73f173464451dd81ae4482f39e7928, "");
     class_75fd3edfd3465199a36ecacb38609cb0.def("nullary_expr", method_pointer_bb295e30838f54a49e255691c1638432, "");
     class_75fd3edfd3465199a36ecacb38609cb0.def("nullary_expr", method_pointer_545073846f4358ae8b586ab8a687e899, "");
-    class_75fd3edfd3465199a36ecacb38609cb0.staticmethod("zero");
-    class_75fd3edfd3465199a36ecacb38609cb0.staticmethod("nullary_expr");
     class_75fd3edfd3465199a36ecacb38609cb0.staticmethod("constant");
     class_75fd3edfd3465199a36ecacb38609cb0.staticmethod("ones");
+    class_75fd3edfd3465199a36ecacb38609cb0.staticmethod("nullary_expr");
+    class_75fd3edfd3465199a36ecacb38609cb0.staticmethod("zero");
 
     if(autowig::Held< class ::Eigen::DenseBase< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 > > >::is_class)
     {

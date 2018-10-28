@@ -119,10 +119,10 @@ void wrapper_94b3e4cf36a654a98d46f7431a732180()
     class_94b3e4cf36a654a98d46f7431a732180.def("__iadd__", autowig::method_decorator_1c1ed1bf9c2e598ba055c5d172322297);
     class_94b3e4cf36a654a98d46f7431a732180.def("__eq__", method_pointer_1fb1dd2f35e3504188b73a6754a7c943, "");
     class_94b3e4cf36a654a98d46f7431a732180.def("cwise_equal", method_pointer_4994af8fa9ef542480dc25b3d54f8d58, "");
-    class_94b3e4cf36a654a98d46f7431a732180.staticmethod("unit_w");
-    class_94b3e4cf36a654a98d46f7431a732180.staticmethod("unit_x");
-    class_94b3e4cf36a654a98d46f7431a732180.staticmethod("unit_z");
     class_94b3e4cf36a654a98d46f7431a732180.staticmethod("unit_y");
+    class_94b3e4cf36a654a98d46f7431a732180.staticmethod("unit_w");
+    class_94b3e4cf36a654a98d46f7431a732180.staticmethod("unit_z");
+    class_94b3e4cf36a654a98d46f7431a732180.staticmethod("unit_x");
     class_94b3e4cf36a654a98d46f7431a732180.staticmethod("unit");
 
     if(autowig::Held< class ::Eigen::MatrixBase< class ::Eigen::Matrix< double, -1, 1, 0, -1, 1 > > >::is_class)
