@@ -10,15 +10,11 @@ services:
   - docker
   
 env:
-  - CONDA_RECIPE=bin/conda/libeigen-dev
-  - CONDA_RECIPE=bin/conda/libstatiskit_linalg-dev
-    CONDA_VERSION=3
+  - CONDA_RECIPE=etc/conda/libeigen-dev
+  - CONDA_RECIPE=etc/conda/libstatiskit_linalg-dev
     TRAVIS_WAIT=20
-  - CONDA_RECIPE=bin/conda/libstatiskit_linalg
-  - CONDA_RECIPE=bin/conda/python-statiskit_linalg
-    CONDA_VERSION=2
-  - CONDA_RECIPE=bin/conda/python-statiskit_linalg
-    CONDA_VERSION=3
+  - CONDA_RECIPE=etc/conda/libstatiskit_linalg
+  - CONDA_RECIPE=etc/conda/python-statiskit_linalg
     
 install:
   - git clone https://github.com/StatisKit/travis-ci.git travis-ci

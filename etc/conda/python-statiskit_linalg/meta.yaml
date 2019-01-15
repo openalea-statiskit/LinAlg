@@ -1,12 +1,12 @@
 package:
   name: python-statiskit_linalg
-  version: "3.3.1"
+  version: {{ GIT_DESCRIBE_VERSION }}
 
 source:
   path: ../../..
 
 build:
-  number: 0
+  number: {{ GIT_DESCRIBE_NUMBER }}
         
 about:
   home: http://statiskit-linalg.readthedocs.org
@@ -15,18 +15,18 @@ about:
 
 requirements:
   build:
-    - libboost_python-dev
-    - libstatiskit_linalg-dev
-    - libtoolchain
-    - libstatiskit_linalg
-    - python
     - python-toolchain
-    - python-statiskit_stl
-  run:
+    - libtoolchain
+  host:
+    - libboost-dev
     - libboost_python
+    - libstatiskit_linalg-dev
     - libstatiskit_linalg
     - python
-    - python-statiskit_stl
+  run:
+    - {{ pin_compatible('libboost_python', min_pin='x.x', max_pin='x.x') }}
+    - {{ pin_compatible('libstatiskit_linalg', exact=True) }}
+    - python
 
 test:                                               
   requires:

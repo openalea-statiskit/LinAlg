@@ -1,12 +1,12 @@
 package:
   name: libstatiskit_linalg
-  version: "3.3.1"
+  version: {{ GIT_DESCRIBE_VERSION }}
 
 source:
   path: ../../..
 
 build:
-  number: 0
+  number: {{ GIT_DESCRIBE_NUMBER }}
   
 about:
   home: http://statiskit-linalg.readthedocs.org
@@ -15,8 +15,8 @@ about:
   
 requirements:
   build:
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
     - libtoolchain
-    - libstatiskit_stl-dev
+  host:
     - libstatiskit_linalg-dev
-  run:
-    - libstatiskit_stl

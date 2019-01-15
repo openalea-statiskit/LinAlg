@@ -8,7 +8,7 @@ source:
   sha256: 3c9d2c1f86eee404de99f4238b24c3a737e6ec963a325d443878fa59f6eb2a90
   
 build:
-  number: 0
+  number: {{ GIT_DESCRIBE_NUMBER }}
   
 about:
   home: http://statiskit-linalg.readthedocs.org
@@ -16,4 +16,7 @@ about:
 
 requirements:
   build:
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+    - libtoolchain
     - libtoolchain-dev
