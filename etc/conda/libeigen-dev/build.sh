@@ -3,9 +3,14 @@ set -ve
 ls 
 ls Eigen
 
+if [[ ! -d ${PREFIX}/include ]]
+then
+    mkdir ${PREFIX}/include
+fi
+
 rm Eigen/CMakeLists.txt
-mv Eigen $PREFIX/include/Eigen
+mv Eigen ${PREFIX}/include/Eigen
 rm unsupported/Eigen/CMakeLists.txt
-mv unsupported/Eigen $PREFIX/include/Eigen/Unsupported
+mv unsupported/Eigen ${PREFIX}/include/Eigen/Unsupported
 
 set +ve
