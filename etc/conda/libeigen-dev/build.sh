@@ -1,6 +1,7 @@
 set -ve
 
 ls 
+ls Eigen
 
 rm Eigen/CMakeLists.txt
 mv Eigen $PREFIX/include/Eigen
