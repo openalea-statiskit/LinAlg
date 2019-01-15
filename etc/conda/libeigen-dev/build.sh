@@ -1,5 +1,7 @@
 set -ve
 
+ls 
+
 rm Eigen/CMakeLists.txt
 mv Eigen $PREFIX/include/Eigen
 rm unsupported/Eigen/CMakeLists.txt
