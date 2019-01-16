@@ -17,6 +17,8 @@ requirements:
   build:
     - python-toolchain
     - libtoolchain
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
   host:
     - libboost-dev
     - libboost_python
