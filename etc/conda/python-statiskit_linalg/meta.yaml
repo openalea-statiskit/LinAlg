@@ -24,9 +24,11 @@ requirements:
     - libboost_python
     - libstatiskit_linalg-dev
     - libstatiskit_linalg
+    - python-statiskit_stl
     - python
   run:
     - {{ pin_compatible('libboost_python', min_pin='x.x', max_pin='x.x') }}
+    - {{ pin_compatible('python-statiskit_stl', min_pin='x.x', max_pin='x.x') }}
     - {{ pin_compatible('libstatiskit_linalg', exact=True) }}
     - python
 
