@@ -1,8 +1,5 @@
 set -ve
 
-ls 
-ls Eigen
-
 if [[ ! -d ${PREFIX}/include ]]
 then
     mkdir ${PREFIX}/include

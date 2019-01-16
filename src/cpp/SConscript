@@ -158,7 +158,7 @@ Alias("cpp-dev", targets)
 Alias("cpp", targets)
 Alias("install", targets)
 
-wigenv = cppenv.Clone(tools = ['wig'])
+wigenv = cppenv.Clone(tools = ['boost_python_wig'])
 wigenv.AppendUnique(CCFLAGS = ['-ferror-limit=0'])
 targets = wigenv.BoostPythonWIG('statiskit_linalg', [target for target in targets if target.name.endswith('.h')],
                                 module='../py/wrapper/_linalg.cpp',
