@@ -22,8 +22,8 @@ requirements:
     - libtoolchain-dev
     - autowig-toolchain
     - libstatiskit_stl-dev
-    - libeigen-dev
   host:
+    - libeigen-dev
     - python
   run:
     - {{ pin_compatible('libeigen-dev', exact=True) }}
