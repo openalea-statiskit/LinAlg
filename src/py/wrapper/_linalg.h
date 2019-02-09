@@ -1,19 +1,19 @@
-#ifndef AUTOWIG__LINALG
-#define AUTOWIG__LINALG
+// TODO #pragma once
 
-#include <boost/python.hpp>
-#include <type_traits>
+#include <pybind11/pybind11.h>
+
+#include <memory>
 #include <statiskit/linalg/Eigen.h>
 #include <statiskit/linalg/config.h>
 #include <statiskit/linalg/operator.h>
-#include <memory>
 
 namespace autowig
 {
-     template<class T> struct Held {
-        typedef std::shared_ptr< T > Type;
-        static bool const is_class = true;
+    template<class T> struct HolderType {
+        typedef std::unique_ptr< T > Type;
+    };
+
+    template<class T> struct NoDeleteHolderType {
+        typedef std::unique_ptr< T, pybind11::nodelete > Type;
     };
 }
-
-#endif

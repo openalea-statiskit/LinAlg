@@ -158,15 +158,15 @@ Alias("cpp-dev", targets)
 Alias("cpp", targets)
 Alias("install", targets)
 
-wigenv = cppenv.Clone(tools = ['boost_python_wig'])
+wigenv = cppenv.Clone(tools = ['pybind11_wig'])
 wigenv.AppendUnique(CCFLAGS = ['-ferror-limit=0'])
-targets = wigenv.BoostPythonWIG('statiskit_linalg', [target for target in targets if target.name.endswith('.h')],
-                                module='../py/wrapper/_linalg.cpp',
-                                decorator='../py/statiskit/linalg/_linalg.py',
-                                parser_bootstrap=1,
-                                controller='AutoWIG.py',
-                                generator='AutoWIG.py',
-                                depends=['statiskit_stl'])
+targets = wigenv.PyBind11WIG('statiskit_linalg', [target for target in targets if target.name.endswith('.h')],
+                             module='../py/wrapper/_linalg.cpp',
+                             decorator='../py/statiskit/linalg/_linalg.py',
+                             parser_bootstrap=1,
+                             controller='AutoWIG.py',
+                             generator='AutoWIG.py',
+                             depends=['statiskit_stl'])
 Alias("autowig", targets)
 wigenv.Depends(targets, "cpp-dev")
 

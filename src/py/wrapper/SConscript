@@ -4,7 +4,7 @@ from SCons.Errors import EnvironmentError
 
 try:
     Import("env")
-    pyenv = env.Clone(tools = ['boost_python'])
+    pyenv = env.Clone(tools = ['pybind11'])
 
     pyenv.AppendUnique(LIBS  = ['statiskit_linalg'])
     if pyenv['SYSTEM'] == 'linux':
@@ -15,7 +15,7 @@ try:
 
     sources = [source for source in pyenv.Glob('*.*') if source.name not in exclude]
 
-    targets = pyenv.BoostPythonExtension("../statiskit/linalg/__linalg", sources, preserve_egg_dir=False)
+    targets = pyenv.PyBind11Extension("../statiskit/linalg/__linalg", sources, preserve_egg_dir=False)
     Alias("py", targets)
     Alias("install", targets)
     pyenv.Depends(targets, "cpp")
