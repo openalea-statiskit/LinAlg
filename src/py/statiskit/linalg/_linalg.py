@@ -1,5 +1,6 @@
 __all__ = []
 
+import statiskit.stl
 
 # Import Boost.Python module
 from . import __linalg
