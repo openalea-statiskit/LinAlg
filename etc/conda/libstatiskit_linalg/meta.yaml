@@ -18,4 +18,5 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - libtoolchain
+  host:
     - libstatiskit_linalg-dev
