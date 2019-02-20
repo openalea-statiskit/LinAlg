@@ -1,9 +1,5 @@
-import autowig
-import itertools
-
-from scons_tools.site_autowig.controller.statiskit_stl import controller as stl_controller
-
 def controller(asg):
+    from scons_tools.site_autowig.controller.statiskit_stl import controller as stl_controller
     asg = stl_controller(asg, library=False)
     # for dcl in asg['::Eigen::internal'].declarations(nested=True):
     #     dcl.pybind11_export = False
@@ -60,6 +56,8 @@ def controller(asg):
     return asg
 
 def generator(asg, module, decorator):
+    import autowig
+    import itertools
     autowig.generator.plugin = 'pybind11'
     nodes = [typedef.qualified_type.unqualified_type for typedef in asg['::statiskit::linalg'].typedefs()]
     nodes = list(itertools.chain(*[node.bases(inherited=True) for node in nodes])) + nodes + asg['::statiskit::linalg'].declarations()

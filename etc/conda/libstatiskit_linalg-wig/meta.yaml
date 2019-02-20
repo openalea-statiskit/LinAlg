@@ -20,7 +20,8 @@ requirements:
     - libtoolchain
     - libtoolchain-dev
     - autowig-toolchain
-  host:
-    - libstatiskit_linalg-dev
     - libstatiskit_stl-wig
+  host:
+    - libstatiskit_stl-wig
+    - libstatiskit_linalg-dev
     - python
