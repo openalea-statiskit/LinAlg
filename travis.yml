@@ -21,10 +21,10 @@ env:
 matrix:
   exclude:
     - os: osx
-      env: CONDA_RECIPE=etc/conda/libstatiskit_stl-wig
+      env: CONDA_RECIPE=etc/conda/libstatiskit_linalg-wig
            TRAVIS_WAIT=20
     - os: windows
-      env: CONDA_RECIPE=etc/conda/libstatiskit_stl-wig
+      env: CONDA_RECIPE=etc/conda/libstatiskit_linalg-wig
            TRAVIS_WAIT=20
 
 before_install:
