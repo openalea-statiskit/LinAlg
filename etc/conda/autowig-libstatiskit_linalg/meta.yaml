@@ -1,5 +1,5 @@
 package:
-  name: libstatiskit_linalg-wig
+  name: autowig-libstatiskit_linalg
   version: {{ GIT_DESCRIBE_VERSION }}
 
 source:
@@ -7,7 +7,8 @@ source:
 
 build:
   number: {{ GIT_DESCRIBE_NUMBER }}
-  
+  detect_binary_files_with_prefix: False
+
 about:
   home: http://statiskit-stl.readthedocs.org
   license: Apache License 2.0
@@ -20,8 +21,12 @@ requirements:
     - libtoolchain
     - libtoolchain-dev
     - autowig-toolchain
-    - libstatiskit_stl-wig
+    - autowig-libstatiskit_stl
   host:
-    - libstatiskit_stl-wig
+    - autowig-libstatiskit_stl
     - libstatiskit_linalg-dev
+    - python
+  run:
+    - {{ pin_compatible('libstatiskit_linalg-dev', exact=True) }}
+    - {{ pin_compatible('autowig-libstatiskit_stl', exact=True) }}
     - python
