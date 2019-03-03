@@ -30,8 +30,8 @@ void wrapper_33412a4d59dc5ac2b599724f2069be84(pybind11::module& module)
     class_33412a4d59dc5ac2b599724f2069be84.def(pybind11::init< ::Eigen::Matrix< double, 1, -1, 1, 1, -1 >::Scalar const &, ::Eigen::Matrix< double, 1, -1, 1, 1, -1 >::Scalar const &, ::Eigen::Matrix< double, 1, -1, 1, 1, -1 >::Scalar const & >());
     class_33412a4d59dc5ac2b599724f2069be84.def(pybind11::init< ::Eigen::Matrix< double, 1, -1, 1, 1, -1 >::Scalar const &, ::Eigen::Matrix< double, 1, -1, 1, 1, -1 >::Scalar const &, ::Eigen::Matrix< double, 1, -1, 1, 1, -1 >::Scalar const &, ::Eigen::Matrix< double, 1, -1, 1, 1, -1 >::Scalar const & >());
     class_33412a4d59dc5ac2b599724f2069be84.def(pybind11::init< class ::Eigen::Matrix< double, 1, -1, 1, 1, -1 > const & >());
-    class_33412a4d59dc5ac2b599724f2069be84.def(pybind11::init< long int const & >());
     class_33412a4d59dc5ac2b599724f2069be84.def(pybind11::init< class ::Eigen::Product< class ::Eigen::Block< class ::Eigen::Block< class ::Eigen::Matrix< double, -1, -1, 1, -1, -1 >, 1, -1, true >, 1, -1, false >, class ::Eigen::TriangularView< class ::Eigen::Block< class ::Eigen::Matrix< double, -1, -1, 1, -1, -1 >, -1, -1, false >, 2 >, 0 > const & >());
+    class_33412a4d59dc5ac2b599724f2069be84.def(pybind11::init< long int const & >());
     class_33412a4d59dc5ac2b599724f2069be84.def("inner_stride", method_pointer_29ad5c75651e5bfca25c9ed2fe07208f, "");
     class_33412a4d59dc5ac2b599724f2069be84.def("outer_stride", method_pointer_11c42683f43052dfad6288abded43253, "");
     class_33412a4d59dc5ac2b599724f2069be84.def("__sub__", function_group::function_80b79e7f0f8752d2bde4c3dc1ede5760, "");

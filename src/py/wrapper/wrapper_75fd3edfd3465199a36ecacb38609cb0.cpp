@@ -65,8 +65,8 @@ void  (::Eigen::DenseBase< ::Eigen::Matrix< double, -1, -1, 0, -1, -1 > >::*meth
 ::Eigen::DenseBase< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 > >::ConstColXpr  (::Eigen::DenseBase< ::Eigen::Matrix< double, -1, -1, 0, -1, -1 > >::*method_pointer_d137626f52665a1cac5a9934efb117fd)(::Eigen::Index )const= &::Eigen::DenseBase< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 > >::col;
 ::Eigen::DenseBase< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 > >::RowXpr  (::Eigen::DenseBase< ::Eigen::Matrix< double, -1, -1, 0, -1, -1 > >::*method_pointer_a2728f2bdcf759d58109f6c9dcb9ac0c)(::Eigen::Index )= &::Eigen::DenseBase< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 > >::row;
 ::Eigen::DenseBase< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 > >::ConstRowXpr  (::Eigen::DenseBase< ::Eigen::Matrix< double, -1, -1, 0, -1, -1 > >::*method_pointer_bb73f173464451dd81ae4482f39e7928)(::Eigen::Index )const= &::Eigen::DenseBase< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 > >::row;
-class ::Eigen::CwiseNullaryOp< struct ::Eigen::internal::scalar_constant_op< double >, class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 > > const (*method_pointer_bb295e30838f54a49e255691c1638432)(::Eigen::Index , ::Eigen::Index , struct ::Eigen::internal::scalar_constant_op< double > const &)= ::Eigen::DenseBase< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 > >::NullaryExpr;
 class ::Eigen::CwiseNullaryOp< struct ::Eigen::internal::scalar_identity_op< double >, class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 > > const (*method_pointer_545073846f4358ae8b586ab8a687e899)(::Eigen::Index , ::Eigen::Index , struct ::Eigen::internal::scalar_identity_op< double > const &)= ::Eigen::DenseBase< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 > >::NullaryExpr;
+class ::Eigen::CwiseNullaryOp< struct ::Eigen::internal::scalar_constant_op< double >, class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 > > const (*method_pointer_bb295e30838f54a49e255691c1638432)(::Eigen::Index , ::Eigen::Index , struct ::Eigen::internal::scalar_constant_op< double > const &)= ::Eigen::DenseBase< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 > >::NullaryExpr;
 
 namespace autowig {
     void method_decorator_68d85a34c1a255a58ea399d7fe7b9047(class ::Eigen::DenseBase< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 > > & instance, ::Eigen::DenseBase< class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 > >::Scalar const & param_in_0, const class ::Eigen::Matrix< double, -1, -1, 0, -1, -1 > & param_out) { instance.setConstant(param_in_0) = param_out; }
@@ -155,7 +155,7 @@ void wrapper_75fd3edfd3465199a36ecacb38609cb0(pybind11::module& module)
     class_75fd3edfd3465199a36ecacb38609cb0.def("col", method_pointer_d137626f52665a1cac5a9934efb117fd, "");
     class_75fd3edfd3465199a36ecacb38609cb0.def("row", method_pointer_a2728f2bdcf759d58109f6c9dcb9ac0c, "");
     class_75fd3edfd3465199a36ecacb38609cb0.def("row", method_pointer_bb73f173464451dd81ae4482f39e7928, "");
-    class_75fd3edfd3465199a36ecacb38609cb0.def_static("nullary_expr", method_pointer_bb295e30838f54a49e255691c1638432, "");
     class_75fd3edfd3465199a36ecacb38609cb0.def_static("nullary_expr", method_pointer_545073846f4358ae8b586ab8a687e899, "");
+    class_75fd3edfd3465199a36ecacb38609cb0.def_static("nullary_expr", method_pointer_bb295e30838f54a49e255691c1638432, "");
 
 }

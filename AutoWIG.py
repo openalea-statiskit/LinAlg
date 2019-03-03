@@ -95,6 +95,7 @@ while not prev == curr:
                                          src_dir=src_dir)
         s = subprocess.Popen(['scons', '-j1', '-k', '--diagnostics-color=never'], stderr=subprocess.PIPE)
         out, curr = s.communicate()
+        curr = curr.decode()
     else:
         print("done")
 os.environ['AutoWIG'] = 'false'
